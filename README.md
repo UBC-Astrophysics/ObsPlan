@@ -9,8 +9,10 @@ depends of the field of view of the telescope).
   P(position|data) = P(position) P(data|position) / P(data)
 
   P(position) is the galaxy density map ( P(m) )
-   P(data|position) is the skymap from LIGO-Virgo ( P(d|m) )
-   P(data) is constant with position so we neglect it.
+  
+  P(data|position) is the skymap from LIGO-Virgo ( P(d|m) )
+  
+  P(data) is constant with position so we neglect it.
 
 1) Load the skymap
 
