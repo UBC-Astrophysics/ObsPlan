@@ -24,9 +24,9 @@
 #    python3 MakeObsPlan.py _nside_ _SkyMap_ [_GalMap_] 
 #
 #
-#    nside = floor ( sqrt (3/Pi) 60 / s ) 
+#    nside = ceil ( sqrt (3/Pi) 60 / s ) 
 #
-#    where s is the length of one side of the square field of view.
+#    where s is the length of one side of the square field of view in degrees.
 #
 #
 # Questions: heyl@phas.ubc.ca
