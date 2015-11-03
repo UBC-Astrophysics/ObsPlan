@@ -1,4 +1,4 @@
-# MakeObsPlan
+# ObsPlan
 
 This script takes the LIGO-Virgo Skymap (P(d|m)) and optionally a
 galaxy-density map (P(m)) and finds the most likely fields to
