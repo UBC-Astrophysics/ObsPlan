@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# MakeObsPlan.py
+# GalMap.py
 #
 # Elisa Antolini
 # Jeremy Heyl
