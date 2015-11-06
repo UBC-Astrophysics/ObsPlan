@@ -1,35 +1,10 @@
 #!/usr/bin/env python
 #
-# MakeObsPlan.py
+# MakeGalMap.py
 #
 # Elisa Antolini
 # Jeremy Heyl
 # UBC Southern Observatory
-#
-# This script takes the LIGO-Virgo Skymap (P(d|m)) and optionally a
-# galaxy-density map (P(m)) and finds the most likely fields to
-# observe (P(m|d)).  The fields are assumed to be healpix regions from a
-# tesselation with a given value of nside (the value of nside
-# depends of the field of view of the telescope).
-#
-#   P(position|data) = P(position) P(data|position) / P(data)
-#
-#   P(position) is the galaxy density map ( P(m) )
-#   P(data|position) is the skymap from LIGO-Virgo ( P(d|m) )
-#   P(data) is constant with position so we neglect it.
-#
-#
-# Usage:
-#
-#    python3 MakeObsPlan.py _nside_ _SkyMap_ [_GalMap_]
-#
-#
-#    nside = ceil ( sqrt (3/Pi) 60 / s )
-#
-#    where s is the length of one side of the square field of view in degrees.
-#
-#
-# Questions: heyl@phas.ubc.ca
 #
 
 
