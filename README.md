@@ -1,3 +1,5 @@
+This package consists of three python scripts to work with LIGO/Virgo probability maps to generate an observing plan.
+
 # ObsPlan
 
 This script takes the LIGO-Virgo Skymap (P(d|m)) and optionally a
@@ -39,3 +41,7 @@ depends of the field of view of the telescope).
 # LIGOClient
 
 Downloads a probability map from the Grace Database and then passes it along to ObsPlan to generate an observation plan.
+
+# GalMap
+
+Create a galaxy density map from a catalogue in FITS format.
