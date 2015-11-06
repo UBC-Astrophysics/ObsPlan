@@ -6,14 +6,9 @@
 # Jeremy Heyl
 # UBC Southern Observatory
 #
+# Downloads a probability map from the Grace Database and
+# then passes it along to ObsPlan to generate an observation plan.
 #
-#
-#
-# uses http://lib.skyalert.org/VOEventLib/
-
-#from VOEventLib.VOEvent import *
-#from VOEventLib.Vutil import *
-
 from argparse import ArgumentParser
 import math as mt
 import numpy as np
@@ -144,7 +139,6 @@ def _main():
 
     SkyMap_name  = GetLIGOMap(args['graceid'],
                               filename=args['grace_file'])
-    
 
     ObsPlan.MakeObsPlan(SkyMap_name,args['nside'],args['savefigures'],
                         nvalues=args['nvalues'],DensityMap_name=args['gal_map'])
