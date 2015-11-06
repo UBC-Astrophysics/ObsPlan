@@ -6,7 +6,7 @@
 # Jeremy Heyl
 # UBC Southern Observatory
 #
-# This script 
+# This script generates a healpix map from a galaxy catalogue
 #
 # Questions: heyl@phas.ubc.ca
 #
