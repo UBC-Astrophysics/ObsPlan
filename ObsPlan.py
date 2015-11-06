@@ -33,10 +33,12 @@
 #
 
 
+from argparse import ArgumentParser
+
 import math as mt
 import numpy as np
 import healpy as hp
-from sys import argv
+import matplotlib.pyplot as plt
 
 
 def IndexToDeclRa(NSIDE,index):
@@ -49,8 +51,9 @@ def DeclRaToIndex(decl,RA,NSIDE):
 
 
 def PlotMap(Map,NsideMap,MapName):
-    hp.mollview(Map,coord='C',rot = [0,0.3], title='Histogram equalized Ecliptic Galaxy Density Map', unit='prob', xsize=NsideMap)
+    hp.mollview(Map,coord='C',rot = [0,0.3], title='Histogram-Equalized Probability Density Map', unit='prob', xsize=NsideMap)
     hp.graticule()
+    plt.savefig(MapName)
 
 def isPower(num, base):
     if base == 1 and num != 1: return False
@@ -59,7 +62,7 @@ def isPower(num, base):
     power = int (mt.log (num, base) + 0.5)
     return base ** power == num
 
-def MakeObsPlan(DensityMap_name,SkyMap_name,nside,SaveFigures,nvalues):
+def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,DensityMap_name=None):
     
     #Check if the nside is a power of two
     val = isPower(nside,2)
@@ -78,21 +81,16 @@ def MakeObsPlan(DensityMap_name,SkyMap_name,nside,SaveFigures,nvalues):
         print("The nearest NSIDE applicable is "+str(nside))
         print(" ****************************************** ")
     
-    
-    
-    
-    GalMap = 0
     nside_DensityMap = 0
     
-    if DensityMap_name != 'none' :
+    if DensityMap_name != None :
         #Load the Glaxy Density Map P(m)
         
-        GalMap = 1
         Densitymap_Ring       = hp.read_map(DensityMap_name,0)
         nside_DensityMap      = hp.pixelfunc.get_nside(Densitymap_Ring)
         galpixels_DensityMap = np.asarray(Densitymap_Ring)
         
-        if SaveFigures == 'yes' :
+        if SaveFigures :
             PlotMap(galpixels_DensityMap,nside_DensityMap,'./GalaxyDensityMap.png')
     
     
@@ -102,7 +100,7 @@ def MakeObsPlan(DensityMap_name,SkyMap_name,nside,SaveFigures,nvalues):
     nside_SkyMap = hp.pixelfunc.get_nside(Skymap_Ring)
     galpixels_SkyMap = np.asarray(Skymap_Ring)
     
-    if SaveFigures == 'yes' :
+    if SaveFigures:
         PlotMap(galpixels_SkyMap,nside_SkyMap,'./LIGOSkyMap.png')
     
     
@@ -112,88 +110,139 @@ def MakeObsPlan(DensityMap_name,SkyMap_name,nside,SaveFigures,nvalues):
         
         galpixels_SkyMap = hp.pixelfunc.ud_grade(galpixels_SkyMap,nside_out = nside, order_in = 'RING', order_out = 'RING')
         
-        if SaveFigures == 'yes' :
+        if SaveFigures:
             PlotMap(galpixels_SkyMap,nside,'./LIGOSkyMapResized.png')
     
     
     #Resize Galaxy Density Map if necessary
     
-    if GalMap == 1:
-        
+    if DensityMap_name != None :
         if nside_DensityMap != nside:
-            
             galpixels_DensityMap = hp.pixelfunc.ud_grade(galpixels_DensityMap,nside_out = nside, order_in = 'RING', order_out = 'RING')
-            if SaveFigures == 'yes' :
+            if SaveFigures:
                 PlotMap(galpixels_DensityMap,nside,'./GalaxyDensityMapResized.png')
-    
-    
-    
     
     Map_Position_Data = np.zeros(hp.nside2npix(nside))
     
-    # Multiply the resulting maps together -> P(position|data) = P(position) P(data|position)
+    # Multiply the resulting maps together ->
+    # P(position|data) = P(position) P(data|position)
     
-    if GalMap == 1:
+    if DensityMap_name != None :
         Map_Position_Data = galpixels_SkyMap * galpixels_DensityMap
     else :
         Map_Position_Data = galpixels_SkyMap
     
     
-    #Normalize to 1 the pixels
+    # Normalize to 1 the sum of the pixels
     Map_Position_Data/=np.sum(Map_Position_Data)
     
-    if SaveFigures == 'yes' :
+    if SaveFigures:
         PlotMap(Map_Position_Data,nside,'./MapPositionData.png')
     
     
-    #Sort the array by the probability
+    # Sort the array by the probability
     
-    #Smallest to the largest
+    # Sort from the largest to the smallest
     
-    healpixno=np.argsort(Map_Position_Data)
+    healpixno=np.argsort(-Map_Position_Data)
     
-    #Largest to smallest
-    
+    # Output Largest to smallest
+    probsum=np.cumsum(Map_Position_Data[healpixno])
     sum = 0
     count = 0
     fLigofile = open('./SkyMap_OutFile.txt', 'w')
     fLigofile.write("# Healpix Number, Ra, Dec, Probability, Cumulative P "+"\n")
-    
-    print("\n")
-    print("Most "+str(nvalues)+" probables values :")
-    print("# Healpix Number, Ra, Dec, Probability, Cumulative P "+"\n")
-    
-    for i in healpixno[::-1]:
+
+    if nvalues != None: 
+        print("\n")
+        print("Most "+str(nvalues)+" probable values :")
+        print("# Healpix Number, Ra, Dec, Probability, Cumulative P ")
+        
+    for i in healpixno:
         # Convert Pixels to RA and DEC in Normalized MAP
         dec, ra = IndexToDeclRa(nside,i)
         sum+=Map_Position_Data[i]
-        fLigofile.write(str(i)+" "+str(ra)+" "+str(dec)+" "+str(Map_Position_Data[i])+" "+str(sum)+"\n")
+        fLigofile.write(str(i)+" "+str(ra)+" "+str(dec)+" "+str(Map_Position_Data[i])+" "+str(probsum[i])+"\n")
         count += 1
-        
-        if count <= nvalues :
-            print(str(i)+" "+str(ra)+" "+str(dec)+" "+str(Map_Position_Data[i])+" "+str(sum)+"\n")
+        if nvalues !=None:
+            if count <= nvalues :
+                print(str(i)+" "+str(ra)+" "+str(dec)+" "+str(Map_Position_Data[i])+" "+str(sum))
     
     fLigofile.close()
 
 
+def _parse_command_line_arguments():
+    """
+    Parse and return command line arguments
+    """
+    parser = ArgumentParser(
+        description=(
+            'Command line generating an observing plan from a LIGO/Virgo probability map (with an optional galaxy map too)'
+        ),
+    )
+    parser.add_argument(
+        'sky-map',
+        type=str,
+        help=(
+            'A FITS file containing the LIGO/Virgo probability map in HEALPIX format'
+        ),
+    )
+    parser.add_argument(
+        'nside',
+        type=int,
+        help=(
+            'nside for the output map'
+            'nside = ceil(sqrt(3/Pi) 60 / s)'
+            'where s is the length of one side of the square field of view in degrees.'
+            'It will be rounded to the nearest power of two.'
+        ),
+    )
+    parser.add_argument(
+        '--gal-map',
+        required=False,
+        type=str,
+        help='A FITS file containing the galaxy density map in HEALPIX format'
+    )
+    parser.add_argument(
+        '--nvalues',
+        required=False,
+        type=int,
+        help='Number of Maximum Probability pixels to be shown'
+    )
+    parser.add_argument('--savefigures',dest='savefigures',action='store_true')
+    parser.add_argument('--no-savefigures',dest='savefigures',action='store_false')
+    parser.set_defaults(savefigures=False)
+
+    arguments = vars(parser.parse_args())
+    return arguments
+
+
+    
 #------------------------------------------------------------------------------
 # main
 #
-def main():
+def _main():
     """
     This is the main routine.
     """
+
+    args=_parse_command_line_arguments()
     
+    MakeObsPlan(args['sky-map'],args['nside'],args['savefigures'],
+                nvalues=args['nvalues'],DensityMap_name=args['gal_map'])
+
+'''    
     #### Input Parameters #####
-    
+
     DensityMap_name  = argv[1]      # Density Map Name or none
     SkyMap_name      = argv[2]      # Sky Map Name
     nside            = int(argv[3]) # NSIDE of probability Map
     SaveFigures      = argv[4]      # Yes or No
     nvalues          = int(argv[5]) # Number of Maximum Probability pixels to be shown
 
+    MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues,DensityMap_name)
+'''
 
-    MakeObsPlan(DensityMap_name,SkyMap_name,nside,SaveFigures,nvalues)
 
 
 
@@ -201,5 +250,5 @@ def main():
 # Start program execution.
 #
 if __name__ == '__main__':
-    main()
+    _main()
 
