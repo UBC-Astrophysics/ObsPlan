@@ -36,3 +36,6 @@ depends of the field of view of the telescope).
   parameter less than one to do the fraction of the total or greater than
   one to output N regions.
 
+# LIGOClient
+
+Downloads a probability map from the Grace Database and then passes it along to ObsPlan to generate an observation plan.
