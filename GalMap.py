@@ -11,11 +11,12 @@
 # Questions: heyl@phas.ubc.ca
 #
 
+from argparse import ArgumentParser
+
 import math as mt
 import numpy as np
 import healpy as hp
 import matplotlib.pyplot as plt
-from sys import argv
 import pyfits
 
 
@@ -34,10 +35,9 @@ def isPower(num, base):
     power = int (mt.log (num, base) + 0.5)
     return base ** power == num
 
-def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap):
+def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap,zcolumn=None):
     #Check if the nside is a power of two
     val = isPower(nvalues,2)
-    print(isPower(nvalues,2))
     
     if val == False:
         print(" **************** WARNING  **************** ")
@@ -55,8 +55,8 @@ def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap):
     FitsMapCat_name  = FitsGalCat_name+"_"+str(z_min)+"_"+str(z_max)
     
     radians_to_deg = 57.2957795
-    Lsun = 3.846e26 # Watt
-    MagSun = -26.832 # Bolometric
+    # Lsun = 3.846e26 # Watt
+    # MagSun = -26.832 # Bolometric
     
     
     #Load the Galaxy Catalog
@@ -68,9 +68,12 @@ def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap):
     
     Gal_RA  = tabledata.field('RA') * radians_to_deg
     Gal_DEC = tabledata.field('DEC') * radians_to_deg
-    K_mag   = tabledata.field('KCORR')
-    z = tabledata.field('ZPHOTO')
-    dist    = (z*3E05)/72
+    # K_mag   = tabledata.field('KCORR')
+    if zcolumn==None:
+        z = tabledata.field('ZPHOTO')
+    else:
+        z = tabledata.field(zcolumn)
+    # dist    = (z*3E05)/72
     
     #Create the pixel map
     
@@ -86,7 +89,7 @@ def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap):
     
     GalMap_smoothed = hp.sphtfunc.smoothing(galpixels_GalMap,sigma = 0.01)
     
-    if showMap == 'yes':
+    if showMap:
         hp.mollview(galpixels_GalMap,coord='C',rot = [0,0.3], title='Histogram equalized Ecliptic', unit='prob', xsize=nvalues)
         hp.graticule()
         plt.savefig(FitsMapCat_name+".png")
@@ -102,14 +105,67 @@ def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap):
     hp.write_map(FitsMapCat_name+"_smoothed.fits", GalMap_smoothed)
 
 
+def _parse_command_line_arguments():
+    """
+    Parse and return command line arguments
+    """
+    parser = ArgumentParser(
+        description=(
+            'Command line generating an observing plan from a LIGO/Virgo probability map (with an optional galaxy map too)'
+        ),
+    )
+    parser.add_argument(
+        'galaxy-catalogue',
+        type=str,
+        help=(
+            'A FITS file containing the galaxy catalogue'
+        ),
+    )
+    parser.add_argument(
+        'nside',
+        type=int,
+        help=(
+            'nside for the output map'
+            'nside = ceil(sqrt(3/Pi) 60 / s)'
+            'where s is the length of one side of the square field of view in degrees.'
+            'It will be rounded to the nearest power of two.'
+        ),
+    )
+    parser.add_argument(
+        'zmin',
+        type=float,
+        help='The minimum redshift for a galaxy to appear in the output map'
+    )
+    parser.add_argument(
+        'zmax',
+        type=float,
+        help='The maximum redshift for a galaxy to appear in the output map'
+    )
+    parser.add_argument(
+        '--zcolumn',
+        required=False,
+        type=str,
+        help='A name of the column in FITS file that contains the redshift (default ZPHOTO)'
+    )
+    parser.add_argument('--savefigures',dest='savefigures',action='store_true',
+                        help='output the healpix data in a png file')
+    parser.add_argument('--no-savefigures',dest='savefigures',action='store_false',
+                            help='do not output the healpix data in a png file (default)')
+    parser.set_defaults(savefigures=False)
+
+    arguments = vars(parser.parse_args())
+    return arguments
+
+    
 #------------------------------------------------------------------------------
 # main
 #
-def main():
+def _main():
     """
     This is the main routine.
     """
     
+    '''    
     #### Input Parameters #####
     
     FitsGalCat_name  = argv[1]
@@ -119,10 +175,15 @@ def main():
     showMap          = argv[5]
     
     MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap)
+    '''
+
+    args=_parse_command_line_arguments()
+    MakeGalMap(args['galaxy-catalogue'],args['nside'],args['zmin'],args['zmax'],
+                    args['savefigures'],zcolumn=args['zcolumn'])
     
 #------------------------------------------------------------------------------
 # Start program execution.
 #
 if __name__ == '__main__':
-    main()
+    _main()
 
