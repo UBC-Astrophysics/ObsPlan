@@ -6,6 +6,11 @@
 # Jeremy Heyl
 # UBC Southern Observatory
 #
+# usage: LIGOClient.py [-h] [--gal-map GAL_MAP] [--grace-file GRACE_FILE]
+#                      [--nvalues NVALUES] [--cumprob CUMPROB]
+#                      [--savefigures] [--no-savefigures]
+#                      graceid nside
+#
 # Downloads a probability map from the Grace Database and
 # then passes it along to ObsPlan to generate an observation plan.
 #
@@ -86,6 +91,12 @@ def _parse_command_line_arguments():
         type=int,
         help='Number of Maximum Probability pixels to be shown'
     )
+    parser.add_argument(
+        '--cumprob',
+        required=False,
+        type=float,
+        help='Output up to the given cumulative probability'
+    )
     parser.add_argument('--savefigures',dest='savefigures',action='store_true')
     parser.add_argument('--no-savefigures',dest='savefigures',action='store_false')
     parser.set_defaults(savefigures=False)
@@ -141,7 +152,8 @@ def _main():
                               filename=args['grace_file'])
 
     ObsPlan.MakeObsPlan(SkyMap_name,args['nside'],args['savefigures'],
-                        nvalues=args['nvalues'],DensityMap_name=args['gal_map'])
+                        nvalues=args['nvalues'],cumprob=args['cumprob'],
+                        DensityMap_name=args['gal_map'])
 
 
 

@@ -19,9 +19,11 @@
 #   P(data) is constant with position so we neglect it.
 #
 #
-# Usage:
 #
-#    python3 ObsPlan.py [_GalMap_] _SkyMap_ _nside_ _PlotFigure_ _Nprob
+# Usage: ObsPlan.py [-h] [--gal-map GAL_MAP] [--nvalues NVALUES]
+#                   [--cumprob CUMPROB] [--savefigures]
+#                   [--no-savefigures]
+#                   sky-map nside
 #
 #
 #    nside = ceil ( sqrt (3/Pi) 60 / s )
@@ -62,7 +64,8 @@ def isPower(num, base):
     power = int (mt.log (num, base) + 0.5)
     return base ** power == num
 
-def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,DensityMap_name=None):
+def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,
+                cumprob=None,DensityMap_name=None):
     
     #Check if the nside is a power of two
     val = isPower(nside,2)
@@ -209,6 +212,12 @@ def _parse_command_line_arguments():
         type=int,
         help='Number of Maximum Probability pixels to be shown'
     )
+    parser.add_argument(
+        '--cumprob',
+        required=False,
+        type=int,
+        help='Output up to the given cumulative probability'
+    )
     parser.add_argument('--savefigures',dest='savefigures',action='store_true')
     parser.add_argument('--no-savefigures',dest='savefigures',action='store_false')
     parser.set_defaults(savefigures=False)
@@ -229,7 +238,8 @@ def _main():
     args=_parse_command_line_arguments()
     
     MakeObsPlan(args['sky-map'],args['nside'],args['savefigures'],
-                nvalues=args['nvalues'],DensityMap_name=args['gal_map'])
+                nvalues=args['nvalues'],cumprob=args['cumprob'],
+                DensityMap_name=args['gal_map'])
 
 '''    
     #### Input Parameters #####

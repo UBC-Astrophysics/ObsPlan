@@ -8,6 +8,10 @@
 #
 # This script generates a healpix map from a galaxy catalogue
 #
+# usage: GalMap.py [-h] [--zcolumn ZCOLUMN] [--savefigures] [--no-savefigures]
+#                   galaxy-catalogue nside zmin zmax
+#
+#
 # Questions: heyl@phas.ubc.ca
 #
 
