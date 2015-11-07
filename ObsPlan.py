@@ -65,6 +65,13 @@ def isPower(num, base):
     power = int (mt.log (num, base) + 0.5)
     return base ** power == num
 
+def integers():
+    """Infinite sequence of integers."""
+    i = 1
+    while True:
+        yield i
+        i = i + 1
+
 def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,
                 cumprob=None,DensityMap_name=None,
                 TextOutput=False):
@@ -155,10 +162,10 @@ def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,
     if TextOutput:
         np.savetxt("SkyMap_OutFile.txt.gz",
                    np.transpose([healpixno,ra,dec,
-                                 Map_Position_Data,probsum]),
-                   fmt="%16d %10.5f %10.5f %10.5f %10.5f",
-                   
-                   header="Healpix Number         Ra        Dec Probability Cumulative Prob")
+                                 Map_Position_Data,probsum,
+                                 np.arange(1,len(probsum)+1)]),
+                   fmt="%16d %10.5f %10.5f %10.5f %10.5f %16d",
+                   header="Healpix Number|        RA|       Dec|Probability|Cumulative Prob | Number of Fields")
     else:
         np.savez("SkyMap_OutFile",
                  healpixno=healpixno,ra=ra,dec=dec,
@@ -166,21 +173,23 @@ def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,
 
     if nvalues != None: 
         print("# %d most probable values :" % nvalues)
-        ii=range(nvalues)
+        ii=np.arange(nvalues)
         np.savetxt(sys.stdout,
                    np.transpose([healpixno[ii],ra[ii],dec[ii],
-                                 Map_Position_Data[ii],probsum[ii]]),
-                   fmt="%16d %10.5f %10.5f %10.5f %10.5f",
-                   header="Healpix Number         Ra        Dec Probability Cumulative Prob")
+                                 Map_Position_Data[ii],probsum[ii],ii+1]),
+                   fmt="%16d %10.5f %10.5f %10.5f %10.5f %16d",
+                   header="Healpix Number|        RA|       Dec|Probability|Cumulative Prob | Number of Fields")
 
     if cumprob != None: 
         print("# Most probable values with cumprob < %g" % cumprob)
         ii=(probsum<cumprob)
+        hpn=healpixno[ii]
         np.savetxt(sys.stdout,
-                   np.transpose([healpixno[ii],ra[ii],dec[ii],
-                                 Map_Position_Data[ii],probsum[ii]]),
-                   fmt="%16d %10.5f %10.5f %10.5f %10.5f",
-                   header="Healpix Number         Ra        Dec Probability Cumulative Prob")
+                   np.transpose([hpn,ra[ii],dec[ii],
+                                 Map_Position_Data[ii],probsum[ii],
+                                 np.arange(1,len(hpn)+1)]),
+                   fmt="%16d %10.5f %10.5f %10.5f %10.5f %16d",
+                   header="Healpix Number|        RA|       Dec|Probability|Cumulative Prob | Number of Fields")
 
 
 
