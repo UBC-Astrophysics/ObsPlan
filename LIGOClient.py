@@ -14,6 +14,8 @@
 # Downloads a probability map from the Grace Database and
 # then passes it along to ObsPlan to generate an observation plan.
 #
+#     Copyright 2015, Elisa Antolini and Jeremy Heyl
+#
 #     This program is free software: you can redistribute it and/or modify
 #     it under the terms of the GNU General Public License as published by
 #     the Free Software Foundation, either version 3 of the License, or

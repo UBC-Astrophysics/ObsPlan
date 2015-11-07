@@ -14,6 +14,8 @@
 #
 # Questions: heyl@phas.ubc.ca
 #
+#     Copyright 2015, Elisa Antolini and Jeremy Heyl
+#
 #     This program is free software: you can redistribute it and/or modify
 #     it under the terms of the GNU General Public License as published by
 #     the Free Software Foundation, either version 3 of the License, or
@@ -107,12 +109,15 @@ def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap,zcolumn=None):
     GalMap_smoothed = hp.sphtfunc.smoothing(galpixels_GalMap,sigma = 0.01)
     
     if showMap:
-        hp.mollview(galpixels_GalMap,coord='C',rot = [0,0.3], title='Histogram equalized Ecliptic', unit='prob', xsize=nvalues)
+        hp.mollview(galpixels_GalMap,coord='C',rot = [0,0.3],
+                    title='Relative Surface Density of Galaxies: %g < z < %g' % (z_min,z_max), unit='prob', xsize=nvalues)
         hp.graticule()
         plt.savefig(FitsMapCat_name+".png")
         plt.show()
         
-        hp.mollview(GalMap_smoothed,coord='C',rot = [0,0.3], title='Histogram equalized Ecliptic', unit='prob', xsize=nvalues)
+        hp.mollview(GalMap_smoothed,coord='C',rot = [0,0.3],
+                    title='Relative Surface Density of Galaxies: %g < z < %g' % (z_min,z_max), unit='prob', xsize=nvalues)
+
         hp.graticule()
         plt.savefig(FitsMapCat_name+"_smoothed.png")
         plt.show()
