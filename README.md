@@ -1,4 +1,4 @@
-This package consists of three python scripts to work with LIGO/Virgo probability maps to generate an observing plan.
+This package consists of four python scripts to work with LIGO/Virgo probability maps to generate an observing plan.
 
 # ObsPlan
 
