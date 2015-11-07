@@ -146,13 +146,11 @@ def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,
     
     
     # Sort the array by the probability
-    
     # Sort from the largest to the smallest
     
     healpixno=np.argsort(-Map_Position_Data)
-    
-    # Output Largest to smallest
     Map_Position_Data=Map_Position_Data[healpixno]
+    # accumulate the probability
     probsum=np.cumsum(Map_Position_Data)
     dec, ra = IndexToDeclRa(nside,healpixno)
     if TextOutput:
@@ -166,9 +164,6 @@ def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,
         np.savez("SkyMap_OutFile",
                  healpixno=healpixno,ra=ra,dec=dec,
                  prob=Map_Position_Data,probsum=probsum)
-
-    # fLigofile = open('./SkyMap_OutFile.txt', 'w')
-    # fLigofile.write("# Healpix Number, Ra, Dec, Probability, Cumulative P "+"\n")
 
     if nvalues != None: 
         print("# %d most probable values :" % nvalues)
