@@ -7,9 +7,8 @@
 # UBC Southern Observatory
 #
 # usage: LIGOClient.py [-h] [--gal-map GAL_MAP] [--grace-file GRACE_FILE]
-#                      [--nvalues NVALUES] [--cumprob CUMPROB]
-#                      [--savefigures] [--no-savefigures]
-#                      [--textoutput] [--no-textoutput]
+#                      [--nvalues NVALUES] [--cumprob CUMPROB] [--savefigures]
+#                      [--no-savefigures] [--textoutput] [--no-textoutput]
 #                      graceid nside
 #
 # Downloads a probability map from the Grace Database and
