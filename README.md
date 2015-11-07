@@ -48,6 +48,8 @@ Create a galaxy density map from a catalogue in FITS format.
 
 # Make2MASSMap
 
+Generates four galaxy density maps from the 2MASS Extended Source Survey
+
 ## Building a Healpix Map from a Catalog
 
 The initial source localizations from LIGO-Virgo will cover large areas of sky and will be provided in the form a healpix map. Astrophysical sources of gravitational radiation are likely to reside in galaxies, so it would make sense to search first in regions where the LIGO-Virgo probability is large and where the density of galaxies is large as well. See [Gehrels et al. (2015)](http://arxiv.org/abs/1508.03608) for more details.
