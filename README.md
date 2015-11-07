@@ -46,7 +46,7 @@ Downloads a probability map from the Grace Database and then passes it along to 
 
 Create a galaxy density map from a catalogue in FITS format.
 
-# Make2MASSMap
+# Make2MASSMaps
 
 Generates four galaxy density maps from the 2MASS Extended Source Survey
 
