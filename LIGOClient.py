@@ -9,6 +9,7 @@
 # usage: LIGOClient.py [-h] [--gal-map GAL_MAP] [--grace-file GRACE_FILE]
 #                      [--nvalues NVALUES] [--cumprob CUMPROB]
 #                      [--savefigures] [--no-savefigures]
+#                      [--textoutput] [--no-textoutput]
 #                      graceid nside
 #
 # Downloads a probability map from the Grace Database and
@@ -101,6 +102,10 @@ def _parse_command_line_arguments():
     parser.add_argument('--no-savefigures',dest='savefigures',action='store_false')
     parser.set_defaults(savefigures=False)
 
+    parser.add_argument('--textoutput',dest='textoutput',action='store_true')
+    parser.add_argument('--no-textoutput',dest='textoutput',action='store_false')
+    parser.set_defaults(textoutput=False)
+
     arguments = vars(parser.parse_args())
     return arguments
 
@@ -153,7 +158,8 @@ def _main():
 
     ObsPlan.MakeObsPlan(SkyMap_name,args['nside'],args['savefigures'],
                         nvalues=args['nvalues'],cumprob=args['cumprob'],
-                        DensityMap_name=args['gal_map'])
+                        DensityMap_name=args['gal_map'],
+                        TextOutput=args['textoutput'])
 
 
 

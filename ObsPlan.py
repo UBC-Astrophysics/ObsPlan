@@ -20,9 +20,9 @@
 #
 #
 #
-# Usage: ObsPlan.py [-h] [--gal-map GAL_MAP] [--nvalues NVALUES]
-#                   [--cumprob CUMPROB] [--savefigures]
-#                   [--no-savefigures]
+# usage: ObsPlan.py [-h] [--gal-map GAL_MAP] [--nvalues NVALUES]
+#                   [--cumprob CUMPROB] [--savefigures] [--no-savefigures]
+#                   [--textoutput] [--no-textoutput]
 #                   sky-map nside
 #
 #
@@ -41,6 +41,8 @@ import math as mt
 import numpy as np
 import healpy as hp
 import matplotlib.pyplot as plt
+import sys
+import pyfits
 
 
 def IndexToDeclRa(NSIDE,index):
@@ -65,7 +67,8 @@ def isPower(num, base):
     return base ** power == num
 
 def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,
-                cumprob=None,DensityMap_name=None):
+                cumprob=None,DensityMap_name=None,
+                TextOutput=False):
     
     #Check if the nside is a power of two
     val = isPower(nside,2)
@@ -152,20 +155,23 @@ def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,
     Map_Position_Data=Map_Position_Data[healpixno]
     probsum=np.cumsum(Map_Position_Data)
     dec, ra = IndexToDeclRa(nside,healpixno)
-    np.savetxt("SkyMap_OutFile.txt.gz",
-               np.transpose([healpixno,ra,dec,
-                             Map_Position_Data,probsum]),
-               fmt="%16d %10.5f %10.5f %10.5f %10.5f",
-
-               header="Healpix Number         Ra        Dec Probability Cumulative Prob")
+    if TextOutput:
+        np.savetxt("SkyMap_OutFile.txt.gz",
+                   np.transpose([healpixno,ra,dec,
+                                 Map_Position_Data,probsum]),
+                   fmt="%16d %10.5f %10.5f %10.5f %10.5f",
+                   
+                   header="Healpix Number         Ra        Dec Probability Cumulative Prob")
+    else:
+        np.savez("SkyMap_OutFile",
+                 healpixno=healpixno,ra=ra,dec=dec,
+                 prob=Map_Position_Data,probsum=probsum)
 
     # fLigofile = open('./SkyMap_OutFile.txt', 'w')
     # fLigofile.write("# Healpix Number, Ra, Dec, Probability, Cumulative P "+"\n")
 
     if nvalues != None: 
-        print("\n")
-        print("# Most "+str(nvalues)+" probable values :")
-        import sys
+        print("# %d most probable values :" % nvalues)
         ii=range(nvalues)
         np.savetxt(sys.stdout,
                    np.transpose([healpixno[ii],ra[ii],dec[ii],
@@ -174,9 +180,7 @@ def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,
                    header="Healpix Number         Ra        Dec Probability Cumulative Prob")
 
     if cumprob != None: 
-        print("\n")
         print("# Most probable values with cumprob < %g" % cumprob)
-        import sys
         ii=(probsum<cumprob)
         np.savetxt(sys.stdout,
                    np.transpose([healpixno[ii],ra[ii],dec[ii],
@@ -234,6 +238,10 @@ def _parse_command_line_arguments():
     parser.add_argument('--no-savefigures',dest='savefigures',action='store_false')
     parser.set_defaults(savefigures=False)
 
+    parser.add_argument('--textoutput',dest='textoutput',action='store_true')
+    parser.add_argument('--no-textoutput',dest='textoutput',action='store_false')
+    parser.set_defaults(textoutput=False)
+
     arguments = vars(parser.parse_args())
     return arguments
 
@@ -251,7 +259,7 @@ def _main():
     
     MakeObsPlan(args['sky-map'],args['nside'],args['savefigures'],
                 nvalues=args['nvalues'],cumprob=args['cumprob'],
-                DensityMap_name=args['gal_map'])
+                DensityMap_name=args['gal_map'],TextOutput=args['textoutput'])
 
 '''    
     #### Input Parameters #####
