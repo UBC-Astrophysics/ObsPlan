@@ -65,13 +65,6 @@ def isPower(num, base):
     power = int (mt.log (num, base) + 0.5)
     return base ** power == num
 
-def integers():
-    """Infinite sequence of integers."""
-    i = 1
-    while True:
-        yield i
-        i = i + 1
-
 def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,
                 cumprob=None,DensityMap_name=None,
                 TextOutput=False):
