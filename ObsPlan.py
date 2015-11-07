@@ -42,7 +42,6 @@ import numpy as np
 import healpy as hp
 import matplotlib.pyplot as plt
 import sys
-import pyfits
 
 
 def IndexToDeclRa(NSIDE,index):
