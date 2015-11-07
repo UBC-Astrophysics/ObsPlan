@@ -69,7 +69,6 @@ def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,
     
     #Check if the nside is a power of two
     val = isPower(nside,2)
-    print(isPower(nside,2))
     
     if val == False:
         print(" **************** WARNING  **************** ")
@@ -150,28 +149,41 @@ def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,
     healpixno=np.argsort(-Map_Position_Data)
     
     # Output Largest to smallest
-    probsum=np.cumsum(Map_Position_Data[healpixno])
-    sum = 0
-    count = 0
-    fLigofile = open('./SkyMap_OutFile.txt', 'w')
-    fLigofile.write("# Healpix Number, Ra, Dec, Probability, Cumulative P "+"\n")
+    Map_Position_Data=Map_Position_Data[healpixno]
+    probsum=np.cumsum(Map_Position_Data)
+    dec, ra = IndexToDeclRa(nside,healpixno)
+    np.savetxt("SkyMap_OutFile.txt.gz",
+               np.transpose([healpixno,ra,dec,
+                             Map_Position_Data,probsum]),
+               fmt="%16d %10.5f %10.5f %10.5f %10.5f",
+
+               header="Healpix Number         Ra        Dec Probability Cumulative Prob")
+
+    # fLigofile = open('./SkyMap_OutFile.txt', 'w')
+    # fLigofile.write("# Healpix Number, Ra, Dec, Probability, Cumulative P "+"\n")
 
     if nvalues != None: 
         print("\n")
-        print("Most "+str(nvalues)+" probable values :")
-        print("# Healpix Number, Ra, Dec, Probability, Cumulative P ")
-        
-    for i in healpixno:
-        # Convert Pixels to RA and DEC in Normalized MAP
-        dec, ra = IndexToDeclRa(nside,i)
-        sum+=Map_Position_Data[i]
-        fLigofile.write(str(i)+" "+str(ra)+" "+str(dec)+" "+str(Map_Position_Data[i])+" "+str(probsum[i])+"\n")
-        count += 1
-        if nvalues !=None:
-            if count <= nvalues :
-                print(str(i)+" "+str(ra)+" "+str(dec)+" "+str(Map_Position_Data[i])+" "+str(sum))
-    
-    fLigofile.close()
+        print("# Most "+str(nvalues)+" probable values :")
+        import sys
+        ii=range(nvalues)
+        np.savetxt(sys.stdout,
+                   np.transpose([healpixno[ii],ra[ii],dec[ii],
+                                 Map_Position_Data[ii],probsum[ii]]),
+                   fmt="%16d %10.5f %10.5f %10.5f %10.5f",
+                   header="Healpix Number         Ra        Dec Probability Cumulative Prob")
+
+    if cumprob != None: 
+        print("\n")
+        print("# Most probable values with cumprob < %g" % cumprob)
+        import sys
+        ii=(probsum<cumprob)
+        np.savetxt(sys.stdout,
+                   np.transpose([healpixno[ii],ra[ii],dec[ii],
+                                 Map_Position_Data[ii],probsum[ii]]),
+                   fmt="%16d %10.5f %10.5f %10.5f %10.5f",
+                   header="Healpix Number         Ra        Dec Probability Cumulative Prob")
+
 
 
 def _parse_command_line_arguments():
@@ -215,7 +227,7 @@ def _parse_command_line_arguments():
     parser.add_argument(
         '--cumprob',
         required=False,
-        type=int,
+        type=float,
         help='Output up to the given cumulative probability'
     )
     parser.add_argument('--savefigures',dest='savefigures',action='store_true')
