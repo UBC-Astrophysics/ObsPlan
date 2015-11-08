@@ -17,26 +17,20 @@ depends of the field of view of the telescope).
   P(data) is constant with position so we neglect it.
 
 1) Load the skymap
-
 2) Load the optional galaxy density map
-
   a) If one map has nside greater than the other, resample the map with the larger value of nside to that of the smaller.
-
   b) Multiply the resulting maps together
-
 3) Resample the probability map to the value of nside parameter (if different)
-
 4) Sort the array by the probability 
-
 5) Output the top N regions with healpix number, RA, Dec and probability
 
   or 
 
   Output the regions that add to a given fraction of the total probability.
 
-  By default it would output the top ten regions, but you could set a
-  parameter less than one to do the fraction of the total or greater than
-  one to output N regions.
+ObsPlan typically takes about one second to generate an observing plan and if one uses galaxy map, one can reduce the
+number of fields required to search within the ninety percent probability region by a factor of two to three.
+
 
 # LIGOClient
 
