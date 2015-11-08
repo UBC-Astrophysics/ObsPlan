@@ -16,13 +16,13 @@ depends of the field of view of the telescope).
   
   P(data) is constant with position so we neglect it.
 
-1) Load the skymap
-2) Load the optional galaxy density map
-  a) If one map has nside greater than the other, resample the map with the larger value of nside to that of the smaller.
-  b) Multiply the resulting maps together
-3) Resample the probability map to the value of nside parameter (if different)
-4) Sort the array by the probability 
-5) Output the top N regions with healpix number, RA, Dec and probability
+1. Load the skymap
+2. Load the optional galaxy density map
+  a. If one map has nside greater than the other, resample the map with the larger value of nside to that of the smaller.
+  b. Multiply the resulting maps together
+3. Resample the probability map to the value of nside parameter (if different)
+4. Sort the array by the probability 
+5. Output the top N regions with healpix number, RA, Dec and probability
 
   or 
 
