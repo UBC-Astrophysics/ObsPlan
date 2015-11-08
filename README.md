@@ -28,8 +28,7 @@ depends of the field of view of the telescope).
 
   Output the regions that add to a given fraction of the total probability.
 
-ObsPlan typically takes about one second to generate an observing plan and if one uses galaxy map, one can reduce the
-number of fields required to search within the ninety percent probability region by a factor of two to three.
+ObsPlan typically takes about one second to generate an observing plan and if one uses a galaxy map, one can reduce the number of fields required to search within the ninety percent probability region by a factor of two to three.
 
 
 # LIGOClient
