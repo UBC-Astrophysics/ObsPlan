@@ -16,27 +16,20 @@ depends of the field of view of the telescope).
   
   P(data) is constant with position so we neglect it.
 
-1) Load the skymap
-
-2) Load the optional galaxy density map
-
-  a) If one map has nside greater than the other, resample the map with the larger value of nside to that of the smaller.
-
-  b) Multiply the resulting maps together
-
-3) Resample the probability map to the value of nside parameter (if different)
-
-4) Sort the array by the probability 
-
-5) Output the top N regions with healpix number, RA, Dec and probability
+1. Load the skymap
+2. Load the optional galaxy density map
+  1. If one map has nside greater than the other, resample the map with the larger value of nside to that of the smaller.
+  2. Multiply the resulting maps together
+3. Resample the probability map to the value of nside parameter (if different)
+4. Sort the array by the probability 
+5. Output the top N regions with healpix number, RA, Dec and probability
 
   or 
 
   Output the regions that add to a given fraction of the total probability.
 
-  By default it would output the top ten regions, but you could set a
-  parameter less than one to do the fraction of the total or greater than
-  one to output N regions.
+ObsPlan typically takes about one second to generate an observing plan and if one uses a galaxy map, one can reduce the number of fields required to search within the ninety percent probability region by a factor of two to three.
+
 
 # LIGOClient
 
@@ -48,13 +41,13 @@ Create a galaxy density map from a catalogue in FITS format.
 
 # Make2MASSMaps
 
-Generates four galaxy density maps from the 2MASS Extended Source Survey
+Generates four galaxy density maps from the 2MASS Extended Source Survey depicted below.
 
 ## Building a Healpix Map from a Catalog
 
 The initial source localizations from LIGO-Virgo will cover large areas of sky and will be provided in the form a healpix map. Astrophysical sources of gravitational radiation are likely to reside in galaxies, so it would make sense to search first in regions where the LIGO-Virgo probability is large and where the density of galaxies is large as well. See [Gehrels et al. (2015)](http://arxiv.org/abs/1508.03608) for more details.
 
-To help this process several galaxy and cluster catalogues are already linked to the LIGO-Virgo sky viewer so that observers can superimpose the galaxy catalogue visually on the LIGO-Virgo probability map. Here we implement a potentially simpler and definitely faster way to achieve a similar result. The python script below will calculate a healpix map of the galaxy density within the catalogue.
+To help this process several galaxy and cluster catalogues are already linked to the LIGO-Virgo sky viewer so that observers can superimpose the galaxy catalogue visually on the LIGO-Virgo probability map. Here we implement a potentially simpler and definitely faster way to achieve a similar result. The python script above (Make2MASSMaps) will calculate a healpix map of the galaxy density within the catalogue.
 
 Under the Bayesian prior assumption that the probability of a gravitational-wave event from a given region of space is propoortional to the density of galaxies within volume, one can calculate an improved localization of the position of the source simply by multiplying the LIGO-Virgo skymap by the skymap produced by this script, and then look in the most probable regions.
 
