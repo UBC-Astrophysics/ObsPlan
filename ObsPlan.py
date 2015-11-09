@@ -62,10 +62,10 @@ import sys
 def IndexToDeclRa(NSIDE,index):
     
     theta,phi=hp.pixelfunc.pix2ang(NSIDE,index)
-    return -np.degrees(theta-mt.pi/2.),np.degrees(mt.pi*2.-phi)
+    return np.degrees(mt.pi/2.-theta),np.degrees(phi)
 
 def DeclRaToIndex(decl,RA,NSIDE):
-    return hp.pixelfunc.ang2pix(NSIDE,np.radians(-decl+90.),np.radians(360.-RA))
+    return hp.pixelfunc.ang2pix(NSIDE,np.radians(90.-decl),np.radians(RA))
 
 
 def PlotMap(Map,NsideMap,MapName):

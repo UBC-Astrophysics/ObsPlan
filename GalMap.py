@@ -42,10 +42,10 @@ import pyfits
 def IndexToDeclRa(NSIDE,index):
     
     theta,phi=hp.pixelfunc.pix2ang(NSIDE,index)
-    return -np.degrees(theta-mt.pi/2.),np.degrees(mt.pi*2.-phi)
+    return np.degrees(mt.pi/2.0-theta),np.degrees(phi)
 
 def DeclRaToIndex(decl,RA,NSIDE):
-    return hp.pixelfunc.ang2pix(NSIDE,np.radians(-decl+90.),np.radians(360.-RA))
+    return hp.pixelfunc.ang2pix(NSIDE,np.radians(90.-decl),np.radians(RA))
 
 def isPower(num, base):
     if base == 1 and num != 1: return False
@@ -54,7 +54,7 @@ def isPower(num, base):
     power = int (mt.log (num, base) + 0.5)
     return base ** power == num
 
-def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap,zcolumn=None):
+def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap,zcolumn=None,sigma=0.01):
     #Check if the nside is a power of two
     val = isPower(nvalues,2)
     
@@ -106,7 +106,7 @@ def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap,zcolumn=None):
     
     galpixels_GalMap[pixels[(z>z_min) & (z<z_max)]] += 1
     
-    GalMap_smoothed = hp.sphtfunc.smoothing(galpixels_GalMap,sigma = 0.01)
+    GalMap_smoothed = hp.sphtfunc.smoothing(galpixels_GalMap,sigma = sigma)
     
     if showMap:
         hp.mollview(galpixels_GalMap,coord='C',rot = [0,0.3],
@@ -169,11 +169,18 @@ def _parse_command_line_arguments():
         type=str,
         help='A name of the column in FITS file that contains the redshift (default ZPHOTO)'
     )
+    parser.add_argument('--smooth',
+                        type=float,
+                        help='smoothing scale in radians (default 0.01)',
+                        required=False)
+    parser.set_defaults(smooth=0.01)
+
     parser.add_argument('--savefigures',dest='savefigures',action='store_true',
                         help='output the healpix data in a png file')
     parser.add_argument('--no-savefigures',dest='savefigures',action='store_false',
                             help='do not output the healpix data in a png file (default)')
     parser.set_defaults(savefigures=False)
+
 
     arguments = vars(parser.parse_args())
     return arguments
@@ -201,7 +208,7 @@ def _main():
 
     args=_parse_command_line_arguments()
     MakeGalMap(args['galaxy-catalogue'],args['nside'],args['zmin'],args['zmax'],
-                    args['savefigures'],zcolumn=args['zcolumn'])
+                    args['savefigures'],zcolumn=args['zcolumn'],sigma=args['smooth'])
     
 #------------------------------------------------------------------------------
 # Start program execution.
