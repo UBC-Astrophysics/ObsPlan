@@ -77,6 +77,53 @@ straightforward and rapid technique to generate a nearly optimal
 observing plan to follow up the events rapidly (i.e. within a few
 seconds of the trigger). 
 
+\section{Galaxy Catalogues}
+
+\section{Bayesian Approach to Follow-Up}
+
+Because we will be interested in the rapid follow-up of candidate
+gravitational-wave events, we will focussed on the rapid Bayesian
+reconsruction outlined by \citet{2015arXiv150803634S}, BAYESTAR.
+At the most basic level, BAYESTAR yields a probability map on the sky
+in the form of a HEALPix map where each pixel contains the probability
+$P(d|m)$ that a particular model (i.e. position on the sky) will yield
+the data (i.e. the observed strains on the LIGO and Virgo
+interferometers).  To plan an observing strategy one would like the
+probability of a particular model (i.e. position on the sky) given the
+data.  We have from Bayes's theorem
+\begin{equation}
+  P(\mathrm{position}|\mathrm{data}) = \frac{P(\mathrm{position}
+    P(\mathrm{data}|\mathrm{position})}{P(\mathrm{data})}.
+  \label{eq:1}
+\end{equation}
+If we make the additional mild assumption that gravitational-waves
+originate from nearly galaxies, the probability of a given position on
+the sky naturally is proportional to the surface density of galaxies
+in that direction within the distance range determined from the
+modelling of the gravitational waveform.  Of course, these distance
+estimates will usually have large uncertainities so the distance range
+over which to integrate the galaxy density distribution will also be
+large, so highly accurate redshift information is not needed to
+construct $P(\mathrm{position}$.
+
+Furthermore, because we will ultimately be interested in which fields
+to observe (not which particular galaxies), accurate positions are not
+required in the construction of $P(\mathrm{position}$. It is natural
+to sample $P(\mathrm{position}$ also as a HEALPix grid with each pixel
+covering about the same solid angle as the field of view of the
+telescope of interest or the BAYESTAR map (a HEALPix level of 512 or
+about 50 square arcminutes per pixel), so positions no more accurate
+than arcminutes are required.  The key to generate the observing plan
+rapidly is to calculate the required galaxy density maps beforehand in
+principle at the desired resolution (this optimization only speeds the
+process up slightly) for the distance ranges of interest.  With the
+arrival of an alert, all that is required is to calculate
+Eq.~(\ref{eq:1}) using the HEALPix maps, resample to the scale of the
+telescope, renormalize the probability, sort the pixels from most
+likely to least and output the positions to cover a given amount of
+cumulative probability.
+
+
 \begin{figure}
   \includegraphics[width=\columnwidth,clip,trim=0 1.35cm 0 0]{fig1u} \\
   \includegraphics[width=\columnwidth,clip,trim=0 0 0 0.15cm]{fig1l} 
