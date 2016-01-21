@@ -16,7 +16,7 @@
 \newcommand{\msun}{\mathrm{M}_\odot}
 
 \title[2MPZ and LIGO]{Using the 2-MASS Photometric Redshift Survey to optimize LIGO Follow-Up Observations}
-\author[Antolini \& Heyl]{Elisa Antolini$^{1}$, Jeremy S. Heyl$^{1}$\thanks{Email:
+\author[Antolini \& Heyl]{Elisa Antolini$^{1}$, Jeremy S. Heyl$\thanks{Email:
     heyl@phas.ubc.ca; Canada Research Chair}$^{2}$ \\
   $^{1}$Dipartimento di Fisica e Geologia, Universit\`a degli Studi di Perugia, I-06123 Perugia, Italia \\
   $^{2}$Department of Physics and Astronomy, University of British
@@ -77,20 +77,19 @@ straightforward and rapid technique to generate a nearly optimal
 observing plan to follow up the events rapidly (i.e. within a few
 seconds of the trigger). 
 
-\section{Galaxy Catalogues}
-
 \section{Bayesian Approach to Follow-Up}
 
 Because we will be interested in the rapid follow-up of candidate
 gravitational-wave events, we will focussed on the rapid Bayesian
-reconsruction outlined by \citet{2015arXiv150803634S}, BAYESTAR.
-At the most basic level, BAYESTAR yields a probability map on the sky
-in the form of a HEALPix map where each pixel contains the probability
-$P(d|m)$ that a particular model (i.e. position on the sky) will yield
-the data (i.e. the observed strains on the LIGO and Virgo
-interferometers).  To plan an observing strategy one would like the
-probability of a particular model (i.e. position on the sky) given the
-data.  We have from Bayes's theorem
+reconsruction outlined by \citet{2015arXiv150803634S}, BAYESTAR.  At
+the most basic level, BAYESTAR yields a probability map on the sky in
+the form of a HEALPpix map \citep{2005ApJ...622..759G} where each
+pixel contains the probability $P(d|m)$ that a particular model
+(i.e. position on the sky) will yield the data (i.e. the observed
+strains on the LIGO and Virgo interferometers).  To plan an observing
+strategy one would like the probability of a particular model
+(i.e. position on the sky) given the data.  We have from Bayes's
+theorem
 \begin{equation}
   P(\mathrm{position}|\mathrm{data}) = \frac{P(\mathrm{position}
     P(\mathrm{data}|\mathrm{position})}{P(\mathrm{data})}.
@@ -104,12 +103,12 @@ modelling of the gravitational waveform.  Of course, these distance
 estimates will usually have large uncertainities so the distance range
 over which to integrate the galaxy density distribution will also be
 large, so highly accurate redshift information is not needed to
-construct $P(\mathrm{position}$.
+construct $P(\mathrm{position})$.
 
 Furthermore, because we will ultimately be interested in which fields
 to observe (not which particular galaxies), accurate positions are not
-required in the construction of $P(\mathrm{position}$. It is natural
-to sample $P(\mathrm{position}$ also as a HEALPix grid with each pixel
+required in the construction of $P(\mathrm{position})$. It is natural
+to sample $P(\mathrm{position})$ also as a HEALPix grid with each pixel
 covering about the same solid angle as the field of view of the
 telescope of interest or the BAYESTAR map (a HEALPix level of 512 or
 about 50 square arcminutes per pixel), so positions no more accurate
@@ -123,10 +122,13 @@ telescope, renormalize the probability, sort the pixels from most
 likely to least and output the positions to cover a given amount of
 cumulative probability.
 
+\section{Galaxy Catalogues}
+
+
 
 \begin{figure}
-  \includegraphics[width=\columnwidth,clip,trim=0 1.35cm 0 0]{fig1u} \\
-  \includegraphics[width=\columnwidth,clip,trim=0 0 0 0.15cm]{fig1l} 
+  \includegraphics[width=\columnwidth,clip,trim=0 1.35cm 0 0]{T125738_bayestar_2MPZgz_0.03_0.04.pdf} 
+  \includegraphics[width=\columnwidth,clip,trim=0 0 0 0.15cm]{T125738_bayestar_2MPZgz_0.01_0.05.pdf} 
   \caption{The number of fields required to cover the given fraction
     of the probablity region for a simulated LIGO detection (red
     curves without the galaxy map, green curves with a smoothed
