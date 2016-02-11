@@ -1,4 +1,5 @@
 \documentclass[useAMS,usenatbib]{mn2e}
+
 \usepackage{graphicx}
 \usepackage{url}
 %\usepackage{tikz}
@@ -97,13 +98,14 @@ theorem
 \end{equation}
 If we make the additional mild assumption that gravitational-waves
 originate from nearly galaxies, the probability of a given position on
-the sky naturally is proportional to the surface density of galaxies
-in that direction within the distance range determined from the
-modelling of the gravitational waveform.  Of course, these distance
-estimates will usually have large uncertainities so the distance range
-over which to integrate the galaxy density distribution will also be
-large, so highly accurate redshift information is not needed to
-construct $P(\mathrm{position})$.
+the sky naturally is proportional to the density (or perhaps the
+luminositiy density) of galaxies in that direction integrated over
+distance range determined from the modelling of the gravitational
+waveform.  Of course, these distance estimates will usually have large
+uncertainities so the distance range over which to integrate the
+galaxy density distribution will also be large, so highly accurate
+redshift information is not needed to construct
+$P(\mathrm{position})$.
 
 Furthermore, because we will ultimately be interested in which fields
 to observe (not which particular galaxies), accurate positions are not
@@ -120,11 +122,13 @@ arrival of an alert, all that is required is to calculate
 Eq.~(\ref{eq:1}) using the HEALPix maps, resample to the scale of the
 telescope, renormalize the probability, sort the pixels from most
 likely to least and output the positions to cover a given amount of
-cumulative probability.
+cumulative probability (this entire process takes typically less than
+one second).
 
 \section{Galaxy Catalogues}
 
 
+\section{Results}
 
 \begin{figure}
   \includegraphics[width=\columnwidth,clip,trim=0 1.35cm 0 0]{T125738_bayestar_2MPZgz_0.03_0.04.pdf} 
@@ -140,6 +144,8 @@ cumulative probability.
     view. The redshift range of the galaxy map in the upper panel is
     $0.03<z<0.04$ and $0.01<z<0.05$ in the lowel panel.}
 \end{figure}
+
+\section{Conclusions}
 
 This work was supported by the Natural Sciences and Engineering
 Research Council of Canada, the Canadian Foundation for Innovation,
