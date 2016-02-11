@@ -87,7 +87,9 @@ def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap,zcolumn=None,sigma=0.
     
     Gal_RA  = tabledata.field('RA') * radians_to_deg
     Gal_DEC = tabledata.field('DEC') * radians_to_deg
-    # K_mag   = tabledata.field('KCORR')
+#    Gal_RA  = tabledata.field('L')
+#    Gal_DEC = tabledata.field('B')
+     # K_mag   = tabledata.field('KCORR')
     if zcolumn==None:
         z = tabledata.field('ZPHOTO')
     else:
