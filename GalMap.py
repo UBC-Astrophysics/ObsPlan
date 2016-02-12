@@ -8,7 +8,8 @@
 #
 # This script generates a healpix map from a galaxy catalogue
 #
-# usage: GalMap.py [-h] [--zcolumn ZCOLUMN] [--savefigures] [--no-savefigures]
+# usage: GalMap.py [-h] [--zcolumn ZCOLUMN] [--num-bootstrap NUM_BOOTSTRAP]
+#                   [--smooth SMOOTH]  [--savefigures] [--no-savefigures]
 #                   galaxy-catalogue nside zmin zmax
 #
 #
@@ -54,7 +55,8 @@ def isPower(num, base):
     power = int (mt.log (num, base) + 0.5)
     return base ** power == num
 
-def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap,zcolumn=None,sigma=0.01):
+def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap,zcolumn=None,
+               sigma=0.01,numbootstrap=None):
     #Check if the nside is a power of two
     val = isPower(nvalues,2)
     
@@ -109,23 +111,36 @@ def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap,zcolumn=None,sigma=0.
     GalMap_smoothed = hp.sphtfunc.smoothing(galpixels_GalMap,sigma = sigma)
     
     if showMap:
-        hp.mollview(galpixels_GalMap,coord='C',rot = [0,0.3],
+        hp.mollview(galpixels_GalMap,coord=['C','G'],rot = [0,0.3],
                     title='Relative Surface Density of Galaxies: %g < z < %g' % (z_min,z_max), unit='prob', xsize=nvalues)
         hp.graticule()
         plt.savefig(FitsMapCat_name+".png")
         plt.show()
         
-        hp.mollview(GalMap_smoothed,coord='C',rot = [0,0.3],
+        hp.mollview(GalMap_smoothed,coord=['C','G'],rot = [0,0.3],
                     title='Relative Surface Density of Galaxies: %g < z < %g' % (z_min,z_max), unit='prob', xsize=nvalues)
 
         hp.graticule()
         plt.savefig(FitsMapCat_name+"_smoothed.png")
         plt.show()
     
+    hp.write_map(FitsMapCat_name+".fits.gz", galpixels_GalMap)
+    hp.write_map(FitsMapCat_name+"_smoothed.fits.gz", GalMap_smoothed)
     
-    hp.write_map(FitsMapCat_name+".fits", galpixels_GalMap)
-    hp.write_map(FitsMapCat_name+"_smoothed.fits", GalMap_smoothed)
 
+    if (numbootstrap!=None):
+        for nboot in range(numbootstrap):
+            iboot=np.intp(np.random.uniform(low=0.0,high=len(pixels),size=len(pixels)))
+            pixelsboot = pixels[iboot]
+            zboot = z[iboot]
+            galpixels_GalMap=0*galpixels_GalMap
+            galpixels_GalMap[pixelsboot[(zboot>z_min) & (zboot<z_max)]] += 1 
+            GalMap_smoothed = hp.sphtfunc.smoothing(galpixels_GalMap,sigma = sigma)
+            hp.write_map("%s_%03d.fits.gz" % (FitsMapCat_name,nboot), galpixels_GalMap)
+            hp.write_map("%s_%03d_smoothed.fits.gz" % (FitsMapCat_name,nboot), GalMap_smoothed)
+    
+
+        
 
 def _parse_command_line_arguments():
     """
@@ -169,6 +184,12 @@ def _parse_command_line_arguments():
         type=str,
         help='A name of the column in FITS file that contains the redshift (default ZPHOTO)'
     )
+    parser.add_argument(
+        '--numbootstrap',
+        required=False,
+        type=int,
+        help='Number of bootstrapped maps to produce'
+    )
     parser.add_argument('--smooth',
                         type=float,
                         help='smoothing scale in radians (default 0.01)',
@@ -208,7 +229,8 @@ def _main():
 
     args=_parse_command_line_arguments()
     MakeGalMap(args['galaxy-catalogue'],args['nside'],args['zmin'],args['zmax'],
-                    args['savefigures'],zcolumn=args['zcolumn'],sigma=args['smooth'])
+                    args['savefigures'],zcolumn=args['zcolumn'],
+               sigma=args['smooth'],numbootstrap=args['numbootstrap'])
     
 #------------------------------------------------------------------------------
 # Start program execution.
