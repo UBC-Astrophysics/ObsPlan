@@ -13,6 +13,7 @@
 \newcommand{\pasa}{Publ. Ast. Soc. Aust.}
 \newcommand{\pasp}{Publ. Ast. Soc. Pac.}
 \newcommand{\prl}{Phys. Rev. Lett.}
+\newcommand{\prd}{Phys. Rev. D}
 \newcommand{\msun}{\mathrm{M}_\odot}
 
 \title[2MPZ and LIGO]{Using the 2-MASS Photometric Redshift Survey to optimize LIGO Follow-Up Observations}
@@ -140,13 +141,106 @@ one second).
 
 \section{Galaxy Catalogues}
 
+To gain a picture of the local Universe, our focus will be the
+completness of the data rather than the accuracy of the distances and
+positions.  \citet{2015arXiv150803608G} combine several redshift
+surveys
+\citep[e.g.][]{2002MNRAS.336..907N,2003MNRAS.344..307L,2005MNRAS.360...81D,
+  2012ApJS..199...26H}
+that cover a large portion of the sky, but at various depths and
+attempt to increasing the completeness of the sample by using only the
+galaxies near the upper-end of the luminosity function ({\em i.e.}
+$L\sim L_*$) and ; the discovery that binary black holes with large
+masses (!)  dominate the initial detections indicates that focussing
+the search on massive galaxies might not be the best strategy.  After
+all such large black holes have not been found so far in our
+approximately $L_*$-galaxy, the Milky Way, or our neighbour,
+Andromeda.  In fact theoretical arguments indicate that the production
+of such massive black holes results from the evolution of massive
+stars in low metallicity galaxies which are typically small in the
+local Universe. Our goal is to have a nearly complete survey that
+attempts to be unbiased with respect to the mass of the galaxy.
 
+We follow in spirit the work of \citet{2004PASA...21..396J} who used
+The Two Micron All Sky Survey extended source catalogue \citep[2MASS
+  XSC,][]{2000AJ....119.2498J,2006AJ....131.1163S}, and the assuption
+that all galaxies have the same $K_s-$band luminosity of around $L_*$
+to estimate distances to each galaxy and create sky maps of the local
+Universe.  A substantial fraction of 2MASS has measured redshifts
+\citep[e.g][]{2012ApJS..199...26H}.  \citet{2014ApJS..210....9B}
+combined the photometric data from 2MASS XSC with additional
+photometry the mid-infrared from WISE \citep{2010AJ....140.1868W} and
+the optical from SuperCOSMOS
+\citep{2001MNRAS.326.1315H,2001MNRAS.326.1295H,2001MNRAS.326.1279H}.
+Using this multiband photometry, they trained neural networks using
+measured spectroscopic redshifts from SDSS
+\citep{2012ApJS..203...21A,2014ApJS..211...17A}, 2dF
+\citep{2001MNRAS.328.1039C,2003astro.ph..6581C}, 6dF
+\citep{2004MNRAS.355..747J,2009MNRAS.399..683J} and other catalogues
+to determine photometric redshifts.  They also extend the photometric
+redshift catalogue beyond the 2MASS XSC building a three-dimensional
+map of the sky out to a redshift of nearly 0.2 well into the realm of
+the first gravitational wave event.  The 2MASS Photometric Redshift
+(2MPZ) catalogue contains over one million galaxies with a median
+redshift of 0.1 with a typical scatter between the
+photometric and spectroscopic redshifts (where both are known) of
+$\sigma_z = 0.015$.
+
+Except for the most local sources, the estimate distances from the
+gravitational wave data itself have comparable errors to this, so this
+catalogue is sufficiently accurate to calculate the surface density of
+galaxies with the expected redshift range of a particular
+gravitational-wave detection.  Furthermore, for the nearest sources,
+there are nearly uniform all-sky redshift surveys which would be more
+appropriate for this task
+\citep[e.g]{2000MNRAS.317...55S,2012ApJS..199...26H}.  Of course, all
+of the techniques outlined here can be applied to these more nearby
+catalogues to produce sky maps of even more nearby galaxies.  Here we
+will focus on galaxies with photometric redshifts between 0.01 and 0.1
+from the 2MPZ as depicted in Fig.~\ref{fig:galmap}.  For closer
+galaxies the redshift error is significant, and the outer end of the
+range is both the median redshift of the catalogue and the typical
+distances of the binary-black-hole sources.
 \begin{figure}
   \includegraphics[width=\columnwidth]{2MPZgz_001_01_smoothed}
   \caption{The relative surface density of galaxies in the 2-MASS Photometric Redshift Survey with photometric redshifts between 0.01 and 0.1, smoothed with a Gaussian of 0.6 degrees (0.01 radian).}
   \label{fig:galmap}
 \end{figure}
 
+To produce this map we divided the sky into 3,145,728 regions (each of
+about 45 square arcminutes, four ACS fields) using a HEALPix
+\citep{2005ApJ...622..759G} tesselation with $\mathtt{NSIDE}=512$.
+Each cell of the map simply contains the number of galaxies in the
+2MPZ catalogue within the range of photometric redshift that lie
+within that portion of sky.  We have subsequently smoothed the map
+with a Gaussian with $\sigma=0.01$ radian.  Typically no HEALPix pixel
+contains more than one galaxy from the catalogue.  After smoothing we
+notice the large-scale structure even when we have averaged over
+distance.  This demonstrates the potential optimization in the
+observing strategy by observing fields with nearby galaxies. Depending
+on whether one believes that the sources are associated with the
+visible portion of galaxies or may travel some distance from the
+galaxy itself before the gravitational-wave event, one would use
+either the raw galaxy counts or the smoothed map.
+
+Furthermore, our choice of weighting the fields simply by the number
+of galaxies within each field is perhaps the most simple one.  Given
+the type of event, one could use a map that gives small,
+low-metallicity galaxies more weight or weigh the galaxies by their
+mass or luminosity.  Of course, all of these possibilities would be
+informed by one's prior knownledge of the source inspired by
+theoretical models and the hints from the waveform itself and give a
+better estimate of $P(\mathrm{position})$.  The key is to calculate these
+maps beforehand.
+
+There is a further structure apparent in the map, and this is of
+course the zone of avoidance imposed by the disk and bulge of our
+Galaxy. One can attempt to probe the zone of avoidance
+\citep[e.g][]{2000AJ....120..298J} and future 21-cm surveys like CHIME
+\citep{2014era..conf10102V} will also probe the large-scale structure
+beyond the Galactic plane.  However, the existing galaxy density map
+as depicted in Fig.~\ref{fig:galmap} can yield an estimate of the
+structure obscured by the Galaxy.
 \begin{figure}
   \includegraphics[width=\columnwidth]{test_mask}
   \includegraphics[width=\columnwidth]{combined}
