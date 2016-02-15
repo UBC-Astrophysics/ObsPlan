@@ -18,7 +18,7 @@
 
 \title[2MPZ and LIGO]{Using the 2-MASS Photometric Redshift Survey to optimize LIGO Follow-Up Observations}
 \author[Antolini \& Heyl]{Elisa Antolini$^{1}$, Jeremy S. Heyl$\thanks{Email:
-    heyl@phas.ubc.ca; Canada Research Chair}$^{2}$ \\
+    heyl@phas.ubc.ca; Canada Research Chair}^{2}$ \\
   $^{1}$Dipartimento di Fisica e Geologia, Universit\`a degli Studi di Perugia, I-06123 Perugia, Italia \\
   $^{2}$Department of Physics and Astronomy, University of British
   Columbia, 6224 Agricultural Road, Vancouver, BC V6T 1Z1, Canada\\
@@ -126,7 +126,7 @@ to observe (not which particular galaxies), accurate positions are not
 required in the construction of $P(\mathrm{position})$. It is natural
 to sample $P(\mathrm{position})$ also as a HEALPix grid with each pixel
 covering about the same solid angle as the field of view of the
-telescope of interest or the BAYESTAR map (a HEALPix level of 512 or
+telescope of interest or the BAYESTAR map (a HEALPix $\mathtt{NSIDE}=512$ or
 about 50 square arcminutes per pixel), so positions no more accurate
 than arcminutes are required.  The key to generate the observing plan
 rapidly is to calculate the required galaxy density maps beforehand in
@@ -235,12 +235,97 @@ maps beforehand.
 
 There is a further structure apparent in the map, and this is of
 course the zone of avoidance imposed by the disk and bulge of our
-Galaxy. One can attempt to probe the zone of avoidance
+Galaxy. Depending on the nature of the follow-up
+({\em e.g.} gamma-ray and radio) observations it may make
+sense to include regions along the Galactic plane where one thinks
+nearby galaxies should be. One can attempt to probe the zone of avoidance
 \citep[e.g][]{2000AJ....120..298J} and future 21-cm surveys like CHIME
 \citep{2014era..conf10102V} will also probe the large-scale structure
-beyond the Galactic plane.  However, the existing galaxy density map
+beyond the Galactic plane.   However, the existing galaxy density map
 as depicted in Fig.~\ref{fig:galmap} can yield an estimate of the
-structure obscured by the Galaxy.
+structure obscured by the Galaxy.  The technique that we will use in
+similar to that used by \citet{2008StMet...5..289A} to inpaint the CMB
+anisotropies across the Galactic plane.  Here we will determine the
+region masked by the Galaxy by finding the region in which the density
+of galaxies is less than one tenth of the mean as depicted in the
+upper panel of Fig.~\ref{fig:infilling}.  This region is much narrower
+than the infilled region of the CMB, and furthermore the observed
+structures the galaxy map are typically larger than the width of the
+mask, so we can reliably estimate the hidden structures.  In spite of
+these differences the basic strategy is similar.  We assume that the
+underlying galaxy map (behind the Galaxy) is isotropic; therefore, it
+is natural to represent it as a sum of spherical harmonics;
+furthermore, we can argue that a small fraction of the components
+contain most of the power, {\em i.e.} the representation of the
+underlying map is sparse, so we can use the adaptive thresholding
+strategy of \citet{2007ITIP...16.2675B} to estimate the underlying
+galaxy distribution.
+
+The technique is straightforward to describe and to implement, and we
+will outline it below.  Let the map be given by $a(\Omega)$ and the
+mask by $m(\Omega)$ where $m(\Omega)=1$ where the underlying galaxies
+are visible.
+\begin{enumerate}
+\item
+  Set an initial guess for the underlying map.
+\begin{equation}
+  y_1(\Omega) = \frac{\left \langle  m(\Omega) a(\Omega)  \right \rangle}{\left \langle m(\Omega) \right \rangle }
+    \label{eq:2}
+\end{equation}
+\item
+  Calculate the residual of the current guess
+  \begin{equation}
+    r_t(\Omega) =  m(\Omega) a(\Omega) - y_t(\Omega)
+    \label{eq:3}
+  \end{equation}
+\item
+  Expand the sum of the residuals in the unmasked region and the current guess
+  in spherical harnomics.
+  \begin{equation}
+    A_{lm,t} = \int d\Omega Y^*_{lm} \left [ m(\Omega) r_t(\Omega) + y_t(\Omega) \right ]
+    \label{eq:4}
+  \end{equation}
+\item
+  Keep only the components with the largest amplitudes and set the
+  amplitudes smaller than the threshold ($\lambda_t$) to zero.
+\item
+  Calculate the new guess from the largest components
+  \begin{equation}
+    y_{t+1}(\Omega) = \sum_{|A_{lm,t}| > \lambda_t} A_{lm,t} Y_{lm}(\Omega).
+    \label{eq:5}
+  \end{equation}
+\item
+  Decrease the threshold $\lambda_t$ and repeat from step (ii) until the stopping criterion
+  is reached.
+\end{enumerate}
+There is of course some art in choosing the size of the underlying
+basis, the thresholds and the stopping criterion.  Here we expand the
+galaxy map to $l_\mathrm{max}=m_\mathrm{max}=64$, so there are a total
+of 2,145 components.  The threshold is set to keep a given fraction of
+the components at each step.  The fraction increases from $10^{-3.5}$
+to $10^{-0.5}$ over 200 iterations, so the initial representations use
+just a few components and the number of components increases to about
+680 at the final iteration, so over two thirds of the spherical
+harmonic components are set to zero in the final map.
+
+From the iterative procedure above it is apparent that the value of
+the guess within the masked region (where $m(\Omega)=0$) does not
+contribute to the residual and does not influence the solution.
+However, the spherical harmonics that contribute to the data near the
+edge of the mask do influence the guess within the masked region.  The
+middle panel of Fig.~\ref{fig:infilling} gives the initial galaxy map
+with the masked region filled in.  There are several structures within
+masked region connect with the structures on either side of the
+Galactic plane.  Finally, we can estimate the signal-to-noise of the
+infilled map by calculate a series of galaxy density maps by
+resampling the 2MPZ to obtain new catalogues, new maps and new
+infilled maps.  The lower panel of Fig.~\ref{fig:infilling} depicts
+the signal-to-noise ratio of the map.  Outside of the Galactic plane
+the signal-to-noise almost everywhere exceeds four.  In the infilled
+region most of the overdense structures correspond to high
+signal-to-noise regions and therefore may provide a reliable estimate
+of the regions in the zone of avoidance where $P(\mathrm{Position})$
+is large.
 \begin{figure}
   \includegraphics[width=\columnwidth]{test_mask}
   \includegraphics[width=\columnwidth]{combined}
@@ -252,11 +337,50 @@ structure obscured by the Galaxy.
     obtained by bootstrapping the galaxy catalogue.}
   \label{fig:infilling}
 \end{figure}
+
 \section{Results}
 
+To assess the performance of these techinques we will focus on optical
+follow-up where we do not wish to observe through the zone of
+avoidance.  We will use the Bayesian probability region calculated by
+the BAYESTAR algorithm \citep{2015arXiv150803634S} from
+\citet{2014ApJ...795..105S} for a LIGO-only detection, that is, before
+Virgo is operational.  For simplicity we focus on fields of view that
+correspond to a particular valid value of \mathtt{NSIDE} for the
+HEALPix map.  In particular we examine a 13-square-degree field of
+view ($\mathtt{NSIDE}=32$) similar to that of LSST, 3-square-degree
+($\mathtt{NSIDE}=64$), 0.8 and 0.2-square-degree fields of view.  We
+quantify the performance in two ways: the time to create the optimized
+observing plan is typically 1-3 seconds and the decrease in the number
+of fields required to reach a given cumulative probability.  The time
+to create the observing plan is typically less than the time to point
+the telescope and begin observations, so the strategy would be to
+point the telescope to the peak of the raw probability region and
+calculate the observing plan during the slew.
+
+Fig.~\ref{fig:bayestar} depicts the results for the different sizes of
+fields and the possibility of using an raw (unsmoothed) and smoothed
+galaxy map.  The upper panel gives the performance with a galaxy map
+restricted to the redshift range $0.03<z<0.04$.  Here the improvement
+in the number of fields to observe is most dramatic.  Let's start with
+the lowest triplet of curves that correspond to the largest field of
+view.  Here the improvement is of using a galaxy map is modest, the
+number of fields to achieve a given cumulative probability decreases
+by about 20\%.  This is because most 13-square-degree regions of the
+sky contain a nearby galaxy. Furthermore, with such a large field of
+view using a smoothed galaxy map does not affect the results
+significantly.  On the other hand, if one uses the alternative metric
+of what is the probabilty of that the source lies within the first
+field, the use of a galaxy map increases this probability from about
+6.5\% to 9.2\%.
+
+
+
 \begin{figure}
-  \includegraphics[width=\columnwidth,clip,trim=0 1.35cm 0 0]{T125738_bayestar_2MPZgz_003_004.pdf} 
-  \includegraphics[width=\columnwidth,clip,trim=0 0 0 0.15cm]{T125738_bayestar_2MPZgz_001_005.pdf} 
+  \includegraphics[width=\columnwidth,clip,trim=0 1.35cm 0
+    0]{T125738_bayestar_2MPZgz_003_004.pdf}
+  \includegraphics[width=\columnwidth,clip,trim=0 0 0
+    0.15cm]{T125738_bayestar_2MPZgz_001_005.pdf}
   \caption{The number of fields required to cover the given fraction
     of the probablity region for a simulated LIGO detection (red
     curves without the galaxy map, green curves with a smoothed
@@ -267,10 +391,12 @@ structure obscured by the Galaxy.
     corresponding 0.2, 0.8, 3.2 and 13 square-degree fields of
     view. The redshift range of the galaxy map in the upper panel is
     $0.03<z<0.04$ and $0.01<z<0.05$ in the lowel panel.}
+  \label{fig:bayestar}
 \end{figure}
 
 \section{Conclusions}
 
+The software used in this letter is available at \url{http://ubc-astrophysics.github.io}.
 This work was supported by the Natural Sciences and Engineering
 Research Council of Canada, the Canadian Foundation for Innovation,
 the British Columbia Knowledge Development Fund and the Bertha and
