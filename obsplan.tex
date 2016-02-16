@@ -159,7 +159,7 @@ found so far in our approximately $L_*$-galaxy, the Milky Way, or our
 neighbour, Andromeda.  In fact theoretical arguments indicate that the
 production of such massive black holes results from the evolution of
 massive stars in low metallicity galaxies
-\cite{2016ApJ...818L..22A,2016arXiv160203790E} which are typically
+\citep{2016ApJ...818L..22A,2016arXiv160203790E} which are typically
 small in the local Universe \citep[e.g.][]{1997MNRAS.285..613H}. Our
 goal is to have a nearly complete survey that attempts to be unbiased
 with respect to the mass of the galaxy.
@@ -167,7 +167,7 @@ with respect to the mass of the galaxy.
 We follow in spirit the work of \citet{2004PASA...21..396J} who used
 The Two Micron All Sky Survey extended source catalogue \citep[2MASS
   XSC,][]{2000AJ....119.2498J,2006AJ....131.1163S}, and the assuption
-that all galaxies have the same $K_s-$band luminosity of around $L_*$
+that all galaxies have the `same $K_s-$band luminosity of around $L_*$
 to estimate distances to each galaxy and create sky maps of the local
 Universe.  A substantial fraction of 2MASS has measured redshifts
 \citep[e.g][]{2012ApJS..199...26H}.  \citet{2014ApJS..210....9B}
@@ -196,11 +196,11 @@ galaxies with the expected redshift range of a particular
 gravitational-wave detection.  Furthermore, for the nearest sources,
 there are nearly uniform all-sky redshift surveys which would be more
 appropriate for this task
-\citep[e.g]{2000MNRAS.317...55S,2012ApJS..199...26H}.  Of course, all
+\citep[e.g][]{2000MNRAS.317...55S,2012ApJS..199...26H}.  Of course, all
 of the techniques outlined here can be applied to these more nearby
 catalogues to produce sky maps of even more nearby galaxies.  Here we
 will focus on galaxies with photometric redshifts between 0.01 and 0.1
-from the 2MPZ as depicted in Fig.~\ref{fig:galmap}.  For closer
+from the 2MPZ catalogue as depicted in Fig.~\ref{fig:galmap}.  For closer
 galaxies the redshift error is significant, and the outer end of the
 range is both the median redshift of the catalogue and the typical
 distances of the binary-black-hole sources.
@@ -264,17 +264,17 @@ accounts for the masking of the background galaxies due to the Large
 Magellanic Cloud, a feature that is apparent in both figures.  Both of
 these masks are nearly the same, so we combine them as depicted in the
 upper panel of Fig.~\ref{fig:infilling}.  This region is much narrower
-than the infilled region of the CMB, and furthermore the observed
-structures the galaxy map are typically longer than the width of the
-mask, so we can reliably estimate the hidden structures.  In spite of
-these differences the basic strategy is similar.  We assume that the
-underlying galaxy map (behind the Galaxy) is isotropic; therefore, it
-is natural to represent it as a sum of spherical harmonics;
-furthermore, we can argue that a small fraction of the components
-contain most of the power, {\em i.e.} the representation of the
-underlying map is sparse, so we can use the adaptive thresholding
-strategy of \citet{2007ITIP...16.2675B} to estimate the underlying
-galaxy distribution.
+than the infilled region of the CMB in \citet{2008StMet...5..289A},
+and furthermore the observed structures the galaxy map are typically
+longer than the width of the mask, so we can reliably estimate the
+hidden structures.  In spite of these differences the basic strategy
+is similar.  We assume that the underlying galaxy map (behind the
+Galaxy) is isotropic; therefore, it is natural to represent it as a
+sum of spherical harmonics; furthermore, we can argue that a small
+fraction of the components contain most of the power, {\em i.e.} the
+representation of the underlying map is sparse, so we can use the
+adaptive thresholding strategy of \citet{2007ITIP...16.2675B} to
+estimate the underlying galaxy distribution.
 
 The technique is straightforward to describe and to implement, and we
 will outline it below.  Let the map be given by $a(\Omega)$ and the
