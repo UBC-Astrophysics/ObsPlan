@@ -81,7 +81,7 @@ the wide variety of models it will be difficult to associate
 unambigously a particular electromagnetic event with a candidate
 gravitational-wave event.
 
-The purpose of this letter is to present a strategy to alleviate both
+The purpose of this paper is to present a strategy to alleviate both
 of these issues; that is, to reduce both the search region and the
 time required to plan and begin observations.  We follow the spirit of
 \citet{2015arXiv150803608G} to develop a galaxy catalogue to guide the
@@ -236,9 +236,10 @@ better estimate of $P(\mathrm{position})$.  The key is to calculate these
 maps beforehand.
 
 \begin{figure}
-  \includegraphics[width=\columnwidth]{2MPZgz_001_01_smoothed}
-  \caption{The relative surface density of galaxies in the 2-MASS Photometric Redshift Survey with photometric redshifts between 0.01 and 0.1, smoothed with a Gaussian of 0.6 degrees (0.01 radian).}
-  \label{fig:galmap}
+  \includegraphics[width=\columnwidth]{2mass_density}
+  \caption{The relative surface brightness of stars in the 2-MASS
+    Photometric Catalogue \citep{2006AJ....131.1163S} smoothed with a Gaussian of 0.03 degrees (0.005 radian).}
+  \label{fig:starmap}
 \end{figure}
 There is a further structure apparent in the map, and this is of
 course the zone of avoidance imposed by the disk and bulge of our
@@ -252,9 +253,15 @@ beyond the Galactic plane.   However, the existing galaxy density map
 as depicted in Fig.~\ref{fig:galmap} can yield an estimate of the
 structure obscured by the Galaxy.  The technique that we will use in
 similar to that used by \citet{2008StMet...5..289A} to inpaint the CMB
-anisotropies across the Galactic plane.  Here we will determine the
-region masked by the Galaxy by finding the region in which the density
-of galaxies is less than one tenth of the mean as depicted in the
+anisotropies across the Galactic plane.
+
+Here we will determine the region masked by the Galaxy by finding the
+region in which the density of galaxies is either less than one tenth
+of the mean (from Fig.~\ref{fig:galmap}) or in which the density of
+stars (from Fig.~\ref{fig:starmap}) is greater than a threshold that
+accounts for the masking of the background galaxies due to the Large
+Magellanic Cloud, a feature that is apparent in both figure.  Both of
+these masks are nearly the same, so we combine them as depicted in the
 upper panel of Fig.~\ref{fig:infilling}.  This region is much narrower
 than the infilled region of the CMB, and furthermore the observed
 structures the galaxy map are typically larger than the width of the
@@ -334,7 +341,7 @@ signal-to-noise regions and therefore may provide a reliable estimate
 of the regions in the zone of avoidance where $P(\mathrm{Position})$
 is large.
 \begin{figure}
-  \includegraphics[width=\columnwidth]{test_mask}
+  \includegraphics[width=\columnwidth]{prod_mask}
   \includegraphics[width=\columnwidth]{combined}
   \includegraphics[width=\columnwidth]{snr}
   \caption{Upper: the mask used for the infilling procedure obtained
@@ -434,11 +441,14 @@ events to understand the astrophysical nature of these sources.
 
 {\bf  more stuff to add here}
 
-The software used in this letter is available at \url{http://ubc-astrophysics.github.io}.
-This work was supported by the Natural Sciences and Engineering
-Research Council of Canada, the Canadian Foundation for Innovation,
-the British Columbia Knowledge Development Fund and the Bertha and
-Louis Weinstein Research Fund at the University of British Columbia.
+The software used in this paper is available at
+\url{http://ubc-astrophysics.github.io}.  We used the VizieR Service,
+the NASA ADS service, the SuperCOSMOS Science Archive, the NASA/IPAC
+Infrared Science Archive, the HEALPy libraries and the arXiv. This work
+was supported by the Natural Sciences and Engineering Research Council
+of Canada, the Canadian Foundation for Innovation, the British
+Columbia Knowledge Development Fund and the Bertha and Louis Weinstein
+Research Fund at the University of British Columbia.
 
 
 \bibliography{obsplan}
