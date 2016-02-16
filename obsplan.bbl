@@ -1,5 +1,12 @@
-\begin{thebibliography}{40}
+\begin{thebibliography}{43}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Abbott} {et~al.}(2016){Abbott}, {Abbott}, {Abbott}, {Abernathy},
+  {Acernese}, {Ackley}, {Adams}, {Adams}, {Addesso}, {Adhikari}, \&
+  et~al.}]{2016ApJ...818L..22A}
+{Abbott}, B.~P., {Abbott}, R., {Abbott}, T.~D., {Abernathy}, M.~R., {Acernese},
+  F., {Ackley}, K., {Adams}, C., {Adams}, T., {Addesso}, P., {Adhikari}, R.~X.,
+  \& et~al. 2016, \apjl, 818, L22
 
 \bibitem[{Abbott {et~al.}(2016)}]{PhysRevLett.116.061102}
 Abbott, B.~P. {et~al.} 2016, Phys. Rev. Lett., 116, 061102
@@ -78,6 +85,9 @@ Abbott, B.~P. {et~al.} 2016, Phys. Rev. Lett., 116, 061102
 {East}, W.~E., {Paschalidis}, V., {Pretorius}, F., \& {Shapiro}, S.~L. 2016,
   \prd, 93, 024011
 
+\bibitem[{{Eldridge} \& {Stanway}(2016)}]{2016arXiv160203790E}
+{Eldridge}, J.~J. \& {Stanway}, E.~R. 2016, ArXiv e-prints
+
 \bibitem[{{Fern{\'a}ndez} \& {Metzger}(2015)}]{2015arXiv151205435F}
 {Fern{\'a}ndez}, R. \& {Metzger}, B.~D. 2015, ArXiv e-prints
 
@@ -115,6 +125,11 @@ Abbott, B.~P. {et~al.} 2016, Phys. Rev. Lett., 116, 061102
   {Thomson}, E.~B., {Kelly}, B.~D., {Morgan}, D.~H., {Smith}, R.~E., {Driver},
   S.~P., {Williamson}, J., {Parker}, Q.~A., {Hawkins}, M.~R.~S., {Williams},
   P.~M., \& {Lawrence}, A. 2001{\natexlab{c}}, \mnras, 326, 1279
+
+\bibitem[{{Heyl} {et~al.}(1997){Heyl}, {Colless}, {Ellis}, \&
+  {Broadhurst}}]{1997MNRAS.285..613H}
+{Heyl}, J., {Colless}, M., {Ellis}, R.~S., \& {Broadhurst}, T. 1997, \mnras,
+  285, 613
 
 \bibitem[{{Huchra} {et~al.}(2012){Huchra}, {Macri}, {Masters}, {Jarrett},
   {Berlind}, {Calkins}, {Crook}, {Cutri}, {Erdo{\v g}du}, {Falco}, {George},
