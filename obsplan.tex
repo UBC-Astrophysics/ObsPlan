@@ -1,6 +1,6 @@
 \documentclass[useAMS,usenatbib]{mn2e}
 \usepackage{graphicx}
-\usepackage{url}
+
 %\usepackage{tikz}
 \newcommand{\aap}{Astron. Astrophys.}
 \newcommand{\aj}{Astron. J.}
@@ -69,9 +69,10 @@ would appear are varied and uncertain. There has been substantial
 speculation on the electromagnetic transients associated with the
 mergers of binaries that include a neutron star
 \citep[e.g.][]{2016PhRvD..93b4011E,2016arXiv160107711K,2016arXiv160100017D,2015arXiv151205435F,2015ApJ...814L..20M,2015PhRvD..92d4028K,2015arXiv150807939S,2015arXiv150807911S}
-However,the first discovered gravitational wave event appears to be
-the merger of binary black holes, so the appearance and duration of
-the electromagnetic counterparts are especially uncertain with only a few models
+However,the first discovered gravitational wave event (GW150914)
+appears to be the merger of binary black holes, so the appearance and
+duration of the electromagnetic counterparts are especially uncertain
+with only a few models
 \citep[e.g.][]{2015PhRvL.115n1102G,2015MNRAS.452.3419M,2016MNRAS.457..939C,2016ApJ...817..183Y}
 Consequently, rapid electromagnetic follow-up of a large portion of
 the probable region would increase the chance of success in finding a
@@ -440,13 +441,58 @@ data analysis following a burst.
 The discovery of gravitational waves binary black hole highlights the
 need for rapid three-dimensional localization of gravitational-wave
 events to understand the astrophysical nature of these sources.
+Although the Fermi GBM did see hints of gamma rays coincident with the
+gravitational wave event in time \citep{2016arXiv160203920C}, other
+efforts at finding an electromagnetic counterpart were apparently in
+vain
+\citep[e.g][]{2016arXiv160204198S,2016arXiv160204156S,2016arXiv160204488F},
+possibly due to the rapid decay of the electromagnetic radiation from
+the binary black-hole merger.  Only the GBM experiment though had
+observations coincident in time with the event.  The Fermi LAT managed
+to observe the entire probability region within 70 minutes of the
+event, so the timescale for rapid follow-up of these events is minutes
+rather than hours.  The algoriths presented in this paper offer a
+technique to maximize the potential for discovery with a very modest
+computation of the fields to observe first and which order.  The key
+is to calculate the likely regions of sky to observed before the burst
+in the form of a HEALPix map, so at the burst one can rapidly
+construct the observing plan.
 
-{\bf  more stuff to add here}
+The information that one puts into the map, of course, will depend on
+the nature of the gravitational-wave event ({\em e.g.} its distances,
+the masses and composition of the components, {\em etc.}).  Here we
+have simply used the surface density of nearby galaxies for the
+$P(\mathrm{position})$ map.  However, one can do much better by using
+the predicted rates of the various types of events and the types of
+galaxies that one expects to find them in.  For example,
+\citet{2016arXiv160204531B} argue that an event like GW150914 resulted
+from a binary black hole whose progenitor stars formed around a
+redshift of 3 (70\% likely) or around a redshift of 0.2 (30\%).  This
+information informed by stellar population synthesis could be used to
+develop a better guess for the galaxy map by increase the weight of
+galaxies whose stars were born during these epochs.
+\citet{2015ApJ...806..263D} argue that the coalesce of black-hole
+binaries like GW150914 will dominate the detection rates, and
+furthermore, most of these binaries form in low-metallicity galaxies
+at about 1~Gyr after the Big Bang.  Knowing in which local galaxies
+these systems typically end up would greatly improve the follow-up
+strategy.  Are we interested in looking at systems that are still low
+metallicity with star formation long ago like dwarf spheroidals?  Or
+do we expect this systems to have been incorporated in larger galaxies
+subsequently and are these larger galaxies typically spirals or
+ellipticals today?
+
+The dawn of gravitational wave astronomy is upon us.  To realize its
+full potential we can used all of our prior knowledge of the expected
+rates of these event in the context of the hierarchical formation of
+galaxies to determine where to look for the electromagnetic signal
+that hopefully accompanies these events.
+
 
 The software used in this paper is available at
 \url{http://ubc-astrophysics.github.io}.  We used the VizieR Service,
 the NASA ADS service, the SuperCOSMOS Science Archive, the NASA/IPAC
-Infrared Science Archive, the HEALPy libraries and the arXiv. This work
+Infrared Science Archive, the HEALPy libraries and arXiv.org. This work
 was supported by the Natural Sciences and Engineering Research Council
 of Canada, the Canadian Foundation for Innovation, the British
 Columbia Knowledge Development Fund and the Bertha and Louis Weinstein

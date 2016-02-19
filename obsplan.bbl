@@ -1,4 +1,4 @@
-\begin{thebibliography}{43}
+\begin{thebibliography}{49}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abbott} {et~al.}(2016){Abbott}, {Abbott}, {Abbott}, {Abernathy},
@@ -29,6 +29,11 @@ Abbott, B.~P. {et~al.} 2016, Phys. Rev. Lett., 116, 061102
 {Ahn}, C.~P., {Alexandroff}, R., {Allende Prieto}, C., {Anderson}, S.~F.,
   {Anderton}, T., {Andrews}, B.~H., {Aubourg}, {\'E}., {Bailey}, S.,
   {Balbinot}, E., {Barnes}, R., \& et~al. 2012, \apjs, 203, 21
+
+\bibitem[{{Belczynski} {et~al.}(2016){Belczynski}, {Holz}, {Bulik}, \&
+  {O'Shaughnessy}}]{2016arXiv160204531B}
+{Belczynski}, K., {Holz}, D.~E., {Bulik}, T., \& {O'Shaughnessy}, R. 2016,
+  ArXiv e-prints
 
 \bibitem[{{Bilicki} {et~al.}(2014){Bilicki}, {Jarrett}, {Peacock}, {Cluver}, \&
   {Steward}}]{2014ApJS..210....9B}
@@ -70,6 +75,27 @@ Abbott, B.~P. {et~al.} 2016, Phys. Rev. Lett., 116, 061102
   S., {Maddox}, S., {Madgwick}, D., {Sutherland}, W., \& {Taylor}, K. 2003,
   ArXiv Astrophysics e-prints
 
+\bibitem[{{Connaughton} {et~al.}(2016){Connaughton}, {Burns}, {Goldstein},
+  {Briggs}, {Zhang}, {Hui}, {Jenke}, {Racusin}, {Wilson-Hodge}, {Bhat},
+  {Cleveland}, {Fitzpatrick}, {Giles}, {Gibby}, {Greiner}, {von Kienlin},
+  {Kippen}, {McBreen}, {Mailyan}, {Meegan}, {Paciesas}, {Preece}, {Roberts},
+  {Sparke}, {Stanbro}, {Toelge}, {Veres}, {Yu}, \&
+  {authors}}]{2016arXiv160203920C}
+{Connaughton}, V., {Burns}, E., {Goldstein}, A., {Briggs}, M.~S., {Zhang},
+  B.-B., {Hui}, C.~M., {Jenke}, P., {Racusin}, J., {Wilson-Hodge}, C.~A.,
+  {Bhat}, P.~N., {Cleveland}, W., {Fitzpatrick}, G., {Giles}, M.~M., {Gibby},
+  M.~H., {Greiner}, J., {von Kienlin}, A., {Kippen}, R.~M., {McBreen}, S.,
+  {Mailyan}, B., {Meegan}, C.~A., {Paciesas}, W.~S., {Preece}, R.~D.,
+  {Roberts}, O., {Sparke}, L., {Stanbro}, M., {Toelge}, K., {Veres}, P., {Yu},
+  H.-F., \& {authors}, o. 2016, ArXiv e-prints
+
+\bibitem[{{Dominik} {et~al.}(2015){Dominik}, {Berti}, {O'Shaughnessy},
+  {Mandel}, {Belczynski}, {Fryer}, {Holz}, {Bulik}, \&
+  {Pannarale}}]{2015ApJ...806..263D}
+{Dominik}, M., {Berti}, E., {O'Shaughnessy}, R., {Mandel}, I., {Belczynski},
+  K., {Fryer}, C., {Holz}, D.~E., {Bulik}, T., \& {Pannarale}, F. 2015, \apj,
+  806, 263
+
 \bibitem[{{D'Orazio} {et~al.}(2016){D'Orazio}, {Levin}, {Murray}, \&
   {Price}}]{2016arXiv160100017D}
 {D'Orazio}, D.~J., {Levin}, J., {Murray}, N.~W., \& {Price}, L. 2016, ArXiv
@@ -87,6 +113,9 @@ Abbott, B.~P. {et~al.} 2016, Phys. Rev. Lett., 116, 061102
 
 \bibitem[{{Eldridge} \& {Stanway}(2016)}]{2016arXiv160203790E}
 {Eldridge}, J.~J. \& {Stanway}, E.~R. 2016, ArXiv e-prints
+
+\bibitem[{{Fermi-LAT collaboration}(2016)}]{2016arXiv160204488F}
+{Fermi-LAT collaboration}. 2016, ArXiv e-prints
 
 \bibitem[{{Fern{\'a}ndez} \& {Metzger}(2015)}]{2015arXiv151205435F}
 {Fern{\'a}ndez}, R. \& {Metzger}, B.~D. 2015, ArXiv e-prints
@@ -252,6 +281,74 @@ Abbott, B.~P. {et~al.} 2016, Phys. Rev. Lett., 116, 061102
   J.~E., {Howard}, E., {Evans}, T., {Fowler}, J., {Fullmer}, L., {Hurt}, R.,
   {Light}, R., {Kopan}, E.~L., {Marsh}, K.~A., {McCallon}, H.~L., {Tam}, R.,
   {Van Dyk}, S., \& {Wheelock}, S. 2006, \aj, 131, 1163
+
+\bibitem[{{Smartt} {et~al.}(2016){Smartt}, {Chambers}, {Smith}, {Huber},
+  {Young}, {Cappellaro}, {Wright}, {Coughlin}, {Schultz}, {Denneau},
+  {Flewelling}, {Heinze}, {Magnier}, {Primak}, {Rest}, {Sherstyuk}, {Stalder},
+  {Stubbs}, {Tonry}, {Waters}, {Willman}, {Anderson}, {Baltay}, {Botticella},
+  {Campbell}, {Dennefeld}, {Chen}, {Della Valle}, {Elias-Rosa}, {Fraser},
+  {Inserra}, {Kankare}, {Kotak}, {Kupfer}, {Harmanen}, {Galbany}, {Gal-Yam},
+  {Guillou}, {Lyman}, {Maguire}, {Mitra}, {Nicholl}, {Olivares E},
+  {Rabinowitz}, {Razza}, {Sollerman}, {Smith}, {Terreran}, \&
+  {Valenti}}]{2016arXiv160204156S}
+{Smartt}, S.~J., {Chambers}, K.~C., {Smith}, K.~W., {Huber}, M.~E., {Young},
+  D.~R., {Cappellaro}, E., {Wright}, D.~E., {Coughlin}, M., {Schultz},
+  A.~S.~B., {Denneau}, L., {Flewelling}, H., {Heinze}, A., {Magnier}, E.~A.,
+  {Primak}, N., {Rest}, A., {Sherstyuk}, A., {Stalder}, B., {Stubbs}, C.~W.,
+  {Tonry}, J., {Waters}, C., {Willman}, M., {Anderson}, J.~P., {Baltay}, C.,
+  {Botticella}, M.~T., {Campbell}, H., {Dennefeld}, M., {Chen}, T.-W., {Della
+  Valle}, M., {Elias-Rosa}, N., {Fraser}, M., {Inserra}, C., {Kankare}, E.,
+  {Kotak}, R., {Kupfer}, T., {Harmanen}, J., {Galbany}, L., {Gal-Yam}, A.,
+  {Guillou}, L.~L., {Lyman}, J.~D., {Maguire}, K., {Mitra}, A., {Nicholl}, M.,
+  {Olivares E}, F., {Rabinowitz}, D., {Razza}, A., {Sollerman}, J., {Smith},
+  M., {Terreran}, G., \& {Valenti}, S. 2016, ArXiv e-prints
+
+\bibitem[{{Soares-Santos} {et~al.}(2016){Soares-Santos}, {Kessler}, {Berger},
+  {Annis}, {Brout}, {Buckley-Geer}, {Chen}, {Cowperthwaite}, {Diehl}, {Doctor},
+  {Drlica-Wagner}, {Farr}, {Finley}, {Flaugher}, {Foley}, {Frieman}, {Gruendl},
+  {Herner}, {Holz}, {Lin}, {Marriner}, {Neilsen}, {Rest}, {Sako}, {Scolnic},
+  {Sobreira}, {Walker}, {Wester}, {Yanny}, {Abbott}, {Abdalla}, {Abdalla},
+  {Allam}, {Armstrong}, {Banerji}, {Benoit-L{\'e}vy}, {Bernstein}, {Bertin},
+  {Brown}, {Burke}, {Capozzi}, {Carnero Rosell}, {Carrasco Kind}, {Carretero},
+  {Castander}, {Cenko}, {Chornock}, {Crocce}, {D'Andrea}, {D'Andrea}, {da
+  Costa}, {Desai}, {Dietrich}, {Drout}, {Eifler}, {Estrada}, {Evrard},
+  {Fairhurst}, {Fernandez}, {Fischer}, {Fong}, {Fosalba}, {Fox}, {Fryer},
+  {Garcia-Bellido}, {Gaztanaga}, {Gerdes}, {Goldstein}, {Gruen}, {Gutierrez},
+  {Honscheid}, {James}, {Karliner}, {Kasen}, {Kent}, {Kuropatkin}, {Kuehn},
+  {Lahav}, {Li}, {Lima}, {Maia}, {Margutti}, {Martini}, {Matheson}, {McMahon},
+  {Metzger}, {Miller}, {Miquel}, {Mohr}, {Nichol}, {Nord}, {Ogando}, {Peoples},
+  {Plazas}, {Quataert}, {Romer}, {Roodman}, {Roodman}, {Rykoff}, {Rykoff},
+  {Sanchez}, {Scarpine}, {Schindler}, {Schubnell}, {Sevilla-Noarbe}, {Sheldon},
+  {Smith}, {Smith}, {Smith}, {Stebbins}, {Sutton}, {Swanson}, {Tarle},
+  {Thaler}, {Thomas}, {Tucker}, {Vikram}, {Wechsler}, \&
+  {Weller}}]{2016arXiv160204198S}
+{Soares-Santos}, M., {Kessler}, R., {Berger}, E., {Annis}, J., {Brout}, D.,
+  {Buckley-Geer}, E., {Chen}, H., {Cowperthwaite}, P.~S., {Diehl}, H.~T.,
+  {Doctor}, Z., {Drlica-Wagner}, A., {Farr}, B., {Finley}, D.~A., {Flaugher},
+  B., {Foley}, R.~J., {Frieman}, J., {Gruendl}, R.~A., {Herner}, K., {Holz},
+  D., {Lin}, H., {Marriner}, J., {Neilsen}, E., {Rest}, A., {Sako}, M.,
+  {Scolnic}, D., {Sobreira}, F., {Walker}, A.~R., {Wester}, W., {Yanny}, B.,
+  {Abbott}, T.~M.~C., {Abdalla}, F.~B., {Abdalla}, F.~B., {Allam}, S.,
+  {Armstrong}, R., {Banerji}, M., {Benoit-L{\'e}vy}, A., {Bernstein}, R.~A.,
+  {Bertin}, E., {Brown}, D.~A., {Burke}, D.~L., {Capozzi}, D., {Carnero
+  Rosell}, A., {Carrasco Kind}, M., {Carretero}, J., {Castander}, F.~J.,
+  {Cenko}, S.~B., {Chornock}, R., {Crocce}, M., {D'Andrea}, C.~B., {D'Andrea},
+  C.~B., {da Costa}, L.~N., {Desai}, S., {Dietrich}, J.~P., {Drout}, M.~R.,
+  {Eifler}, T.~F., {Estrada}, J., {Evrard}, A.~E., {Fairhurst}, S.,
+  {Fernandez}, E., {Fischer}, J., {Fong}, W., {Fosalba}, P., {Fox}, D.~B.,
+  {Fryer}, C.~L., {Garcia-Bellido}, J., {Gaztanaga}, E., {Gerdes}, D.~W.,
+  {Goldstein}, D.~A., {Gruen}, D., {Gutierrez}, G., {Honscheid}, K., {James},
+  D.~J., {Karliner}, I., {Kasen}, D., {Kent}, S., {Kuropatkin}, N., {Kuehn},
+  K., {Lahav}, O., {Li}, T.~S., {Lima}, M., {Maia}, M.~A.~G., {Margutti}, R.,
+  {Martini}, P., {Matheson}, T., {McMahon}, R.~G., {Metzger}, B.~D., {Miller},
+  C.~J., {Miquel}, R., {Mohr}, J.~J., {Nichol}, R.~C., {Nord}, B., {Ogando},
+  R., {Peoples}, J., {Plazas}, A.~A., {Quataert}, E., {Romer}, A.~K.,
+  {Roodman}, A., {Roodman}, A., {Rykoff}, E.~S., {Rykoff}, E.~S., {Sanchez},
+  E., {Scarpine}, V., {Schindler}, R., {Schubnell}, M., {Sevilla-Noarbe}, I.,
+  {Sheldon}, E., {Smith}, M., {Smith}, N., {Smith}, R.~C., {Stebbins}, A.,
+  {Sutton}, P.~J., {Swanson}, M.~E.~C., {Tarle}, G., {Thaler}, J., {Thomas},
+  R.~C., {Tucker}, D.~L., {Vikram}, V., {Wechsler}, R.~H., \& {Weller}, J.
+  2016, ArXiv e-prints
 
 \bibitem[{{Vanderlinde} \& {Chime Collaboration}(2014)}]{2014era..conf10102V}
 {Vanderlinde}, K. \& {Chime Collaboration}. 2014, in Exascale Radio Astronomy,
