@@ -50,7 +50,7 @@
   of the position of the source simply by multiplying the LIGO-Virgo
   skymap by the density of galaxies in the range of redshifts.  We
   propose using the 2-MASS Photometric Redshift Galaxy Catalogue for
-  this purpose and demonstrate that using it can dramtically reduce
+  this purpose and demonstrate that using it can dramatically reduce
   the search region for electromagnetic counterparts.
 \end{abstract}
 
@@ -61,7 +61,7 @@ local Universe \citep{PhysRevLett.116.061102}.  During these initial
 years of gravitational astronomy, the localization of the candidate
 events on the sky is poor with the ninety-percent confidence regions
 covering hundreds or even thousands of square degrees.  Finding an
-electromagnetic counterpart to these candidate graviational-wave
+electromagnetic counterpart to these candidate gravitational-wave
 events will be crucial to understanding what produces them,
 interpretation of the signal and to provide tests of general
 relativity.  The ideas of how the the electromagnetic counterparts
@@ -79,7 +79,7 @@ the probable region would increase the chance of success in finding a
 counterpart.  Over the large search regions and over the span of days
 or weeks, many electromagnetic transients typically occur, and with
 the wide variety of models it will be difficult to associate
-unambigously a particular electromagnetic event with a candidate
+unambiguously a particular electromagnetic event with a candidate
 gravitational-wave event.
 
 The purpose of this paper is to present a strategy to alleviate both
@@ -89,7 +89,7 @@ time required to plan and begin observations.  We follow the spirit of
 observational plan.  However, our goal here is to develop a nearly
 complete catalogue at the expense of having less accurate estimates of
 the redshifts of the galaxies within the catalogue.  The accuracy of
-the galaxy distances needs to be only as good as the distance estmates
+the galaxy distances needs to be only as good as the distance estimates
 of the gravitational-wave events.  Additionally we will outline a
 straightforward and rapid technique to generate a nearly optimal
 observing plan to follow up the events rapidly (i.e. within a few
@@ -98,10 +98,10 @@ seconds of the trigger).
 \section{Bayesian Approach to Follow-Up}
 
 Because we will be interested in the rapid follow-up of candidate
-gravitational-wave events, we will focussed on the rapid Bayesian
-reconsruction outlined by \citet{2015arXiv150803634S}, BAYESTAR.  At
+gravitational-wave events, we will focused on the rapid Bayesian
+reconstruction outlined by \citet{2015arXiv150803634S}, BAYESTAR.  At
 the most basic level, BAYESTAR yields a probability map on the sky in
-the form of a HEALPpix map \citep{2005ApJ...622..759G} where each
+the form of a HEALPix map \citep{2005ApJ...622..759G} where each
 pixel contains the probability $P(d|m)$ that a particular model
 (i.e. position on the sky) will yield the data (i.e. the observed
 strains on the LIGO and Virgo interferometers).  To plan an observing
@@ -119,7 +119,7 @@ the sky naturally is proportional to the density (or perhaps the
 luminosity density) of galaxies in that direction integrated over
 distance range determined from the modelling of the gravitational
 waveform.  Of course, these distance estimates will usually have large
-uncertainities so the distance range over which to integrate the
+uncertainties so the distance range over which to integrate the
 galaxy density distribution will also be large, so highly accurate
 redshift information is not needed to construct
 $P(\mathrm{position})$.
@@ -145,7 +145,7 @@ one second).
 \section{Galaxy Catalogues}
 
 To gain a picture of the local Universe, our focus will be the
-completness of the data rather than the accuracy of the distances and
+completeness of the data rather than the accuracy of the distances and
 positions.  \citet{2015arXiv150803608G} combine several redshift
 surveys
 \citep[e.g.][]{2002MNRAS.336..907N,2003MNRAS.344..307L,2005MNRAS.360...81D,
@@ -154,7 +154,7 @@ various depths and attempt to increasing the completeness of the
 sample by using only the galaxies near the upper-end of the luminosity
 function ({\em i.e.}  $L\sim L_*$) and ; the discovery that binary
 black holes with large masses (!)  dominate the initial detections
-indicates that focussing the search on massive galaxies might not be
+indicates that focusing the search on massive galaxies might not be
 the best strategy.  After all such large black holes have not been
 found so far in our approximately $L_*$-galaxy, the Milky Way, or our
 neighbour, Andromeda.  In fact theoretical arguments indicate that the
@@ -167,7 +167,7 @@ with respect to the mass of the galaxy.
 
 We follow in spirit the work of \citet{2004PASA...21..396J} who used
 The Two Micron All Sky Survey extended source catalogue \citep[2MASS
-  XSC,][]{2000AJ....119.2498J,2006AJ....131.1163S}, and the assuption
+  XSC,][]{2000AJ....119.2498J,2006AJ....131.1163S}, and the assumption
 that all galaxies have the `same $K_s-$band luminosity of around $L_*$
 to estimate distances to each galaxy and create sky maps of the local
 Universe.  A substantial fraction of 2MASS has measured redshifts
@@ -213,7 +213,7 @@ distances of the binary-black-hole sources.
 
 To produce this map we divided the sky into 3,145,728 regions (each of
 about 45 square arcminutes, four ACS fields) using a HEALPix
-\citep{2005ApJ...622..759G} tesselation with $\mathtt{NSIDE}=512$.
+\citep{2005ApJ...622..759G} tessellation with $\mathtt{NSIDE}=512$.
 Each cell of the map simply contains the number of galaxies in the
 2MPZ catalogue within the range of photometric redshift that lie
 within that portion of sky.  We have subsequently smoothed the map
@@ -232,7 +232,7 @@ of galaxies within each field is perhaps the most simple one.  Given
 the type of event, one could use a map that gives small,
 low-metallicity galaxies more weight or weigh the galaxies by their
 mass or luminosity.  Of course, all of these possibilities would be
-informed by one's prior knownledge of the source inspired by
+informed by one's prior knowledge of the source inspired by
 theoretical models and the hints from the waveform itself and give a
 better estimate of $P(\mathrm{position})$.  The key is to calculate these
 maps beforehand.
@@ -296,7 +296,7 @@ are visible.
   \end{equation}
 \item
   Expand the sum of the residuals in the unmasked region and the current guess
-  in spherical harnomics.
+  in spherical harmonics.
   \begin{equation}
     A_{lm,t} = \int d\Omega Y^*_{lm} \left [ m(\Omega) r_t(\Omega) + y_t(\Omega) \right ]
     \label{eq:4}
@@ -348,7 +348,7 @@ is large.
   \includegraphics[width=\columnwidth]{sigma_prod_mask}
   \caption{Upper: the mask used for the infilling procedure obtained
     by determining the regions where the galaxy density is less than
-    one tenth of the mean or the star denisty lies above a given
+    one tenth of the mean or the star density lies above a given
     threshold (see text for details).  Middle: the infilled galaxy
     distribution. Lower: The standard deviation of the infilled map
     obtained by bootstrapping the galaxy catalogue.}
@@ -357,7 +357,7 @@ is large.
 
 \section{Results}
 
-To assess the performance of these techinques we will focus on optical
+To assess the performance of these techniques we will focus on optical
 follow-up where we do not wish to observe through the zone of
 avoidance.  We will use the Bayesian probability region calculated by
 the BAYESTAR algorithm \citep{2015arXiv150803634S} from
@@ -387,7 +387,7 @@ by about 20\%.  This is because most 13-square-degree regions of the
 sky contain a nearby galaxy. Furthermore, with such a large field of
 view using a smoothed galaxy map does not affect the results
 significantly.  On the other hand, if one uses the alternative metric
-of what is the probabilty of that the source lies within the first
+of what is the probability of that the source lies within the first
 field, the use of a galaxy map increases this probability from about
 6.5\% to 9.2\%.
 
@@ -424,15 +424,15 @@ data analysis following a burst.
   \includegraphics[width=\columnwidth,clip,trim=0 0 0
     0.15cm]{T125738_bayestar_2MPZgz_001_005.pdf}
   \caption{The number of fields required to cover the given fraction
-    of the probablity region for a simulated LIGO detection (red
+    of the probability region for a simulated LIGO detection (red
     curves without the galaxy map, green curves with a smoothed
     galaxy, blue curves with a raw galaxy map).  The upper solid
-    curves use a healpix map with about 200,000 cells, the dashed
+    curves use a HEALPix map with about 200,000 cells, the dashed
     curves have about 50,000 cells, the dotted curves have about
     12,000 cells and lower solid curves have about 3,000 cells,
     corresponding 0.2, 0.8, 3.2 and 13 square-degree fields of
     view. The redshift range of the galaxy map in the upper panel is
-    $0.03<z<0.04$ and $0.01<z<0.05$ in the lowel panel.}
+    $0.03<z<0.04$ and $0.01<z<0.05$ in the lower panel.}
   \label{fig:bayestar}
 \end{figure}
 
@@ -451,7 +451,7 @@ the binary black-hole merger.  Only the GBM experiment though had
 observations coincident in time with the event.  The Fermi LAT managed
 to observe the entire probability region within 70 minutes of the
 event, so the timescale for rapid follow-up of these events is minutes
-rather than hours.  The algoriths presented in this paper offer a
+rather than hours.  The algorithms presented in this paper offer a
 technique to maximize the potential for discovery with a very modest
 computation of the fields to observe first and which order.  The key
 is to calculate the likely regions of sky to observed before the burst
