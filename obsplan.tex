@@ -312,20 +312,21 @@ significance of this value, we perform two tests.  First, we shuffled
 the data within the test region and recalculated $r$ for these
 shuffled sets.  Over one thousand trials the maximum value of $r$
 obtained was 0.0057 and the distribution was consistent with a normal
-distribution with $\sigma=0.002$ or approximately the reciprocal of
-the square root of the number of pixels within the test region.  For
-an second more stringent test we calculated the angular power spectrum
-of the original galaxy map and generated 1,000 galaxy maps consistent
-with this power spectrum.  This accounts for the fact that
-neighbouring regions of sky are correlated, which the standard shuffle
-test neglects.  The largest obtained was 0.171, and the distribution
-was consistent with a normal distribution with $\sigma=0.066$, so the
-observed correlation over the test region is near four sigma.  For
-comparision the correlation coefficient of the galaxy map with a
-bootstrapped realisation of the same map over the test region is
-typically much higher $r=0.97$, so clearly much information is lost in
-the reconstruction, but the test reveals that the infilling procedure
-does give a good first-order guess at the hidden structures.
+distribution with $\sigma=0.002$ and a mean of zero or approximately
+the reciprocal of the square root of the number of pixels within the
+test region.  For an second more stringent test we calculated the
+angular power spectrum of the original galaxy map and generated 1,000
+galaxy maps consistent with this power spectrum.  This accounts for
+the fact that neighbouring regions of sky are correlated, which the
+standard shuffle test neglects.  The largest obtained was 0.171, and
+the distribution was consistent with a normal distribution with
+$\sigma=0.066$ and zero mean, so the observed correlation over the
+test region reaches nearly four-sigma significance.  For comparision
+the correlation coefficient of the galaxy map with a bootstrapped
+realisation of the same map over the test region is typically much
+higher $r=0.97$, so clearly much information is lost in the
+reconstruction, but the test reveals that the infilling procedure does
+give a good first-order guess at the hidden structures.
 \begin{figure}
   \includegraphics[width=\columnwidth]{infill_test_dataC.png}
   \includegraphics[width=\columnwidth]{infill_test_maskeddataC.png}
@@ -432,18 +433,33 @@ data analysis following a burst.
   \includegraphics[width=\columnwidth,clip,trim=0 1.35cm 0
     0]{T125738_bayestar_2MPZgz_003_004.pdf}
   \includegraphics[width=\columnwidth,clip,trim=0 0 0
-    0.15cm]{T125738_bayestar_2MPZgz_001_005.pdf}
+    0.15cm]{T125738_bayestar_2MPZgz_001_01.pdf}
   \caption{The number of fields required to cover the given fraction
-    of the probability region for a simulated LIGO detection (red
-    curves without the galaxy map, green curves with a smoothed
-    galaxy, blue curves with a raw galaxy map).  The upper solid
-    curves use a HEALPix map with about 200,000 cells, the dashed
-    curves have about 50,000 cells, the dotted curves have about
-    12,000 cells and lower solid curves have about 3,000 cells,
-    corresponding 0.2, 0.8, 3.2 and 13 square-degree fields of
+    of the probability region for a simulated LIGO detection (solid curves
+    curves without the galaxy map, dashed curves with a smoothed
+    galaxy, dotted with a raw galaxy map).  The upper red
+    curves use a HEALPix map with about 800,000 cells, the green
+    curves have about 50,000 cells, the blue curves have about
+    3,000 cells,
+    corresponding 0.05, 0.8  and 13 square-degree fields of
     view. The redshift range of the galaxy map in the upper panel is
-    $0.03<z<0.04$ and $0.01<z<0.05$ in the lower panel.}
+    $0.03<z<0.04$ and $0.01<z<0.1$ in the lower panel.}
   \label{fig:bayestar}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\columnwidth]{nfields_infilled.pdf}
+  \caption{The number of fields required to cover the given fraction
+    of the probability region for a simulated LIGO detection: solid
+    curves curves without the galaxy map, dashed curves with a
+    smoothed galaxy map and the dotted curves with a smoothed maps
+    infilled through the Galactic plane.  The upper red curves use a
+    HEALPix map with about 200,000 cells, the green curves have about
+    50,000 cells, the blue curves have about 12,000 cells,
+    corresponding 0.2, 0.8 and 3 square-degree fields of view. The
+    redshift range of the galaxy map is 0.01 to 0.1. The green dashed and solid curves are
+    the same as those in the lower panel of Fig.~\ref{fig:bayestar}.}
+  \label{fig:bayestar_inf}
 \end{figure}
 
 \section{Conclusions}

@@ -138,6 +138,7 @@ def MakeObsPlan(SkyMap_name,nside,SaveFigures,nvalues=None,
     if DensityMap_name != None :
         if nside_DensityMap != nside:
             galpixels_DensityMap = hp.pixelfunc.ud_grade(galpixels_DensityMap,nside_out = nside, order_in = 'RING', order_out = 'RING')
+            galpixels_DensityMap = np.where(galpixels_DensityMap>0,galpixels_DensityMap,0)
             if SaveFigures:
                 PlotMap(galpixels_DensityMap,nside,'./GalaxyDensityMapResized.png')
     
