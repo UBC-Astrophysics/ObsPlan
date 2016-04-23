@@ -1,4 +1,4 @@
-\begin{thebibliography}{59}
+\begin{thebibliography}{60}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abbott} {et~al.}(2016{\natexlab{a}}){Abbott}, {Abbott}, {Abbott},
@@ -42,6 +42,10 @@ Abbott, B.~P. {et~al.} 2016, Phys. Rev. Lett., 116, 061102
 
 \bibitem[{Antolini \& Heyl(2016)}]{2016AntolInfill}
 Antolini, E. \& Heyl, J.~S. 2016, \mnras, submitted
+
+\bibitem[{{Bartos} {et~al.}(2015){Bartos}, {Crotts}, \&
+  {M{\'a}rka}}]{2015ApJ...801L...1B}
+{Bartos}, I., {Crotts}, A.~P.~S., \& {M{\'a}rka}, S. 2015, \apjl, 801, L1
 
 \bibitem[{{Belczynski} {et~al.}(2016){Belczynski}, {Holz}, {Bulik}, \&
   {O'Shaughnessy}}]{2016arXiv160204531B}
