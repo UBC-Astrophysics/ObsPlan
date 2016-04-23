@@ -61,16 +61,20 @@ LIGO has recently begun to detect gravitational wave events from the
 local Universe \citep{PhysRevLett.116.061102}.  During these initial
 years of gravitational astronomy, the localization of the candidate
 events on the sky is poor with the ninety-percent confidence regions
-covering hundreds or even thousands of square degrees.  Finding an
+covering hundreds or even thousands of square degrees .
+\citep{2014ApJ...789L...5K,2014ApJ...795..105S,2015ApJ...804..114B,2016LRR....19....1A}.
+Finding an
 electromagnetic counterpart to these candidate gravitational-wave
 events will be crucial to understand the host environment, the
-evolution of the progenitoris and to provide tests of cosmology
-relativity by yielding measurement of the redshift of the source.  The
+evolution of the progenitor and to provide tests of cosmology
+by yielding measurement of the redshift of the source.  The
 ideas of how the the electromagnetic counterparts would appear are
 varied and uncertain. There has been substantial speculation on the
 electromagnetic transients associated with the mergers of binaries
 that include a neutron star
-\citep[e.g.][]{2016PhRvD..93b4011E,2016arXiv160107711K,2016arXiv160100017D,2015arXiv151205435F,2015ApJ...814L..20M,2015PhRvD..92d4028K,2015arXiv150807939S,2015arXiv150807911S}
+\citep[e.g.][]{2016PhRvD..93b4011E,2016arXiv160107711K,2016arXiv160100017D,
+  2015arXiv151205435F,2015ApJ...814L..20M,2015PhRvD..92d4028K,
+  2015arXiv150807939S,2015arXiv150807911S}
 However,the first discovered gravitational wave event (GW150914)
 appears to be the merger of binary black holes, so the appearance and
 duration of the electromagnetic counterparts are especially uncertain
@@ -88,28 +92,30 @@ The purpose of this paper is to present a strategy to alleviate both
 of these issues; that is, to reduce both the search region and the
 time required to plan and begin observations.  We follow the spirit of
 \citet{2015arXiv150803608G} to develop a galaxy catalogue to guide the
-observational plan.  However, our goal here is to develop a nearly
-complete catalogue at the expense of having less accurate estimates of
-the redshifts of the galaxies within the catalogue.  The accuracy of
-the galaxy distances needs to be only as good as the distance estimates
-of the gravitational-wave events.  Additionally we will outline a
+observational plan \citep[see
+  also][]{PhysRevD.82.102002,0004-637X-784-1-8,Ghosh2015,Fan2015}.
+However, our goal here is to develop a nearly complete catalogue at
+the expense of having less accurate estimates of the redshifts of the
+galaxies within the catalogue.  The accuracy of the galaxy distances
+needs to be only as good as the distance estimates of the
+gravitational-wave events.  Additionally we will outline a
 straightforward and rapid technique to generate a nearly optimal
 observing plan to follow up the events rapidly (i.e. within a few
-seconds of the trigger). 
+seconds of the trigger).
 
 \section{Bayesian Approach to Follow-Up}
 
 Because we will be interested in the rapid follow-up of candidate
 gravitational-wave events, we will be focused on the rapid Bayesian
-reconstruction outlined by \citet{2015arXiv150803634S}, BAYESTAR.  At
-the most basic level, BAYESTAR yields a probability map on the sky in
+reconstruction outlined by \citet{2015arXiv150803634S}, BAYESTAR. 
+BAYESTAR yields a probability map on the sky in
 the form of a HEALPix map \citep{2005ApJ...622..759G} where each pixel
 contains the posterior probability $P(m|d)$ of a particular model
 parameterized by the position on the sky conditioned on the observed
 data (i.e. the observed strains on the LIGO and Virgo
 interferometers).  To plan an observing strategy one would like the
-probability of a particular model (i.e. position on the sky) given the
-data.  We have from Bayes's theorem
+probability of a particular model (i.e. position on the sky).
+We have from Bayes's theorem
 \begin{equation}
   P(\mathrm{position}|\mathrm{data}) = \frac{P(\mathrm{position})
     P(\mathrm{data}|\mathrm{position})}{P(\mathrm{data})}.
@@ -258,7 +264,8 @@ maps beforehand.
 \begin{figure}
   \includegraphics[width=\columnwidth]{2mass_density}
   \caption{The relative surface brightness of stars in the 2-MASS
-    Photometric Catalogue \citep{2006AJ....131.1163S} smoothed with a Gaussian of 0.03 degrees (0.005 radian).}
+    Photometric Catalogue \citep{2006AJ....131.1163S} smoothed with a Gaussian
+    of 0.03 degrees (0.005 radian).}
   \label{fig:starmap}
 \end{figure}
 There is a further structure apparent in the map, and this is of
@@ -372,7 +379,7 @@ is large.
 
 \section{Results}
 
-To assess the performance of these techniques we will focus on optical
+To assess the performance of these techniques we will first focus on optical
 follow-up where we do not wish to observe through the zone of
 avoidance.  We will use the Bayesian probability region calculated by
 the BAYESTAR algorithm \citep{2015arXiv150803634S} from
@@ -380,8 +387,8 @@ the BAYESTAR algorithm \citep{2015arXiv150803634S} from
 Virgo is operational.  For simplicity we focus on fields of view that
 correspond to a particular valid value of \texttt{NSIDE} for the
 HEALPix map.  In particular we examine a 13-square-degree field of
-view ($\mathtt{NSIDE}=32$) similar to that of LSST, 3-square-degree
-($\mathtt{NSIDE}=64$), 0.8 and 0.2-square-degree fields of view.  We
+view ($\mathtt{NSIDE}=16$) similar to that of LSST, 0.8
+($\mathtt{NSIDE}=64$) and 0.05-square-degree fields of view.  We
 quantify the performance in two ways: the time to create the optimized
 observing plan is typically 1-3 seconds and the decrease in the number
 of fields required to reach a given cumulative probability.
@@ -400,35 +407,36 @@ view using a smoothed galaxy map does not affect the results
 significantly.  On the other hand, if one uses the alternative metric
 of what is the probability of that the source lies within the first
 field, the use of a galaxy map increases this probability from about
-6.5\% to 9.2\%.
+6.6\% to 14.5\%.
 
-If we now examine the most modest field of view, the 0.2 square-degree
+If we now examine the most modest field of view, the 0.05 square-degree
 field, we can see a more dramatic advantage of using the galaxy map.
 If one uses the raw galaxy map in which each observed field must
-contain at least one galaxy, it requires 57 fields (or about 12 square
+contain at least one galaxy, it requires 73 fields (or about 4 square
 degrees) to reach half of the cumulative probability.  To reach the
-same cumulative probability requires 186 fields (about 40 square
-degrees) if one uses the smoothed map and 308 fields (about 65 square
+same cumulative probability requires 742 fields (about 38 square
+degrees) if one uses the smoothed map and 1,211 fields (about 61 square
 degrees) without a galaxy map.  For such a small field of view the
 effectiveness of the galaxy map is dramatic.  Furthermore, the chance
-of the source being in the first observed field increases from 0.26\%
-to 2.3\% with the unsmoothed map.  Understandably for the
+of the source being in the first observed field increases from 0.07\%
+to 1.2\% with the unsmoothed map.  Understandably for the
 intermediate-sized fields of view the improvement is intermediate
 between that achieved for the LSST field of view and for the modest one.
 
-If the redshift estimate for the source is somewhat less accurate
-perhaps $0.01<z<0.05$, the gains to be had by using a galaxy map are
-more modest as depicted in the lower panel of Fig.~\ref{fig:bayestar}.
-For the 13 square-degree field of view, the improvement is especially
-modest; with the galaxy map eight fields are required to reach the
-fifty percent mark and without the map nine fields are required.  For
-the smallest field of view, the galaxy map reduces the number of
-fields required to reach the fifty-percent mark from 308 to 141, a
-55\% reduction.  With the more accurate redshift estimate the
-reduction was over 80\%.  The probability of the source lying in the
-first field increases from 0.26\% to 0.52\%.  This stresses the
-importance of having distance estimates as early as possible in the
-data analysis following a burst.
+If the redshift estimate for the source is much less accurate perhaps
+$0.01<z<0.1$, the gains to be had by using a galaxy map are more
+modest as depicted in the lower panel of Fig.~\ref{fig:bayestar}.  The
+galaxy map corresponding to this range of redshift is given in
+Fig.~\ref{fig:galmap}.  For the 13 square-degree field of view, the
+improvement is especially modest; with the galaxy map eight fields are
+required to reach the fifty percent mark and without the map nine
+fields are required.  For the smallest field of view, the galaxy map
+reduces the number of fields required to reach the fifty-percent mark
+from 1,211 to 473, a 61\% reduction.  With the more accurate redshift
+estimate the reduction was nearly 94\%.  The probability of the source
+lying in the first field increases from 0.07\% to 0.46\%.  This
+stresses the importance of having distance estimates as early as
+possible in the data analysis following a burst.
 \begin{figure}
   \includegraphics[width=\columnwidth,clip,trim=0 1.35cm 0
     0]{T125738_bayestar_2MPZgz_003_004.pdf}
@@ -447,6 +455,32 @@ data analysis following a burst.
   \label{fig:bayestar}
 \end{figure}
 
+Fig.~\ref{fig:bayestar_inf} depicts the results using the infilled
+galaxy map.  An infilled map is useful to search for electromagnetic
+counterparts that may be seen through the Galactic plane, for example,
+gamma-rays, hard x-rays and radio emission.  Here we use a narrower
+range of fields of view: 0.2, 0.8 and 3 square-degrees.  For example
+the Parkes Multibeam receiever\citep{1996PASA...13..243S} can cover
+about 3 square-degrees in a single pointing and XMM-Netwon EPIC
+instrument has a 0.25 square-degree field.  Here we will focus on the
+middle set of green curves that are for the 0.8-square-degree field of
+view, the same as the green curves in lower panel of
+Fig.~\ref{fig:bayestar}.  In both figures the upper solid curve gives
+the number of fields without a galaxy maps and the dashed curve gives
+the number of fields with a smoothed galaxy map.  For these curves,
+the first field has one-percent probabilty without a galaxy map and
+two percent with the smoothed galaxy map.  The infilled map because it
+also has probablity through the Galactic plane yields an intermediate
+result of 1.6\% in the first field. To reach half of the probability
+requires 84 fields without a galaxy map, 79 with the infilled map and
+70 with the smoothed map, so again using the infilled map and
+searching through the Galactic plane yields an intermediate result.
+One could reduce the number of fields to reach the fiftieth percentile
+slightly by using the infilled, smoothed map in the Galactic plane and
+the raw galaxy counts outside of the plane.  The total number of
+fields required to search half of the probability is 63 for the raw
+map, so the improvement achieved through this additional complication
+is modest.
 \begin{figure}
   \includegraphics[width=\columnwidth]{nfields_infilled.pdf}
   \caption{The number of fields required to cover the given fraction
@@ -457,8 +491,9 @@ data analysis following a burst.
     HEALPix map with about 200,000 cells, the green curves have about
     50,000 cells, the blue curves have about 12,000 cells,
     corresponding 0.2, 0.8 and 3 square-degree fields of view. The
-    redshift range of the galaxy map is 0.01 to 0.1. The green dashed and solid curves are
-    the same as those in the lower panel of Fig.~\ref{fig:bayestar}.}
+    redshift range of the galaxy map is 0.01 to 0.1. The green dashed
+    and solid curves are the same as those in the lower panel of
+    Fig.~\ref{fig:bayestar}.}
   \label{fig:bayestar_inf}
 \end{figure}
 
@@ -470,7 +505,7 @@ events to understand the astrophysical nature of these sources.
 Although the Fermi GBM did see hints of gamma rays coincident with the
 gravitational wave event in time \citep{2016arXiv160203920C}, other
 efforts at finding an electromagnetic counterpart only provided upper limits
-\citep[e.g][]{2016arXiv160204198S,2016arXiv160204156S,2016arXiv160204488F},
+\citep[e.g][]{2016arXiv160208492A,2016arXiv160204198S,2016arXiv160204156S,2016arXiv160204488F},
 possibly due to the rapid decay of the electromagnetic radiation from
 the binary black-hole merger.  Only the GBM experiment though had
 observations coincident in time with the event.  The Fermi LAT managed

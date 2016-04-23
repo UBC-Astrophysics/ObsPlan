@@ -1,12 +1,22 @@
-\begin{thebibliography}{50}
+\begin{thebibliography}{59}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
-\bibitem[{{Abbott} {et~al.}(2016){Abbott}, {Abbott}, {Abbott}, {Abernathy},
-  {Acernese}, {Ackley}, {Adams}, {Adams}, {Addesso}, {Adhikari}, \&
-  et~al.}]{2016ApJ...818L..22A}
+\bibitem[{{Abbott} {et~al.}(2016{\natexlab{a}}){Abbott}, {Abbott}, {Abbott},
+  {Abernathy}, {Acernese}, {Ackley}, {Adams}, {Adams}, {Addesso}, {Adhikari},
+  \& et~al.}]{2016ApJ...818L..22A}
 {Abbott}, B.~P., {Abbott}, R., {Abbott}, T.~D., {Abernathy}, M.~R., {Acernese},
   F., {Ackley}, K., {Adams}, C., {Adams}, T., {Addesso}, P., {Adhikari}, R.~X.,
-  \& et~al. 2016, \apjl, 818, L22
+  \& et~al. 2016{\natexlab{a}}, \apjl, 818, L22
+
+\bibitem[{{Abbott} {et~al.}(2016{\natexlab{b}}){Abbott}, {Abbott}, {Abbott},
+  {Abernathy}, {Acernese}, {Ackley}, {Adams}, {Adams}, {Addesso}, {Adhikari},
+  \& et~al.}]{2016arXiv160208492A}
+---. 2016{\natexlab{b}}, ArXiv e-prints
+
+\bibitem[{{Abbott} {et~al.}(2016{\natexlab{c}}){Abbott}, {Abbott}, {Abbott},
+  {Abernathy}, {Acernese}, {Ackley}, {Adams}, {Adams}, {Addesso}, {Adhikari},
+  \& et~al.}]{2016LRR....19....1A}
+---. 2016{\natexlab{c}}, Living Reviews in Relativity, 19
 
 \bibitem[{Abbott {et~al.}(2016)}]{PhysRevLett.116.061102}
 Abbott, B.~P. {et~al.} 2016, Phys. Rev. Lett., 116, 061102
@@ -37,6 +47,15 @@ Antolini, E. \& Heyl, J.~S. 2016, \mnras, submitted
   {O'Shaughnessy}}]{2016arXiv160204531B}
 {Belczynski}, K., {Holz}, D.~E., {Bulik}, T., \& {O'Shaughnessy}, R. 2016,
   ArXiv e-prints, 1602.04531
+
+\bibitem[{{Berry} {et~al.}(2015){Berry}, {Mandel}, {Middleton}, {Singer},
+  {Urban}, {Vecchio}, {Vitale}, {Cannon}, {Farr}, {Farr}, {Graff}, {Hanna},
+  {Haster}, {Mohapatra}, {Pankow}, {Price}, {Sidery}, \&
+  {Veitch}}]{2015ApJ...804..114B}
+{Berry}, C.~P.~L., {Mandel}, I., {Middleton}, H., {Singer}, L.~P., {Urban},
+  A.~L., {Vecchio}, A., {Vitale}, S., {Cannon}, K., {Farr}, B., {Farr}, W.~M.,
+  {Graff}, P.~B., {Hanna}, C., {Haster}, C.-J., {Mohapatra}, S., {Pankow}, C.,
+  {Price}, L.~R., {Sidery}, T., \& {Veitch}, J. 2015, \apj, 804, 114
 
 \bibitem[{{Bilicki} {et~al.}(2014){Bilicki}, {Jarrett}, {Peacock}, {Cluver}, \&
   {Steward}}]{2014ApJS..210....9B}
@@ -117,6 +136,11 @@ Antolini, E. \& Heyl, J.~S. 2016, \mnras, submitted
 \bibitem[{{Eldridge} \& {Stanway}(2016)}]{2016arXiv160203790E}
 {Eldridge}, J.~J. \& {Stanway}, E.~R. 2016, ArXiv e-prints, 1602.03790
 
+\bibitem[{Fan {et~al.}(2015)Fan, Messenger, \& Heng}]{Fan2015}
+Fan, X., Messenger, C., \& Heng, I.~S. 2015, Gravitational Wave Astrophysics:
+  Proceedings of the Third Session of the Sant Cugat Forum on Astrophysics, ed.
+  F.~C. Sopuerta (Cham: Springer International Publishing), 35--42
+
 \bibitem[{{Fermi-LAT collaboration}(2016)}]{2016arXiv160204488F}
 {Fermi-LAT collaboration}. 2016, ArXiv e-prints, 1602.04488
 
@@ -133,6 +157,11 @@ Antolini, E. \& Heyl, J.~S. 2016, \mnras, submitted
 {Gerosa}, D., {Kesden}, M., {O'Shaughnessy}, R., {Klein}, A., {Berti}, E.,
   {Sperhake}, U., \& {Trifir{\`o}}, D. 2015, Physical Review Letters, 115,
   141102
+
+\bibitem[{Ghosh \& Nelemans(2015)}]{Ghosh2015}
+Ghosh, S. \& Nelemans, G. 2015, Gravitational Wave Astrophysics: Proceedings of
+  the Third Session of the Sant Cugat Forum on Astrophysics, ed. F.~C. Sopuerta
+  (Cham: Springer International Publishing), 51--58
 
 \bibitem[{{G{\'o}rski} {et~al.}(2005){G{\'o}rski}, {Hivon}, {Banday},
   {Wandelt}, {Hansen}, {Reinecke}, \& {Bartelmann}}]{2005ApJ...622..759G}
@@ -157,6 +186,9 @@ Antolini, E. \& Heyl, J.~S. 2016, \mnras, submitted
   {Thomson}, E.~B., {Kelly}, B.~D., {Morgan}, D.~H., {Smith}, R.~E., {Driver},
   S.~P., {Williamson}, J., {Parker}, Q.~A., {Hawkins}, M.~R.~S., {Williams},
   P.~M., \& {Lawrence}, A. 2001{\natexlab{c}}, \mnras, 326, 1279
+
+\bibitem[{Hanna {et~al.}(2014)Hanna, Mandel, \& Vousden}]{0004-637X-784-1-8}
+Hanna, C., Mandel, I., \& Vousden, W. 2014, The Astrophysical Journal, 784, 8
 
 \bibitem[{{Heyl} {et~al.}(1997){Heyl}, {Colless}, {Ellis}, \&
   {Broadhurst}}]{1997MNRAS.285..613H}
@@ -210,6 +242,9 @@ Antolini, E. \& Heyl, J.~S. 2016, \mnras, submitted
   J., {Huchra}, J., {Jarrett}, T., {Lahav}, O., {Lucey}, J., {Mamon}, G.~A.,
   {Proust}, D., {Sadler}, E.~M., \& {Wakamatsu}, K.-i. 2004, \mnras, 355, 747
 
+\bibitem[{{Kasliwal} \& {Nissanke}(2014)}]{2014ApJ...789L...5K}
+{Kasliwal}, M.~M. \& {Nissanke}, S. 2014, \apjl, 789, L5
+
 \bibitem[{{Kawaguchi} {et~al.}(2016){Kawaguchi}, {Kyutoku}, {Shibata}, \&
   {Tanaka}}]{2016arXiv160107711K}
 {Kawaguchi}, K., {Kyutoku}, K., {Shibata}, M., \& {Tanaka}, M. 2016, ArXiv
@@ -245,6 +280,9 @@ Antolini, E. \& Heyl, J.~S. 2016, \mnras, submitted
   {Lahav}, O., {Lewis}, I., {Lumsden}, S., {Maddox}, S., {Madgwick}, D.,
   {Peacock}, J.~A., {Peterson}, B.~A., {Sutherland}, W., {Taylor}, K., \&
   {2DFGRS Team}. 2002, \mnras, 336, 907
+
+\bibitem[{Nuttall \& Sutton(2010)}]{PhysRevD.82.102002}
+Nuttall, L.~K. \& Sutton, P.~J. 2010, Phys. Rev. D, 82, 102002
 
 \bibitem[{{Saunders} {et~al.}(2000){Saunders}, {Sutherland}, {Maddox},
   {Keeble}, {Oliver}, {Rowan-Robinson}, {McMahon}, {Efstathiou}, {Tadros},
@@ -352,6 +390,13 @@ Antolini, E. \& Heyl, J.~S. 2016, \mnras, submitted
   {Sutton}, P.~J., {Swanson}, M.~E.~C., {Tarle}, G., {Thaler}, J., {Thomas},
   R.~C., {Tucker}, D.~L., {Vikram}, V., {Wechsler}, R.~H., \& {Weller}, J.
   2016, ArXiv e-prints, 1602.04198
+
+\bibitem[{{Staveley-Smith} {et~al.}(1996){Staveley-Smith}, {Wilson}, {Bird},
+  {Disney}, {Ekers}, {Freeman}, {Haynes}, {Sinclair}, {Vaile}, {Webster}, \&
+  {Wright}}]{1996PASA...13..243S}
+{Staveley-Smith}, L., {Wilson}, W.~E., {Bird}, T.~S., {Disney}, M.~J., {Ekers},
+  R.~D., {Freeman}, K.~C., {Haynes}, R.~F., {Sinclair}, M.~W., {Vaile}, R.~A.,
+  {Webster}, R.~L., \& {Wright}, A.~E. 1996, \pasa, 13, 243
 
 \bibitem[{{Vanderlinde} \& {Chime Collaboration}(2014)}]{2014era..conf10102V}
 {Vanderlinde}, K. \& {Chime Collaboration}. 2014, in Exascale Radio Astronomy,
