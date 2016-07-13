@@ -1,4 +1,4 @@
-\begin{thebibliography}{60}
+\begin{thebibliography}{64}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abbott} {et~al.}(2016{\natexlab{a}}){Abbott}, {Abbott}, {Abbott},
@@ -11,7 +11,7 @@
 \bibitem[{{Abbott} {et~al.}(2016{\natexlab{b}}){Abbott}, {Abbott}, {Abbott},
   {Abernathy}, {Acernese}, {Ackley}, {Adams}, {Adams}, {Addesso}, {Adhikari},
   \& et~al.}]{2016arXiv160208492A}
----. 2016{\natexlab{b}}, ArXiv e-prints, 1602.08492
+---. 2016{\natexlab{b}}, ArXiv e-prints
 
 \bibitem[{{Abbott} {et~al.}(2016{\natexlab{c}}){Abbott}, {Abbott}, {Abbott},
   {Abernathy}, {Acernese}, {Ackley}, {Adams}, {Adams}, {Addesso}, {Adhikari},
@@ -40,9 +40,6 @@ Abbott, B.~P. {et~al.} 2016, Phys. Rev. Lett., 116, 061102
   {Anderton}, T., {Andrews}, B.~H., {Aubourg}, {\'E}., {Bailey}, S.,
   {Balbinot}, E., {Barnes}, R., \& et~al. 2012, \apjs, 203, 21
 
-\bibitem[{Antolini \& Heyl(2016)}]{2016AntolInfill}
-Antolini, E. \& Heyl, J.~S. 2016, in preparation
-
 \bibitem[{{Bartos} {et~al.}(2015){Bartos}, {Crotts}, \&
   {M{\'a}rka}}]{2015ApJ...801L...1B}
 {Bartos}, I., {Crotts}, A.~P.~S., \& {M{\'a}rka}, S. 2015, \apjl, 801, L1
@@ -70,6 +67,9 @@ Antolini, E. \& Heyl, J.~S. 2016, in preparation
   {Donoho}}]{2007ITIP...16.2675B}
 {Bobin}, J., {Starck}, J.-L., {Fadili}, J.~M., {Moudden}, Y., \& {Donoho},
   D.~L. 2007, IEEE Transactions on Image Processing, 16, 2675
+
+\bibitem[{Caiazzo {et~al.}(2016)Caiazzo, Antolini, \& Heyl}]{2016AntolInfill}
+Caiazzo, I., Antolini, E., \& Heyl, J.~S. 2016, \mnras, in prepartion
 
 \bibitem[{{Cerioli} {et~al.}(2016){Cerioli}, {Lodato}, \&
   {Price}}]{2016MNRAS.457..939C}
@@ -259,6 +259,9 @@ Hanna, C., Mandel, I., \& Vousden, W. 2014, The Astrophysical Journal, 784, 8
 {Kyutoku}, K., {Ioka}, K., {Okawa}, H., {Shibata}, M., \& {Taniguchi}, K. 2015,
   \prd, 92, 044028
 
+\bibitem[{{Leibler} \& {Berger}(2010)}]{2010ApJ...725.1202L}
+{Leibler}, C.~N. \& {Berger}, E. 2010, \apj, 725, 1202
+
 \bibitem[{{Liske} {et~al.}(2003){Liske}, {Lemon}, {Driver}, {Cross}, \&
   {Couch}}]{2003MNRAS.344..307L}
 {Liske}, J., {Lemon}, D.~J., {Driver}, S.~P., {Cross}, N.~J.~G., \& {Couch},
@@ -270,6 +273,10 @@ Hanna, C., Mandel, I., \& Vousden, W. 2014, The Astrophysical Journal, 784, 8
 \bibitem[{{Mingarelli} {et~al.}(2015){Mingarelli}, {Levin}, \&
   {Lazio}}]{2015ApJ...814L..20M}
 {Mingarelli}, C.~M.~F., {Levin}, J., \& {Lazio}, T.~J.~W. 2015, \apjl, 814, L20
+
+\bibitem[{{Nissanke} {et~al.}(2013){Nissanke}, {Kasliwal}, \&
+  {Georgieva}}]{2013ApJ...767..124N}
+{Nissanke}, S., {Kasliwal}, M., \& {Georgieva}, A. 2013, \apj, 767, 124
 
 \bibitem[{{Norberg} {et~al.}(2002){Norberg}, {Cole}, {Baugh}, {Frenk},
   {Baldry}, {Bland-Hawthorn}, {Bridges}, {Cannon}, {Colless}, {Collins},
@@ -301,6 +308,22 @@ Nuttall, L.~K. \& Sutton, P.~J. 2010, Phys. Rev. D, 82, 102002
 
 \bibitem[{{Siegel} \& {Ciolfi}(2015{\natexlab{b}})}]{2015arXiv150807939S}
 ---. 2015{\natexlab{b}}, ArXiv e-prints, 1508.07939
+
+\bibitem[{{Singer} {et~al.}(2016{\natexlab{a}}){Singer}, {Chen}, {Holz},
+  {Farr}, {Price}, {Raymond}, {Cenko}, {Gehrels}, {Cannizzo}, {Kasliwal},
+  {Nissanke}, {Coughlin}, {Farr}, {Urban}, {Vitale}, {Veitch}, {Graff},
+  {Berry}, {Mohapatra}, \& {Mandel}}]{2016arXiv160307333S}
+{Singer}, L.~P., {Chen}, H.-Y., {Holz}, D.~E., {Farr}, W.~M., {Price}, L.~R.,
+  {Raymond}, V., {Cenko}, S.~B., {Gehrels}, N., {Cannizzo}, J., {Kasliwal},
+  M.~M., {Nissanke}, S., {Coughlin}, M., {Farr}, B., {Urban}, A.~L., {Vitale},
+  S., {Veitch}, J., {Graff}, P., {Berry}, C.~P.~L., {Mohapatra}, S., \&
+  {Mandel}, I. 2016{\natexlab{a}}, ArXiv e-prints
+
+\bibitem[{{Singer} {et~al.}(2016{\natexlab{b}}){Singer}, {Chen}, {Holz},
+  {Farr}, {Price}, {Raymond}, {Cenko}, {Gehrels}, {Cannizzo}, {Kasliwal},
+  {Nissanke}, {Coughlin}, {Farr}, {Urban}, {Vitale}, {Veitch}, {Graff},
+  {Berry}, {Mohapatra}, \& {Mandel}}]{2016arXiv160504242S}
+---. 2016{\natexlab{b}}, ArXiv e-prints
 
 \bibitem[{{Singer} \& {Price}(2016)}]{2015arXiv150803634S}
 {Singer}, L.~P. \& {Price}, L.~R. 2016, \prd, 93, 024013

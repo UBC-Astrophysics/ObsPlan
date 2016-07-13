@@ -124,8 +124,8 @@ def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap,zcolumn=None,
         plt.savefig(FitsMapCat_name+"_smoothed.png")
         plt.show()
     
-    hp.write_map(FitsMapCat_name+".fits.gz", galpixels_GalMap)
-    hp.write_map(FitsMapCat_name+"_smoothed.fits.gz", GalMap_smoothed)
+    hp.write_map(FitsMapCat_name+".fits.gz", galpixels_GalMap,coord='C')
+    hp.write_map(FitsMapCat_name+"_smoothed.fits.gz", GalMap_smoothed,coord='C')
     
 
     if (numbootstrap!=None):
@@ -136,8 +136,8 @@ def MakeGalMap(FitsGalCat_name,nvalues,z_min,z_max,showMap,zcolumn=None,
             galpixels_GalMap=0*galpixels_GalMap
             galpixels_GalMap[pixelsboot[(zboot>z_min) & (zboot<z_max)]] += 1 
             GalMap_smoothed = hp.sphtfunc.smoothing(galpixels_GalMap,sigma = sigma)
-            hp.write_map("%s_%03d.fits.gz" % (FitsMapCat_name,nboot), galpixels_GalMap)
-            hp.write_map("%s_%03d_smoothed.fits.gz" % (FitsMapCat_name,nboot), GalMap_smoothed)
+            hp.write_map("%s_%03d.fits.gz" % (FitsMapCat_name,nboot), galpixels_GalMap,coord='C')
+            hp.write_map("%s_%03d_smoothed.fits.gz" % (FitsMapCat_name,nboot), GalMap_smoothed,coord='C')
     
 
         

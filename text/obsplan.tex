@@ -17,7 +17,7 @@
 \newcommand{\prd}{Phys. Rev. D}
 \newcommand{\msun}{\mathrm{M}_\odot}
 
-\title[2MPZ and LIGO]{Using the 2-MASS Photometric Redshift Survey to optimize LIGO Follow-Up Observations}
+\title[2MPZ and LIGO]{Using the 2-MASS Photometric Redshift Survey to optimise LIGO Follow-Up Observations}
 \author[Antolini \& Heyl]{Elisa Antolini$^{1}$, Jeremy S. Heyl$\thanks{Email:
     heyl@phas.ubc.ca; Canada Research Chair}^{2}$ \\
   $^{1}$Dipartimento di Fisica e Geologia, Universit\`a degli Studi di Perugia, I-06123 Perugia, Italia \\
@@ -38,16 +38,16 @@
   merger and ring-down of the black hole binary at a distance of about
   500~Mpc or a redshift of about 0.1.  The search for electromagnetic
   counterparts for the inspiral of binary black holes is impeded by
-  poor initial source localizations and a lack of a compelling model
+  coarse initial source localisations and a lack of a compelling model
   for the counterpart; therefore, rapid electromagnetic follow-up is
   required to understand the astrophysical context of these sources.
   Because astrophysical sources of gravitational radiation are likely
   to reside in galaxies, it would make sense to search first in
   regions where the LIGO-Virgo probability is large and where the
-  density of galaxies is large as well.  Under the Bayesian prior
+  density of galaxies is large as well.  Under the 
   assumption that the probability of a gravitational-wave event from a
   given region of space is proportional to the density of galaxies
-  within the probed volume, one can calculate an improved localization
+  within the probed volume, one can calculate an improved localisation
   of the position of the source simply by multiplying the LIGO-Virgo
   skymap by the density of galaxies in the range of redshifts.  We
   propose using the 2-MASS Photometric Redshift Galaxy Catalogue for
@@ -63,26 +63,25 @@
 
 LIGO has recently begun to detect gravitational wave events from the
 local Universe \citep{PhysRevLett.116.061102}.  During these initial
-years of gravitational astronomy, the localization of the candidate
-events on the sky is poor with the ninety-percent confidence regions
+years of gravitational astronomy, the localisation of the candidate
+events on the sky is coarse with the ninety-percent confidence regions
 covering hundreds or even thousands of square degrees .
 \citep{2014ApJ...789L...5K,2014ApJ...795..105S,2015ApJ...804..114B,2016LRR....19....1A}.
-Finding an
-electromagnetic counterpart to these candidate gravitational-wave
-events will be crucial to understand the host environment, the
-evolution of the progenitor and to provide tests of cosmology
-by yielding measurement of the redshift of the source.  The
+Finding an electromagnetic counterpart to these candidate
+gravitational-wave events will be crucial to understand the host
+environment, the evolution of the progenitor and to provide tests of
+cosmology by yielding measurement of the redshift of the source.  The
 ideas of how the the electromagnetic counterparts would appear are
-varied and uncertain. There has been substantial speculation on the
+varied and uncertain. There has been substantial consideration of the
 electromagnetic transients associated with the mergers of binaries
 that include a neutron star
 \citep[e.g.][]{2016PhRvD..93b4011E,2016arXiv160107711K,2016arXiv160100017D,
   2015arXiv151205435F,2015ApJ...814L..20M,2015PhRvD..92d4028K,
-  2015arXiv150807939S,2015arXiv150807911S}
-However,the first discovered gravitational wave event (GW150914)
-appears to be the merger of binary black holes, so the appearance and
-duration of the electromagnetic counterparts are especially uncertain
-with only a few models
+  2015arXiv150807939S,2015arXiv150807911S} However,the first
+discovered gravitational wave event (GW150914) was almost certainly
+the merger of binary black holes, so the appearance and duration of
+the electromagnetic counterparts are especially uncertain with only a
+few models
 \citep[e.g.][]{2015PhRvL.115n1102G,2015MNRAS.452.3419M,2016MNRAS.457..939C,2016ApJ...817..183Y}.
 Consequently, rapid electromagnetic follow-up of a large portion of
 the probable region would increase the chance of success in finding a
@@ -94,7 +93,7 @@ gravitational-wave event.
 
 The purpose of this paper is to present a strategy to alleviate both
 of these issues; that is, to reduce both the search region and the
-time required to plan and begin observations.  We follow the spirit of
+time required to plan and begin observations.  We follow the approach of
 \citet{2015arXiv150803608G} to develop a galaxy catalogue to guide the
 observational plan \citep[see
   also][]{PhysRevD.82.102002,0004-637X-784-1-8,Ghosh2015,Fan2015,2015ApJ...801L...1B}.
@@ -115,7 +114,7 @@ reconstruction outlined by \citet{2015arXiv150803634S}, BAYESTAR.
 BAYESTAR yields a probability map on the sky in
 the form of a HEALPix map \citep{2005ApJ...622..759G} where each pixel
 contains the posterior probability $P(m|d)$ of a particular model
-parameterized by the position on the sky conditioned on the observed
+parameterised by the position on the sky conditioned on the observed
 data (i.e. the observed strains on the LIGO and Virgo
 interferometers).  To plan an observing strategy one would like the
 probability of a particular model (i.e. position on the sky).
@@ -139,21 +138,21 @@ $P(\mathrm{position})$.
 Furthermore, because we will ultimately be interested in which fields
 to observe (not which particular galaxies), accurate positions are not
 required in the construction of $P(\mathrm{position})$. Because the
-LIGO probability maps are sampled on a HEALPix grid, it is convenient 
-to sample $P(\mathrm{position})$ also as a HEALPix grid with each pixel
-covering about the same solid angle as the field of view of the
-telescope of interest or the BAYESTAR map (a HEALPix $\mathtt{NSIDE}=512$ or
-about 50 square arcminutes per pixel), so positions no more accurate
-than arcminutes are required.  The key to generate the observing plan
-rapidly is to calculate the required galaxy density maps beforehand in
-principle at the desired resolution (this optimization only speeds the
-process up slightly) for the distance ranges of interest.  With the
-arrival of an alert, all that is required is to calculate
-Eq.~(\ref{eq:1}) using the HEALPix maps, resample to the scale of the
-telescope, renormalize the probability, sort the pixels from most
-likely to least and output the positions to cover a given amount of
-cumulative probability (this entire process takes typically less than
-one second).
+LIGO probability maps are sampled on a HEALPix grid, it is convenient
+to sample $P(\mathrm{position})$ also as a HEALPix grid with each
+pixel covering about the same solid angle as the field of view of the
+telescope of interest or the BAYESTAR map.  We choose a HEALPix map
+with $\mathtt{NSIDE}=512$ or about 50 square arcminutes per pixel, so
+positions no more accurate than arcminutes are required.  The key to
+generate the observing plan rapidly is to calculate the required
+galaxy density maps beforehand in principle at the desired resolution
+(this optimisation only speeds the process up slightly) for the
+distance ranges of interest.  With the arrival of an alert, all that
+is required is to calculate Eq.~(\ref{eq:1}) using the HEALPix maps,
+resample to the scale of the telescope, renormalise the probability,
+sort the pixels from most likely to least and output the positions to
+cover a given amount of cumulative probability (this entire process
+takes typically less than one second).
 
 \section{Galaxy Catalogues}
 
@@ -161,24 +160,26 @@ To gain a picture of the local Universe, our focus will be the
 completeness of the data rather than the accuracy of the distances and
 positions.  The Census of the Local Universe
 \citep[CLU;][]{2015arXiv150803608G} combines several redshift surveys
-(2dF Galaxy Redshift Survey \cite{2002MNRAS.336..907N}; the Millenium
-Galaxy Catalog, \cite{2003MNRAS.344..307L,2005MNRAS.360...81D}; and
-the 2MASS Reshift Survey \cite{2012ApJS..199...26H}) that cover a
-large portion of the sky, but at various depths and attempt to
-increasing the completeness of the sample by using only the galaxies
-near the upper-end of the luminosity function ({\em i.e.}  $L\sim
-L_*$).  This optimizes the strategy to discover neutron-star binaries
-whose abundance is probably proportional to the total number of stars
-in a galaxy, and galaxies near $L_*$ dominate the stellar mass in the
-Universe.  On the other hand, the discovery that binary black holes
-with large masses dominate the initial detections indicates that
-focusing the search on massive galaxies might not be the best strategy
-to discover the electromagnetic counterparts to the first sources.
-After all such large black holes have not been found so far in our
-approximately $L_*$-galaxy, the Milky Way, or our neighbour,
-Andromeda.  In fact theoretical arguments indicate that the production
-of such massive black holes results from the evolution of massive
-stars in low metallicity galaxies
+(2dF Galaxy Redshift Survey \citealt{2002MNRAS.336..907N}; the
+Millenium Galaxy Catalog,
+\citealt{2003MNRAS.344..307L,2005MNRAS.360...81D}; and the 2MASS
+Reshift Survey \citealt{2012ApJS..199...26H}) that cover a large
+portion of the sky, but at various depths and attempt to increasing
+the completeness of the sample by using only the galaxies near the
+upper-end of the luminosity function ({\em i.e.}  $L\sim L_*$).  This
+may optimise the strategy to discover neutron-star binaries whose
+abundance is probably proportional to the total number of stars in a
+galaxy, and galaxies near $L_*$ dominate the stellar mass in the
+Universe \citep[however see][for caveats to this
+  assumption]{2010ApJ...725.1202L}.  On the other hand, the discovery
+that binary black holes with large masses dominate the initial
+detections indicates that focusing the search on massive galaxies
+might not be the best strategy to discover the electromagnetic
+counterparts to the first sources.  After all such large black holes
+have not been found so far in our approximately $L_*$-galaxy, the
+Milky Way, or our neighbour, Andromeda.  In fact theoretical arguments
+indicate that the production of such massive black holes results from
+the evolution of massive stars in low metallicity galaxies
 \citep{2016ApJ...818L..22A,2016arXiv160203790E} which are typically
 small in the local Universe \citep[e.g.][]{1997MNRAS.285..613H}. Our
 goal is to have a nearly complete survey that attempts to be unbiased
@@ -209,12 +210,15 @@ redshift of 0.1 with a typical scatter between the
 photometric and spectroscopic redshifts (where both are known) of
 $\sigma_z = 0.015$.
 
-Except for the most local sources, the estimate distances from the
+Except for the most local binary-black-hole mergers and
+neutron-star-black-hole mergers, the estimated distances from the
 gravitational wave data itself have comparable errors to this, so this
 catalogue is sufficiently accurate to calculate the surface density of
 galaxies with the expected redshift range of a particular
-gravitational-wave detection.  Furthermore, for the nearest sources,
-there are nearly uniform all-sky redshift surveys which would be more
+gravitational-wave detection.  On the other hand, the
+binary-neutron-star sources will have distances comparable to these
+uncertainties.  Fortunately, for these nearby sources, there are
+nearly uniform all-sky redshift surveys which would be more
 appropriate for this task
 \citep[e.g.][]{2000MNRAS.317...55S,2012ApJS..199...26H}.  Of course,
 all of the techniques outlined here can be applied to these more
@@ -225,8 +229,9 @@ For closer galaxies the redshift error is significant (the mean error
 is about 0.015), and the outer end of the range is both the median
 redshift of the catalogue and the typical distances of the
 binary-black-hole sources.  Although at the inner edge of the
-catalogue the redshift error exceeds the redshift estimate, this
-does not impede our goal of creating a catalogue of nearby galaxies.
+catalogue the redshift error exceeds the redshift estimate, this does
+not impede our goal of creating a catalogue of nearby galaxies to
+look for counterparts to binary-black-hole mergers.
 \begin{figure}
   \includegraphics[width=\columnwidth]{2MPZgz_001_01_smoothed}
   \caption{The relative surface density of galaxies in the 2-MASS Photometric Redshift Survey with photometric redshifts between 0.01 and 0.1, smoothed with a Gaussian of 0.6 degrees (0.01 radian).}
@@ -238,17 +243,21 @@ about 45 square arcminutes, four ACS fields) using a HEALPix
 \citep{2005ApJ...622..759G} tessellation with $\mathtt{NSIDE}=512$.
 Each cell of the map simply contains the number of galaxies in the
 2MPZ catalogue within the range of photometric redshift that lie
-within that portion of sky.  We have subsequently smoothed the map
+within that portion of sky.  We have consequently smoothed the map
 with a Gaussian of 0.6 degrees or about 2~Mpc at a redshift of 0.05.
 This smoothing accounts for the possibility that either the
 binary-black hole has been kicked out of one of the catalogue galaxies
 (1000~km/s for 1~Gyr yields 1~Mpc) or that the catalogue galaxies are
 accommpanied by smaller galaxies that are absent from the catalogue
 but cluster around those in the catalogue within a typical group scale
-of 1~Mpc.  Typically no HEALPix pixel contains more than one galaxy
+of 1~Mpc.  In prinicple we could smooth the maps more finely with
+increasing distance; these results would necessarily be closer to the
+unsmoothed map.
+
+Typically no HEALPix pixel contains more than one galaxy
 from the catalogue.  After smoothing we notice the large-scale
 structure even when we have averaged over distance.  This demonstrates
-the potential optimization in the observing strategy by observing
+the potential optimisation in the observing strategy by observing
 fields with nearby galaxies. Depending on whether one believes that
 the sources are associated with the visible portion of galaxies or may
 travel some distance from the galaxy itself before the
@@ -263,7 +272,7 @@ mass or luminosity.  Of course, all of these possibilities would be
 informed by one's prior knowledge of the source guided by
 theoretical models and the hints from the waveform itself and give a
 better estimate of $P(\mathrm{position})$.  The key is to calculate these
-maps beforehand.
+maps beforehand. 
 
 \begin{figure}
   \includegraphics[width=\columnwidth]{2mass_density}
@@ -272,19 +281,19 @@ maps beforehand.
     of 0.03 degrees (0.005 radian).}
   \label{fig:starmap}
 \end{figure}
-There is a further structure apparent in the map, and this is of
-course the zone of avoidance imposed by the disk and bulge of our
-Galaxy. Depending on the nature of the follow-up
-({\em e.g.} gamma-ray and radio) observations it may make
-sense to include regions along the Galactic plane where one thinks
-nearby galaxies should be. One can attempt to probe the zone of avoidance
-\citep[e.g][]{2000AJ....120..298J} and future 21-cm surveys like CHIME
-\citep{2014era..conf10102V} will also probe the large-scale structure
-beyond the Galactic plane.   However, the existing galaxy density map
-as depicted in Fig.~\ref{fig:galmap} can yield an estimate of the
-structure obscured by the Galaxy.  The technique that we will use in
-similar to that used by \citet{2008StMet...5..289A} to inpaint the CMB
-anisotropies across the Galactic plane.
+There is a further structure apparent in the map, and this is the zone
+of avoidance imposed by the disk and bulge of our Galaxy. Depending on
+the nature of the follow-up ({\em e.g.} gamma-ray and radio)
+observations it may make sense to include regions along the Galactic
+plane where one thinks nearby galaxies should be. One can attempt to
+probe the zone of avoidance \citep[e.g][]{2000AJ....120..298J} and
+future 21-cm surveys like CHIME \citep{2014era..conf10102V} will also
+probe the large-scale structure beyond the Galactic plane.  However,
+the existing galaxy density map as depicted in Fig.~\ref{fig:galmap}
+can yield an estimate of the structure obscured by the Galaxy.  The
+technique that we will use in similar to that used by
+\citet{2008StMet...5..289A} to inpaint the CMB anisotropies across the
+Galactic plane.
 
 Here we will determine the region masked by the Galaxy by finding the
 region in which the density of galaxies is either less than one tenth
@@ -342,12 +351,14 @@ give a good first-order guess at the hidden structures.
   \includegraphics[width=\columnwidth]{infill_test_dataC.png}
   \includegraphics[width=\columnwidth]{infill_test_maskeddataC.png}
   \includegraphics[width=\columnwidth]{infill_test_resultC.png}
-  \caption{Upper: the data used for the infilling test before masking
+  \includegraphics[width=\columnwidth]{infill_test_diffC.png}
+  \caption{Top: the data used for the infilling test before masking
     (this is the same as Fig.~\ref{fig:galmap} but in equatorial
-    coordinated.  Middle: we masked both the Galactic plane and within
-    five degrees of the celestial equator.  Lower: the infilled galaxy
+    coordinated.  Upper middle: we masked both the Galactic plane and within
+    five degrees of the celestial equator.  Lower middle: the infilled galaxy
     distribution both in the Galactic plane and the equatorial plane
-    to compare with the upper panel.}
+    to compare with the upper panel. Bottom: Difference between the initial map (top) and the
+    infilled map (lower middle).}
   \label{fig:infilling_test}
 \end{figure}
 
@@ -393,7 +404,7 @@ correspond to a particular valid value of \texttt{NSIDE} for the
 HEALPix map.  In particular we examine a 13-square-degree field of
 view ($\mathtt{NSIDE}=16$) similar to that of LSST, 0.8
 ($\mathtt{NSIDE}=64$) and 0.05-square-degree fields of view.  We
-quantify the performance in two ways: the time to create the optimized
+quantify the performance in two ways: the time to create the optimised
 observing plan is typically 1-3 seconds and the decrease in the number
 of fields required to reach a given cumulative probability.
 
@@ -401,7 +412,7 @@ Fig.~\ref{fig:bayestar} depicts the results for the different sizes of
 fields and the possibility of using an raw (unsmoothed) and smoothed
 galaxy map.  The upper panel gives the performance with a galaxy map
 restricted to the redshift range $0.03<z<0.04$.  Here the improvement
-in the number of fields to observe is most dramatic.  Let's start with
+in the number of fields to observe is most dramatic.  We begin with
 the lowest triplet of curves that correspond to the largest field of
 view.  Here the improvement is of using a galaxy map is modest, the
 number of fields to achieve a given cumulative probability decreases
@@ -503,12 +514,15 @@ is modest.
 
 \section{Conclusions}
 
-The discovery of gravitational waves binary black hole highlights the
-need for rapid three-dimensional localization of gravitational-wave
-events to understand the astrophysical nature of these sources.
+The discovery of gravitational waves from binary-black-hole mergers
+highlights the need for rapid three-dimensional localisation of
+gravitational-wave events to understand the astrophysical nature of
+these sources
+\citep{2013ApJ...767..124N,2016arXiv160307333S,2016arXiv160504242S}
 Although the Fermi GBM did see hints of gamma rays coincident with the
 gravitational wave event in time \citep{2016arXiv160203920C}, other
-efforts at finding an electromagnetic counterpart only provided upper limits
+efforts at finding an electromagnetic counterpart only provided upper
+limits
 \citep[e.g][]{2016arXiv160208492A,2016arXiv160204198S,2016arXiv160204156S,2016arXiv160204488F},
 possibly due to the rapid decay of the electromagnetic radiation from
 the binary black-hole merger.  Only the GBM experiment though had
@@ -516,7 +530,7 @@ observations coincident in time with the event.  The Fermi LAT managed
 to observe the entire probability region within 70 minutes of the
 event, so the timescale for rapid follow-up of these events is minutes
 rather than hours.  The algorithms presented in this paper offer a
-technique to maximize the potential for discovery with a very modest
+technique to maximise the potential for discovery with a very modest
 computation of the fields to observe first and which order.  The key
 is to calculate the likely regions of sky to observed before the burst
 in the form of a HEALPix map, so at the burst one can rapidly
@@ -535,18 +549,18 @@ redshift of 3 (70\% likely) or around a redshift of 0.2 (30\%).  This
 information informed by stellar population synthesis could be used to
 develop a better guess for the galaxy map by increase the weight of
 galaxies whose stars were born during these epochs.
-\citet{2015ApJ...806..263D} argue that the coalesce of black-hole
+\citet{2015ApJ...806..263D} argue that the coalescence of black-hole
 binaries like GW150914 will dominate the detection rates, and
 furthermore, most of these binaries form in low-metallicity galaxies
 at about 1~Gyr after the Big Bang.  Knowing in which local galaxies
 these systems typically end up would greatly improve the follow-up
 strategy.  Are we interested in looking at systems that are still low
 metallicity with star formation long ago like dwarf spheroidals?  Or
-do we expect these systems to have been incorporated in larger galaxies
-subsequently and are these larger galaxies typically spirals or
-ellipticals today?
+do we expect these systems to have been incorporated in larger
+galaxies subsequently and are these larger galaxies typically spirals
+or ellipticals today?
 
-The dawn of gravitational wave astronomy is upon us.  To realize its
+The dawn of gravitational wave astronomy is upon us.  To realise its
 full potential we can use all of our prior knowledge of the expected
 rates of these event in the context of the hierarchical formation of
 galaxies to determine where to look for the electromagnetic signal
