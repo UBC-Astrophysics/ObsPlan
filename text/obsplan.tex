@@ -275,7 +275,7 @@ better estimate of $P(\mathrm{position})$.  The key is to calculate these
 maps beforehand. 
 
 \begin{figure}
-  \includegraphics[width=\columnwidth]{2mass_density}
+  \includegraphics[width=\columnwidth,clip,trim=0 1in 0 0]{2mass_density}
   \caption{The relative surface brightness of stars in the 2-MASS
     Photometric Catalogue \citep{2006AJ....131.1163S} smoothed with a Gaussian
     of 0.03 degrees (0.005 radian).}
@@ -323,10 +323,11 @@ and the equatorial plane.  These equatorial region outside the
 Galactic plane is our test region where we know the underlying galaxy
 distribution, and we attempt to reconstruct it from the data outside
 the masked regions.  Most of the structures within the equatorial
-region in the top panel are reproduced in the lower panel.  However,
-to make statistic sense of the agreement we calculate Pearson's
-correlation coefficient ($r$) between the original data and the
-infilled reproduction within the infilled region outside of the
+region in the top panel are reproduced in the lower middle panel.  The
+difference between the input map and the infill map is depicted in the
+bottom panel. To make statistic sense of the agreement we calculate
+Pearson's correlation coefficient ($r$) between the original data and
+the infilled reproduction within the infilled region outside of the
 Galactic plane.  We obtain a value of $r=0.25$.  To estimate the
 significance of this value, we perform two tests.  First, we shuffled
 the data within the test region and recalculated $r$ for these
@@ -348,19 +349,34 @@ higher $r=0.97$, so clearly much information is lost in the
 reconstruction, but the test reveals that the infilling procedure does
 give a good first-order guess at the hidden structures.
 \begin{figure}
-  \includegraphics[width=\columnwidth]{infill_test_dataC.png}
-  \includegraphics[width=\columnwidth]{infill_test_maskeddataC.png}
-  \includegraphics[width=\columnwidth]{infill_test_resultC.png}
-  \includegraphics[width=\columnwidth]{infill_test_diffC.png}
+  \includegraphics[width=\columnwidth,clip,trim=0 1in 0 0]{infill_test_dataC.png}
+  \includegraphics[width=\columnwidth,clip,trim=0 1in 0 0]{infill_test_maskeddataC.png}
+  \includegraphics[width=\columnwidth,clip,trim=0 1in 0 0]{infill_test_resultC.png}
+  \includegraphics[width=\columnwidth,clip,trim=0 0.4in 0 0]{infill_test_diffC.png}
   \caption{Top: the data used for the infilling test before masking
     (this is the same as Fig.~\ref{fig:galmap} but in equatorial
     coordinated.  Upper middle: we masked both the Galactic plane and within
     five degrees of the celestial equator.  Lower middle: the infilled galaxy
     distribution both in the Galactic plane and the equatorial plane
-    to compare with the upper panel. Bottom: Difference between the initial map (top) and the
+    to compare with the upper panel. Bottom: the difference between the initial map (top) and the
     infilled map (lower middle).}
   \label{fig:infilling_test}
 \end{figure}
+
+The region that we have infilled is still apparent in the infilled map
+whereas for the infilled CMB the infilled region is not apparent.  We
+believe that this results from two facts.  First, we are infilling a
+narrow region, so that we can get as reliable an estimate of the
+background galaxy distribution as possible. For the CMB infilling one
+just wants a map that is constrained to be the same outside the
+infilled region and has the same statistics as the rest of the map
+within the region; one does not need a reliable estimate of the
+covered sky, so one can mask a larger portion of the image.  The
+second reason is that the galaxy density is strictly positive whereas
+at the CMB anisotropies are positive and negative.  We have tried some
+simple reparametrisations of the galaxy density, but these either yield
+the same artifacts (such as subtracting the mean desnity) or other
+difficulties (such as using the logarithm of the density).
 
 After demonstrating the efficacy of the infilling procedure, we now
 perform the calculation to infill only through the Galactic plane (we did
