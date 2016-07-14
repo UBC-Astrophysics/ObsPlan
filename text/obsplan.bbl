@@ -1,44 +1,28 @@
 \begin{thebibliography}{64}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
-\bibitem[{{Abbott} {et~al.}(2016{\natexlab{a}}){Abbott}, {Abbott}, {Abbott},
-  {Abernathy}, {Acernese}, {Ackley}, {Adams}, {Adams}, {Addesso}, {Adhikari},
-  \& et~al.}]{2016ApJ...818L..22A}
-{Abbott}, B.~P., {Abbott}, R., {Abbott}, T.~D., {Abernathy}, M.~R., {Acernese},
-  F., {Ackley}, K., {Adams}, C., {Adams}, T., {Addesso}, P., {Adhikari}, R.~X.,
-  \& et~al. 2016{\natexlab{a}}, \apjl, 818, L22
+\bibitem[{{Abbott} {et~al.}(2016{\natexlab{a}})}]{2016ApJ...818L..22A}
+{Abbott}, B.~P. {et~al.} 2016{\natexlab{a}}, \apjl, 818, L22
 
-\bibitem[{{Abbott} {et~al.}(2016{\natexlab{b}}){Abbott}, {Abbott}, {Abbott},
-  {Abernathy}, {Acernese}, {Ackley}, {Adams}, {Adams}, {Addesso}, {Adhikari},
-  \& et~al.}]{2016arXiv160208492A}
+\bibitem[{{Abbott} {et~al.}(2016{\natexlab{b}})}]{2016arXiv160208492A}
 ---. 2016{\natexlab{b}}, ArXiv e-prints
-
-\bibitem[{{Abbott} {et~al.}(2016{\natexlab{c}}){Abbott}, {Abbott}, {Abbott},
-  {Abernathy}, {Acernese}, {Ackley}, {Adams}, {Adams}, {Addesso}, {Adhikari},
-  \& et~al.}]{2016LRR....19....1A}
----. 2016{\natexlab{c}}, Living Reviews in Relativity, 19
 
 \bibitem[{Abbott {et~al.}(2016)}]{PhysRevLett.116.061102}
 Abbott, B.~P. {et~al.} 2016, Phys. Rev. Lett., 116, 061102
+
+\bibitem[{{Abbott} {et~al.}(2016)}]{2016LRR....19....1A}
+{Abbott}, B.~P. {et~al.} 2016, Living Reviews in Relativity, 19
 
 \bibitem[{{Abrial} {et~al.}(2008){Abrial}, {Moudden}, {Starck}, {Fadili},
   {Delabrouille}, \& {Nguyen}}]{2008StMet...5..289A}
 {Abrial}, P., {Moudden}, Y., {Starck}, J.-L., {Fadili}, J., {Delabrouille}, J.,
   \& {Nguyen}, M.~K. 2008, Statistical Methodology, 5, 289
 
-\bibitem[{{Ahn} {et~al.}(2014){Ahn}, {Alexandroff}, {Allende Prieto}, {Anders},
-  {Anderson}, {Anderton}, {Andrews}, {Aubourg}, {Bailey}, {Bastien}, \&
-  et~al.}]{2014ApJS..211...17A}
-{Ahn}, C.~P., {Alexandroff}, R., {Allende Prieto}, C., {Anders}, F.,
-  {Anderson}, S.~F., {Anderton}, T., {Andrews}, B.~H., {Aubourg}, {\'E}.,
-  {Bailey}, S., {Bastien}, F.~A., \& et~al. 2014, \apjs, 211, 17
+\bibitem[{{Ahn} {et~al.}(2012)}]{2012ApJS..203...21A}
+{Ahn}, C.~P. {et~al.} 2012, \apjs, 203, 21
 
-\bibitem[{{Ahn} {et~al.}(2012){Ahn}, {Alexandroff}, {Allende Prieto},
-  {Anderson}, {Anderton}, {Andrews}, {Aubourg}, {Bailey}, {Balbinot}, {Barnes},
-  \& et~al.}]{2012ApJS..203...21A}
-{Ahn}, C.~P., {Alexandroff}, R., {Allende Prieto}, C., {Anderson}, S.~F.,
-  {Anderton}, T., {Andrews}, B.~H., {Aubourg}, {\'E}., {Bailey}, S.,
-  {Balbinot}, E., {Barnes}, R., \& et~al. 2012, \apjs, 203, 21
+\bibitem[{{Ahn} {et~al.}(2014)}]{2014ApJS..211...17A}
+---. 2014, \apjs, 211, 17
 
 \bibitem[{{Bartos} {et~al.}(2015){Bartos}, {Crotts}, \&
   {M{\'a}rka}}]{2015ApJ...801L...1B}
@@ -49,14 +33,8 @@ Abbott, B.~P. {et~al.} 2016, Phys. Rev. Lett., 116, 061102
 {Belczynski}, K., {Holz}, D.~E., {Bulik}, T., \& {O'Shaughnessy}, R. 2016,
   ArXiv e-prints, 1602.04531
 
-\bibitem[{{Berry} {et~al.}(2015){Berry}, {Mandel}, {Middleton}, {Singer},
-  {Urban}, {Vecchio}, {Vitale}, {Cannon}, {Farr}, {Farr}, {Graff}, {Hanna},
-  {Haster}, {Mohapatra}, {Pankow}, {Price}, {Sidery}, \&
-  {Veitch}}]{2015ApJ...804..114B}
-{Berry}, C.~P.~L., {Mandel}, I., {Middleton}, H., {Singer}, L.~P., {Urban},
-  A.~L., {Vecchio}, A., {Vitale}, S., {Cannon}, K., {Farr}, B., {Farr}, W.~M.,
-  {Graff}, P.~B., {Hanna}, C., {Haster}, C.-J., {Mohapatra}, S., {Pankow}, C.,
-  {Price}, L.~R., {Sidery}, T., \& {Veitch}, J. 2015, \apj, 804, 114
+\bibitem[{{Berry} {et~al.}(2015)}]{2015ApJ...804..114B}
+{Berry}, C.~P.~L. {et~al.} 2015, \apj, 804, 114
 
 \bibitem[{{Bilicki} {et~al.}(2014){Bilicki}, {Jarrett}, {Peacock}, {Cluver}, \&
   {Steward}}]{2014ApJS..210....9B}
@@ -75,52 +53,17 @@ Caiazzo, I., Antolini, E., \& Heyl, J.~S. 2016, in prepartion
   {Price}}]{2016MNRAS.457..939C}
 {Cerioli}, A., {Lodato}, G., \& {Price}, D.~J. 2016, \mnras, 457, 939
 
-\bibitem[{{Colless} {et~al.}(2001){Colless}, {Dalton}, {Maddox}, {Sutherland},
-  {Norberg}, {Cole}, {Bland-Hawthorn}, {Bridges}, {Cannon}, {Collins}, {Couch},
-  {Cross}, {Deeley}, {De Propris}, {Driver}, {Efstathiou}, {Ellis}, {Frenk},
-  {Glazebrook}, {Jackson}, {Lahav}, {Lewis}, {Lumsden}, {Madgwick}, {Peacock},
-  {Peterson}, {Price}, {Seaborne}, \& {Taylor}}]{2001MNRAS.328.1039C}
-{Colless}, M., {Dalton}, G., {Maddox}, S., {Sutherland}, W., {Norberg}, P.,
-  {Cole}, S., {Bland-Hawthorn}, J., {Bridges}, T., {Cannon}, R., {Collins}, C.,
-  {Couch}, W., {Cross}, N., {Deeley}, K., {De Propris}, R., {Driver}, S.~P.,
-  {Efstathiou}, G., {Ellis}, R.~S., {Frenk}, C.~S., {Glazebrook}, K.,
-  {Jackson}, C., {Lahav}, O., {Lewis}, I., {Lumsden}, S., {Madgwick}, D.,
-  {Peacock}, J.~A., {Peterson}, B.~A., {Price}, I., {Seaborne}, M., \&
-  {Taylor}, K. 2001, \mnras, 328, 1039
+\bibitem[{{Colless} {et~al.}(2001)}]{2001MNRAS.328.1039C}
+{Colless}, M. {et~al.} 2001, \mnras, 328, 1039
 
-\bibitem[{{Colless} {et~al.}(2003){Colless}, {Peterson}, {Jackson}, {Peacock},
-  {Cole}, {Norberg}, {Baldry}, {Baugh}, {Bland-Hawthorn}, {Bridges}, {Cannon},
-  {Collins}, {Couch}, {Cross}, {Dalton}, {De Propris}, {Driver}, {Efstathiou},
-  {Ellis}, {Frenk}, {Glazebrook}, {Lahav}, {Lewis}, {Lumsden}, {Maddox},
-  {Madgwick}, {Sutherland}, \& {Taylor}}]{2003astro.ph..6581C}
-{Colless}, M., {Peterson}, B.~A., {Jackson}, C., {Peacock}, J.~A., {Cole}, S.,
-  {Norberg}, P., {Baldry}, I.~K., {Baugh}, C.~M., {Bland-Hawthorn}, J.,
-  {Bridges}, T., {Cannon}, R., {Collins}, C., {Couch}, W., {Cross}, N.,
-  {Dalton}, G., {De Propris}, R., {Driver}, S.~P., {Efstathiou}, G., {Ellis},
-  R.~S., {Frenk}, C.~S., {Glazebrook}, K., {Lahav}, O., {Lewis}, I., {Lumsden},
-  S., {Maddox}, S., {Madgwick}, D., {Sutherland}, W., \& {Taylor}, K. 2003,
-  ArXiv Astrophysics e-prints, astro-ph/0306581
+\bibitem[{{Colless} {et~al.}(2003)}]{2003astro.ph..6581C}
+---. 2003, ArXiv Astrophysics e-prints, astro-ph/0306581
 
-\bibitem[{{Connaughton} {et~al.}(2016){Connaughton}, {Burns}, {Goldstein},
-  {Briggs}, {Zhang}, {Hui}, {Jenke}, {Racusin}, {Wilson-Hodge}, {Bhat},
-  {Cleveland}, {Fitzpatrick}, {Giles}, {Gibby}, {Greiner}, {von Kienlin},
-  {Kippen}, {McBreen}, {Mailyan}, {Meegan}, {Paciesas}, {Preece}, {Roberts},
-  {Sparke}, {Stanbro}, {Toelge}, {Veres}, {Yu}, \&
-  {authors}}]{2016arXiv160203920C}
-{Connaughton}, V., {Burns}, E., {Goldstein}, A., {Briggs}, M.~S., {Zhang},
-  B.-B., {Hui}, C.~M., {Jenke}, P., {Racusin}, J., {Wilson-Hodge}, C.~A.,
-  {Bhat}, P.~N., {Cleveland}, W., {Fitzpatrick}, G., {Giles}, M.~M., {Gibby},
-  M.~H., {Greiner}, J., {von Kienlin}, A., {Kippen}, R.~M., {McBreen}, S.,
-  {Mailyan}, B., {Meegan}, C.~A., {Paciesas}, W.~S., {Preece}, R.~D.,
-  {Roberts}, O., {Sparke}, L., {Stanbro}, M., {Toelge}, K., {Veres}, P., {Yu},
-  H.-F., \& {authors}, o. 2016, ArXiv e-prints, 1602.03920
+\bibitem[{{Connaughton} {et~al.}(2016)}]{2016arXiv160203920C}
+{Connaughton}, V. {et~al.} 2016, ArXiv e-prints, 1602.03920
 
-\bibitem[{{Dominik} {et~al.}(2015){Dominik}, {Berti}, {O'Shaughnessy},
-  {Mandel}, {Belczynski}, {Fryer}, {Holz}, {Bulik}, \&
-  {Pannarale}}]{2015ApJ...806..263D}
-{Dominik}, M., {Berti}, E., {O'Shaughnessy}, R., {Mandel}, I., {Belczynski},
-  K., {Fryer}, C., {Holz}, D.~E., {Bulik}, T., \& {Pannarale}, F. 2015, \apj,
-  806, 263
+\bibitem[{{Dominik} {et~al.}(2015)}]{2015ApJ...806..263D}
+{Dominik}, M. {et~al.} 2015, \apj, 806, 263
 
 \bibitem[{{D'Orazio} {et~al.}(2016){D'Orazio}, {Levin}, {Murray}, \&
   {Price}}]{2016arXiv160100017D}
@@ -182,14 +125,8 @@ Ghosh, S. \& Nelemans, G. 2015, Gravitational Wave Astrophysics: Proceedings of
 {Hambly}, N.~C., {Irwin}, M.~J., \& {MacGillivray}, H.~T. 2001{\natexlab{b}},
   \mnras, 326, 1295
 
-\bibitem[{{Hambly} {et~al.}(2001{\natexlab{c}}){Hambly}, {MacGillivray},
-  {Read}, {Tritton}, {Thomson}, {Kelly}, {Morgan}, {Smith}, {Driver},
-  {Williamson}, {Parker}, {Hawkins}, {Williams}, \&
-  {Lawrence}}]{2001MNRAS.326.1279H}
-{Hambly}, N.~C., {MacGillivray}, H.~T., {Read}, M.~A., {Tritton}, S.~B.,
-  {Thomson}, E.~B., {Kelly}, B.~D., {Morgan}, D.~H., {Smith}, R.~E., {Driver},
-  S.~P., {Williamson}, J., {Parker}, Q.~A., {Hawkins}, M.~R.~S., {Williams},
-  P.~M., \& {Lawrence}, A. 2001{\natexlab{c}}, \mnras, 326, 1279
+\bibitem[{{Hambly} {et~al.}(2001{\natexlab{c}})}]{2001MNRAS.326.1279H}
+{Hambly}, N.~C. {et~al.} 2001{\natexlab{c}}, \mnras, 326, 1279
 
 \bibitem[{Hanna {et~al.}(2014)Hanna, Mandel, \& Vousden}]{0004-637X-784-1-8}
 Hanna, C., Mandel, I., \& Vousden, W. 2014, The Astrophysical Journal, 784, 8
@@ -199,15 +136,8 @@ Hanna, C., Mandel, I., \& Vousden, W. 2014, The Astrophysical Journal, 784, 8
 {Heyl}, J., {Colless}, M., {Ellis}, R.~S., \& {Broadhurst}, T. 1997, \mnras,
   285, 613
 
-\bibitem[{{Huchra} {et~al.}(2012){Huchra}, {Macri}, {Masters}, {Jarrett},
-  {Berlind}, {Calkins}, {Crook}, {Cutri}, {Erdo{\v g}du}, {Falco}, {George},
-  {Hutcheson}, {Lahav}, {Mader}, {Mink}, {Martimbeau}, {Schneider},
-  {Skrutskie}, {Tokarz}, \& {Westover}}]{2012ApJS..199...26H}
-{Huchra}, J.~P., {Macri}, L.~M., {Masters}, K.~L., {Jarrett}, T.~H., {Berlind},
-  P., {Calkins}, M., {Crook}, A.~C., {Cutri}, R., {Erdo{\v g}du}, P., {Falco},
-  E., {George}, T., {Hutcheson}, C.~M., {Lahav}, O., {Mader}, J., {Mink},
-  J.~D., {Martimbeau}, N., {Schneider}, S., {Skrutskie}, M., {Tokarz}, S., \&
-  {Westover}, M. 2012, \apjs, 199, 26
+\bibitem[{{Huchra} {et~al.}(2012)}]{2012ApJS..199...26H}
+{Huchra}, J.~P. {et~al.} 2012, \apjs, 199, 26
 
 \bibitem[{{Jarrett}(2004)}]{2004PASA...21..396J}
 {Jarrett}, T. 2004, \pasa, 21, 396
@@ -222,29 +152,11 @@ Hanna, C., Mandel, I., \& Vousden, W. 2014, The Astrophysical Journal, 784, 8
 {Jarrett}, T.~H., {Chester}, T., {Cutri}, R., {Schneider}, S., {Skrutskie}, M.,
   \& {Huchra}, J.~P. 2000{\natexlab{b}}, \aj, 119, 2498
 
-\bibitem[{{Jones} {et~al.}(2009){Jones}, {Read}, {Saunders}, {Colless},
-  {Jarrett}, {Parker}, {Fairall}, {Mauch}, {Sadler}, {Watson}, {Burton},
-  {Campbell}, {Cass}, {Croom}, {Dawe}, {Fiegert}, {Frankcombe}, {Hartley},
-  {Huchra}, {James}, {Kirby}, {Lahav}, {Lucey}, {Mamon}, {Moore}, {Peterson},
-  {Prior}, {Proust}, {Russell}, {Safouris}, {Wakamatsu}, {Westra}, \&
-  {Williams}}]{2009MNRAS.399..683J}
-{Jones}, D.~H., {Read}, M.~A., {Saunders}, W., {Colless}, M., {Jarrett}, T.,
-  {Parker}, Q.~A., {Fairall}, A.~P., {Mauch}, T., {Sadler}, E.~M., {Watson},
-  F.~G., {Burton}, D., {Campbell}, L.~A., {Cass}, P., {Croom}, S.~M., {Dawe},
-  J., {Fiegert}, K., {Frankcombe}, L., {Hartley}, M., {Huchra}, J., {James},
-  D., {Kirby}, E., {Lahav}, O., {Lucey}, J., {Mamon}, G.~A., {Moore}, L.,
-  {Peterson}, B.~A., {Prior}, S., {Proust}, D., {Russell}, K., {Safouris}, V.,
-  {Wakamatsu}, K.-I., {Westra}, E., \& {Williams}, M. 2009, \mnras, 399, 683
+\bibitem[{{Jones} {et~al.}(2004)}]{2004MNRAS.355..747J}
+{Jones}, D.~H. {et~al.} 2004, \mnras, 355, 747
 
-\bibitem[{{Jones} {et~al.}(2004){Jones}, {Saunders}, {Colless}, {Read},
-  {Parker}, {Watson}, {Campbell}, {Burkey}, {Mauch}, {Moore}, {Hartley},
-  {Cass}, {James}, {Russell}, {Fiegert}, {Dawe}, {Huchra}, {Jarrett}, {Lahav},
-  {Lucey}, {Mamon}, {Proust}, {Sadler}, \& {Wakamatsu}}]{2004MNRAS.355..747J}
-{Jones}, D.~H., {Saunders}, W., {Colless}, M., {Read}, M.~A., {Parker}, Q.~A.,
-  {Watson}, F.~G., {Campbell}, L.~A., {Burkey}, D., {Mauch}, T., {Moore}, L.,
-  {Hartley}, M., {Cass}, P., {James}, D., {Russell}, K., {Fiegert}, K., {Dawe},
-  J., {Huchra}, J., {Jarrett}, T., {Lahav}, O., {Lucey}, J., {Mamon}, G.~A.,
-  {Proust}, D., {Sadler}, E.~M., \& {Wakamatsu}, K.-i. 2004, \mnras, 355, 747
+\bibitem[{{Jones} {et~al.}(2009)}]{2009MNRAS.399..683J}
+---. 2009, \mnras, 399, 683
 
 \bibitem[{{Kasliwal} \& {Nissanke}(2014)}]{2014ApJ...789L...5K}
 {Kasliwal}, M.~M. \& {Nissanke}, S. 2014, \apjl, 789, L5
@@ -278,30 +190,14 @@ Hanna, C., Mandel, I., \& Vousden, W. 2014, The Astrophysical Journal, 784, 8
   {Georgieva}}]{2013ApJ...767..124N}
 {Nissanke}, S., {Kasliwal}, M., \& {Georgieva}, A. 2013, \apj, 767, 124
 
-\bibitem[{{Norberg} {et~al.}(2002){Norberg}, {Cole}, {Baugh}, {Frenk},
-  {Baldry}, {Bland-Hawthorn}, {Bridges}, {Cannon}, {Colless}, {Collins},
-  {Couch}, {Cross}, {Dalton}, {De Propris}, {Driver}, {Efstathiou}, {Ellis},
-  {Glazebrook}, {Jackson}, {Lahav}, {Lewis}, {Lumsden}, {Maddox}, {Madgwick},
-  {Peacock}, {Peterson}, {Sutherland}, {Taylor}, \& {2DFGRS
-  Team}}]{2002MNRAS.336..907N}
-{Norberg}, P., {Cole}, S., {Baugh}, C.~M., {Frenk}, C.~S., {Baldry}, I.,
-  {Bland-Hawthorn}, J., {Bridges}, T., {Cannon}, R., {Colless}, M., {Collins},
-  C., {Couch}, W., {Cross}, N.~J.~G., {Dalton}, G., {De Propris}, R., {Driver},
-  S.~P., {Efstathiou}, G., {Ellis}, R.~S., {Glazebrook}, K., {Jackson}, C.,
-  {Lahav}, O., {Lewis}, I., {Lumsden}, S., {Maddox}, S., {Madgwick}, D.,
-  {Peacock}, J.~A., {Peterson}, B.~A., {Sutherland}, W., {Taylor}, K., \&
-  {2DFGRS Team}. 2002, \mnras, 336, 907
+\bibitem[{{Norberg} {et~al.}(2002)}]{2002MNRAS.336..907N}
+{Norberg}, P. {et~al.} 2002, \mnras, 336, 907
 
 \bibitem[{Nuttall \& Sutton(2010)}]{PhysRevD.82.102002}
 Nuttall, L.~K. \& Sutton, P.~J. 2010, Phys. Rev. D, 82, 102002
 
-\bibitem[{{Saunders} {et~al.}(2000){Saunders}, {Sutherland}, {Maddox},
-  {Keeble}, {Oliver}, {Rowan-Robinson}, {McMahon}, {Efstathiou}, {Tadros},
-  {White}, {Frenk}, {Carrami{\~n}ana}, \& {Hawkins}}]{2000MNRAS.317...55S}
-{Saunders}, W., {Sutherland}, W.~J., {Maddox}, S.~J., {Keeble}, O., {Oliver},
-  S.~J., {Rowan-Robinson}, M., {McMahon}, R.~G., {Efstathiou}, G.~P., {Tadros},
-  H., {White}, S.~D.~M., {Frenk}, C.~S., {Carrami{\~n}ana}, A., \& {Hawkins},
-  M.~R.~S. 2000, \mnras, 317, 55
+\bibitem[{{Saunders} {et~al.}(2000)}]{2000MNRAS.317...55S}
+{Saunders}, W. {et~al.} 2000, \mnras, 317, 55
 
 \bibitem[{{Siegel} \& {Ciolfi}(2015{\natexlab{a}})}]{2015arXiv150807911S}
 {Siegel}, D.~M. \& {Ciolfi}, R. 2015{\natexlab{a}}, ArXiv e-prints, 1508.07911
@@ -309,142 +205,36 @@ Nuttall, L.~K. \& Sutton, P.~J. 2010, Phys. Rev. D, 82, 102002
 \bibitem[{{Siegel} \& {Ciolfi}(2015{\natexlab{b}})}]{2015arXiv150807939S}
 ---. 2015{\natexlab{b}}, ArXiv e-prints, 1508.07939
 
-\bibitem[{{Singer} {et~al.}(2016{\natexlab{a}}){Singer}, {Chen}, {Holz},
-  {Farr}, {Price}, {Raymond}, {Cenko}, {Gehrels}, {Cannizzo}, {Kasliwal},
-  {Nissanke}, {Coughlin}, {Farr}, {Urban}, {Vitale}, {Veitch}, {Graff},
-  {Berry}, {Mohapatra}, \& {Mandel}}]{2016arXiv160307333S}
-{Singer}, L.~P., {Chen}, H.-Y., {Holz}, D.~E., {Farr}, W.~M., {Price}, L.~R.,
-  {Raymond}, V., {Cenko}, S.~B., {Gehrels}, N., {Cannizzo}, J., {Kasliwal},
-  M.~M., {Nissanke}, S., {Coughlin}, M., {Farr}, B., {Urban}, A.~L., {Vitale},
-  S., {Veitch}, J., {Graff}, P., {Berry}, C.~P.~L., {Mohapatra}, S., \&
-  {Mandel}, I. 2016{\natexlab{a}}, ArXiv e-prints
-
-\bibitem[{{Singer} {et~al.}(2016{\natexlab{b}}){Singer}, {Chen}, {Holz},
-  {Farr}, {Price}, {Raymond}, {Cenko}, {Gehrels}, {Cannizzo}, {Kasliwal},
-  {Nissanke}, {Coughlin}, {Farr}, {Urban}, {Vitale}, {Veitch}, {Graff},
-  {Berry}, {Mohapatra}, \& {Mandel}}]{2016arXiv160504242S}
----. 2016{\natexlab{b}}, ArXiv e-prints
-
 \bibitem[{{Singer} \& {Price}(2016)}]{2015arXiv150803634S}
 {Singer}, L.~P. \& {Price}, L.~R. 2016, \prd, 93, 024013
 
-\bibitem[{{Singer} {et~al.}(2014){Singer}, {Price}, {Farr}, {Urban}, {Pankow},
-  {Vitale}, {Veitch}, {Farr}, {Hanna}, {Cannon}, {Downes}, {Graff}, {Haster},
-  {Mandel}, {Sidery}, \& {Vecchio}}]{2014ApJ...795..105S}
-{Singer}, L.~P., {Price}, L.~R., {Farr}, B., {Urban}, A.~L., {Pankow}, C.,
-  {Vitale}, S., {Veitch}, J., {Farr}, W.~M., {Hanna}, C., {Cannon}, K.,
-  {Downes}, T., {Graff}, P., {Haster}, C.-J., {Mandel}, I., {Sidery}, T., \&
-  {Vecchio}, A. 2014, \apj, 795, 105
+\bibitem[{{Singer} {et~al.}(2014)}]{2014ApJ...795..105S}
+{Singer}, L.~P. {et~al.} 2014, \apjs, 211, 7
 
-\bibitem[{{Skrutskie} {et~al.}(2006){Skrutskie}, {Cutri}, {Stiening},
-  {Weinberg}, {Schneider}, {Carpenter}, {Beichman}, {Capps}, {Chester},
-  {Elias}, {Huchra}, {Liebert}, {Lonsdale}, {Monet}, {Price}, {Seitzer},
-  {Jarrett}, {Kirkpatrick}, {Gizis}, {Howard}, {Evans}, {Fowler}, {Fullmer},
-  {Hurt}, {Light}, {Kopan}, {Marsh}, {McCallon}, {Tam}, {Van Dyk}, \&
-  {Wheelock}}]{2006AJ....131.1163S}
-{Skrutskie}, M.~F., {Cutri}, R.~M., {Stiening}, R., {Weinberg}, M.~D.,
-  {Schneider}, S., {Carpenter}, J.~M., {Beichman}, C., {Capps}, R., {Chester},
-  T., {Elias}, J., {Huchra}, J., {Liebert}, J., {Lonsdale}, C., {Monet}, D.~G.,
-  {Price}, S., {Seitzer}, P., {Jarrett}, T., {Kirkpatrick}, J.~D., {Gizis},
-  J.~E., {Howard}, E., {Evans}, T., {Fowler}, J., {Fullmer}, L., {Hurt}, R.,
-  {Light}, R., {Kopan}, E.~L., {Marsh}, K.~A., {McCallon}, H.~L., {Tam}, R.,
-  {Van Dyk}, S., \& {Wheelock}, S. 2006, \aj, 131, 1163
+\bibitem[{{Singer} {et~al.}(2016{\natexlab{a}})}]{2016arXiv160307333S}
+---. 2016{\natexlab{a}}, ArXiv e-prints
 
-\bibitem[{{Smartt} {et~al.}(2016){Smartt}, {Chambers}, {Smith}, {Huber},
-  {Young}, {Cappellaro}, {Wright}, {Coughlin}, {Schultz}, {Denneau},
-  {Flewelling}, {Heinze}, {Magnier}, {Primak}, {Rest}, {Sherstyuk}, {Stalder},
-  {Stubbs}, {Tonry}, {Waters}, {Willman}, {Anderson}, {Baltay}, {Botticella},
-  {Campbell}, {Dennefeld}, {Chen}, {Della Valle}, {Elias-Rosa}, {Fraser},
-  {Inserra}, {Kankare}, {Kotak}, {Kupfer}, {Harmanen}, {Galbany}, {Gal-Yam},
-  {Guillou}, {Lyman}, {Maguire}, {Mitra}, {Nicholl}, {Olivares E},
-  {Rabinowitz}, {Razza}, {Sollerman}, {Smith}, {Terreran}, \&
-  {Valenti}}]{2016arXiv160204156S}
-{Smartt}, S.~J., {Chambers}, K.~C., {Smith}, K.~W., {Huber}, M.~E., {Young},
-  D.~R., {Cappellaro}, E., {Wright}, D.~E., {Coughlin}, M., {Schultz},
-  A.~S.~B., {Denneau}, L., {Flewelling}, H., {Heinze}, A., {Magnier}, E.~A.,
-  {Primak}, N., {Rest}, A., {Sherstyuk}, A., {Stalder}, B., {Stubbs}, C.~W.,
-  {Tonry}, J., {Waters}, C., {Willman}, M., {Anderson}, J.~P., {Baltay}, C.,
-  {Botticella}, M.~T., {Campbell}, H., {Dennefeld}, M., {Chen}, T.-W., {Della
-  Valle}, M., {Elias-Rosa}, N., {Fraser}, M., {Inserra}, C., {Kankare}, E.,
-  {Kotak}, R., {Kupfer}, T., {Harmanen}, J., {Galbany}, L., {Gal-Yam}, A.,
-  {Guillou}, L.~L., {Lyman}, J.~D., {Maguire}, K., {Mitra}, A., {Nicholl}, M.,
-  {Olivares E}, F., {Rabinowitz}, D., {Razza}, A., {Sollerman}, J., {Smith},
-  M., {Terreran}, G., \& {Valenti}, S. 2016, ArXiv e-prints, 1602.04156
+\bibitem[{{Singer} {et~al.}(2016{\natexlab{b}})}]{2016arXiv160504242S}
+---. 2016{\natexlab{b}}, ArXiv e-prints
 
-\bibitem[{{Soares-Santos} {et~al.}(2016){Soares-Santos}, {Kessler}, {Berger},
-  {Annis}, {Brout}, {Buckley-Geer}, {Chen}, {Cowperthwaite}, {Diehl}, {Doctor},
-  {Drlica-Wagner}, {Farr}, {Finley}, {Flaugher}, {Foley}, {Frieman}, {Gruendl},
-  {Herner}, {Holz}, {Lin}, {Marriner}, {Neilsen}, {Rest}, {Sako}, {Scolnic},
-  {Sobreira}, {Walker}, {Wester}, {Yanny}, {Abbott}, {Abdalla}, {Abdalla},
-  {Allam}, {Armstrong}, {Banerji}, {Benoit-L{\'e}vy}, {Bernstein}, {Bertin},
-  {Brown}, {Burke}, {Capozzi}, {Carnero Rosell}, {Carrasco Kind}, {Carretero},
-  {Castander}, {Cenko}, {Chornock}, {Crocce}, {D'Andrea}, {D'Andrea}, {da
-  Costa}, {Desai}, {Dietrich}, {Drout}, {Eifler}, {Estrada}, {Evrard},
-  {Fairhurst}, {Fernandez}, {Fischer}, {Fong}, {Fosalba}, {Fox}, {Fryer},
-  {Garcia-Bellido}, {Gaztanaga}, {Gerdes}, {Goldstein}, {Gruen}, {Gutierrez},
-  {Honscheid}, {James}, {Karliner}, {Kasen}, {Kent}, {Kuropatkin}, {Kuehn},
-  {Lahav}, {Li}, {Lima}, {Maia}, {Margutti}, {Martini}, {Matheson}, {McMahon},
-  {Metzger}, {Miller}, {Miquel}, {Mohr}, {Nichol}, {Nord}, {Ogando}, {Peoples},
-  {Plazas}, {Quataert}, {Romer}, {Roodman}, {Roodman}, {Rykoff}, {Rykoff},
-  {Sanchez}, {Scarpine}, {Schindler}, {Schubnell}, {Sevilla-Noarbe}, {Sheldon},
-  {Smith}, {Smith}, {Smith}, {Stebbins}, {Sutton}, {Swanson}, {Tarle},
-  {Thaler}, {Thomas}, {Tucker}, {Vikram}, {Wechsler}, \&
-  {Weller}}]{2016arXiv160204198S}
-{Soares-Santos}, M., {Kessler}, R., {Berger}, E., {Annis}, J., {Brout}, D.,
-  {Buckley-Geer}, E., {Chen}, H., {Cowperthwaite}, P.~S., {Diehl}, H.~T.,
-  {Doctor}, Z., {Drlica-Wagner}, A., {Farr}, B., {Finley}, D.~A., {Flaugher},
-  B., {Foley}, R.~J., {Frieman}, J., {Gruendl}, R.~A., {Herner}, K., {Holz},
-  D., {Lin}, H., {Marriner}, J., {Neilsen}, E., {Rest}, A., {Sako}, M.,
-  {Scolnic}, D., {Sobreira}, F., {Walker}, A.~R., {Wester}, W., {Yanny}, B.,
-  {Abbott}, T.~M.~C., {Abdalla}, F.~B., {Abdalla}, F.~B., {Allam}, S.,
-  {Armstrong}, R., {Banerji}, M., {Benoit-L{\'e}vy}, A., {Bernstein}, R.~A.,
-  {Bertin}, E., {Brown}, D.~A., {Burke}, D.~L., {Capozzi}, D., {Carnero
-  Rosell}, A., {Carrasco Kind}, M., {Carretero}, J., {Castander}, F.~J.,
-  {Cenko}, S.~B., {Chornock}, R., {Crocce}, M., {D'Andrea}, C.~B., {D'Andrea},
-  C.~B., {da Costa}, L.~N., {Desai}, S., {Dietrich}, J.~P., {Drout}, M.~R.,
-  {Eifler}, T.~F., {Estrada}, J., {Evrard}, A.~E., {Fairhurst}, S.,
-  {Fernandez}, E., {Fischer}, J., {Fong}, W., {Fosalba}, P., {Fox}, D.~B.,
-  {Fryer}, C.~L., {Garcia-Bellido}, J., {Gaztanaga}, E., {Gerdes}, D.~W.,
-  {Goldstein}, D.~A., {Gruen}, D., {Gutierrez}, G., {Honscheid}, K., {James},
-  D.~J., {Karliner}, I., {Kasen}, D., {Kent}, S., {Kuropatkin}, N., {Kuehn},
-  K., {Lahav}, O., {Li}, T.~S., {Lima}, M., {Maia}, M.~A.~G., {Margutti}, R.,
-  {Martini}, P., {Matheson}, T., {McMahon}, R.~G., {Metzger}, B.~D., {Miller},
-  C.~J., {Miquel}, R., {Mohr}, J.~J., {Nichol}, R.~C., {Nord}, B., {Ogando},
-  R., {Peoples}, J., {Plazas}, A.~A., {Quataert}, E., {Romer}, A.~K.,
-  {Roodman}, A., {Roodman}, A., {Rykoff}, E.~S., {Rykoff}, E.~S., {Sanchez},
-  E., {Scarpine}, V., {Schindler}, R., {Schubnell}, M., {Sevilla-Noarbe}, I.,
-  {Sheldon}, E., {Smith}, M., {Smith}, N., {Smith}, R.~C., {Stebbins}, A.,
-  {Sutton}, P.~J., {Swanson}, M.~E.~C., {Tarle}, G., {Thaler}, J., {Thomas},
-  R.~C., {Tucker}, D.~L., {Vikram}, V., {Wechsler}, R.~H., \& {Weller}, J.
-  2016, ArXiv e-prints, 1602.04198
+\bibitem[{{Skrutskie} {et~al.}(2006)}]{2006AJ....131.1163S}
+{Skrutskie}, M.~F. {et~al.} 2006, \aj, 131, 1163
 
-\bibitem[{{Staveley-Smith} {et~al.}(1996){Staveley-Smith}, {Wilson}, {Bird},
-  {Disney}, {Ekers}, {Freeman}, {Haynes}, {Sinclair}, {Vaile}, {Webster}, \&
-  {Wright}}]{1996PASA...13..243S}
-{Staveley-Smith}, L., {Wilson}, W.~E., {Bird}, T.~S., {Disney}, M.~J., {Ekers},
-  R.~D., {Freeman}, K.~C., {Haynes}, R.~F., {Sinclair}, M.~W., {Vaile}, R.~A.,
-  {Webster}, R.~L., \& {Wright}, A.~E. 1996, \pasa, 13, 243
+\bibitem[{{Smartt} {et~al.}(2016)}]{2016arXiv160204156S}
+{Smartt}, S.~J. {et~al.} 2016, ArXiv e-prints, 1602.04156
+
+\bibitem[{{Soares-Santos} {et~al.}(2016)}]{2016arXiv160204198S}
+{Soares-Santos}, M. {et~al.} 2016, ArXiv e-prints, 1602.04198
+
+\bibitem[{{Staveley-Smith} {et~al.}(1996)}]{1996PASA...13..243S}
+{Staveley-Smith}, L. {et~al.} 1996, \pasa, 13, 243
 
 \bibitem[{{Vanderlinde} \& {Chime Collaboration}(2014)}]{2014era..conf10102V}
 {Vanderlinde}, K. \& {Chime Collaboration}. 2014, in Exascale Radio Astronomy,
   Vol.~2
 
-\bibitem[{{Wright} {et~al.}(2010){Wright}, {Eisenhardt}, {Mainzer}, {Ressler},
-  {Cutri}, {Jarrett}, {Kirkpatrick}, {Padgett}, {McMillan}, {Skrutskie},
-  {Stanford}, {Cohen}, {Walker}, {Mather}, {Leisawitz}, {Gautier}, {McLean},
-  {Benford}, {Lonsdale}, {Blain}, {Mendez}, {Irace}, {Duval}, {Liu}, {Royer},
-  {Heinrichsen}, {Howard}, {Shannon}, {Kendall}, {Walsh}, {Larsen}, {Cardon},
-  {Schick}, {Schwalm}, {Abid}, {Fabinsky}, {Naes}, \&
-  {Tsai}}]{2010AJ....140.1868W}
-{Wright}, E.~L., {Eisenhardt}, P.~R.~M., {Mainzer}, A.~K., {Ressler}, M.~E.,
-  {Cutri}, R.~M., {Jarrett}, T., {Kirkpatrick}, J.~D., {Padgett}, D.,
-  {McMillan}, R.~S., {Skrutskie}, M., {Stanford}, S.~A., {Cohen}, M., {Walker},
-  R.~G., {Mather}, J.~C., {Leisawitz}, D., {Gautier}, III, T.~N., {McLean}, I.,
-  {Benford}, D., {Lonsdale}, C.~J., {Blain}, A., {Mendez}, B., {Irace}, W.~R.,
-  {Duval}, V., {Liu}, F., {Royer}, D., {Heinrichsen}, I., {Howard}, J.,
-  {Shannon}, M., {Kendall}, M., {Walsh}, A.~L., {Larsen}, M., {Cardon}, J.~G.,
-  {Schick}, S., {Schwalm}, M., {Abid}, M., {Fabinsky}, B., {Naes}, L., \&
-  {Tsai}, C.-W. 2010, \aj, 140, 1868
+\bibitem[{{Wright} {et~al.}(2010)}]{2010AJ....140.1868W}
+{Wright}, E.~L. {et~al.} 2010, \aj, 140, 1868
 
 \bibitem[{{Yang} \& {Zhang}(2016)}]{2016ApJ...817..183Y}
 {Yang}, H. \& {Zhang}, F. 2016, \apj, 817, 183
